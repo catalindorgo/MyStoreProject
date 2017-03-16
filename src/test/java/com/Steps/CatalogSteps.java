@@ -27,4 +27,26 @@ public class CatalogSteps extends ScenarioSteps {
         mainPage.clickOnDressesSection();
         catalogPage.checkDressesPageTitleAndBannerAndListedItems();
     }
+
+    @StepGroup
+    public void checkTShirtTitleAndBannerAndListedItems(){
+        mainPage.clickTShirtSection();
+        catalogPage.checkTShirtTitleAndBannerAndListedItems();
+    }
+
+    @StepGroup
+    public void checkBlousesSubsectionsTitleBannerAndListedItmes(){
+        mainPage.selectBlousesSubSection();
+        catalogPage.checkBlousesSubsectionsTitleBannerAndListeItmes();
+    }
+    @StepGroup
+    public void checkTShirtSubSectionTitleBannerAndListedItems(){
+        mainPage.selectTShirtSubSection();
+        catalogPage.checkTShirtSubsectionsTitleBannerAndListeItmes();
+    }
+    @StepGroup
+    public void checkCasualDressesSubSectionFromDressesTitleBannerAndListedItems(){
+        mainPage.selectCasualDressesSubSectionFromDresses();
+        catalogPage.checkCasualDressesSubSectionFromDressesTitleBannerAndListedItems();
+    }
 }

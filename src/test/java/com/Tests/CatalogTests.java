@@ -32,4 +32,29 @@ public class CatalogTests {
         webDriver.manage().window().maximize();
         catalogSteps.checkDressesPagesTitleAndBannerAndListedItems();
     }
+    @Test
+    public void checkTShirtTitleAndBannerAndListedItems(){
+        webDriver.get("http://automationpractice.com/index.php");
+        webDriver.manage().window().maximize();
+        catalogSteps.checkTShirtTitleAndBannerAndListedItems();
+    }
+
+    @Test
+    public void checkBlousesSubsectionsTitleBannerAndListeItmes(){
+        webDriver.get("http://automationpractice.com/index.php");
+        webDriver.manage().window().maximize();
+        catalogSteps.checkBlousesSubsectionsTitleBannerAndListedItmes();
+    }
+    @Test
+    public void checkTShirtSubSectionTitleBannerAndListedItems(){
+        webDriver.get("http://automationpractice.com/index.php");
+        webDriver.manage().window().maximize();
+        catalogSteps.checkTShirtSubSectionTitleBannerAndListedItems();
+    }
+    @Test
+    public void checkCasualDressesSubSectionFromDressesTitleBannerAndListedItems(){
+        webDriver.get("http://automationpractice.com/index.php");
+        webDriver.manage().window().maximize();
+        catalogSteps.checkCasualDressesSubSectionFromDressesTitleBannerAndListedItems();
+    }
 }

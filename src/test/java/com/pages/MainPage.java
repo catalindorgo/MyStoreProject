@@ -13,7 +13,7 @@ import java.util.Set;
 /**
  * Created by catalindorgo on 3/14/2017.
  */
-public class MainPage extends PageObject {
+public class MainPage extends GeneralMethods {
     @FindBy(xpath = "//a/img[@alt='My Store']")
     private WebElement siteLogo;
 
@@ -50,7 +50,7 @@ public class MainPage extends PageObject {
     @FindBy(xpath = "//ul[contains(@class, 'container')]/li/a[@title='Summer Dresses']")
     private WebElement summerDressSubSectionFromDressesSection;
 
-    @FindBy(xpath = "//li/a[@title='T-shirts']")
+    @FindBy(xpath = "//div/ul/li/a[@title='T-shirts']")
     private WebElement tShirtsSection;
 
     @FindBy(xpath = "//div[@id='homepage-slider']")
@@ -67,6 +67,12 @@ public class MainPage extends PageObject {
 
     @FindBy(xpath = "//a[contains(text(), 'Sellers')]")
     private WebElement bestSellesrSection;
+
+    @FindBy(xpath = ".//form[@id='searchbox']/input[@class]")
+    private WebElement searchBoxField;
+
+    @FindBy(xpath = ".//form[@id='searchbox']/button")
+    private WebElement searchBoxGoButton;
 
     public void checkElementsPresenceFromWomenDropDown(){
         Actions actions = new Actions(getDriver());
@@ -113,6 +119,23 @@ public class MainPage extends PageObject {
     public void clickOnDressesSection(){
         dressesSection.click();
     }
-
+    public void clickTShirtSection(){tShirtsSection.click();}
+    public void selectBlousesSubSection(){
+        hoverOverWebElement(womenSection);
+        blousesSubSectionFromWomenSection.click();
+    }
+    public void selectTShirtSubSection(){
+        hoverOverWebElement(womenSection);
+        tShirtSubSectionFromWomenSection.click();
+    }
+    public void selectCasualDressesSubSectionFromDresses(){
+        hoverOverWebElement(dressesSection);
+        casualDressSubSectionFromDressesSection.click();
+    }
+    public void searchForTerm(String searchTerm){
+        searchBoxField.click();
+        searchBoxField.sendKeys(searchTerm);
+        searchBoxGoButton.click();
+    }
 }
 

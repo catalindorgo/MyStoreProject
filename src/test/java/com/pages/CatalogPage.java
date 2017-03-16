@@ -30,6 +30,23 @@ public class CatalogPage extends GeneralMethods {
     @FindBy(xpath = "//div[@class='rte']//p[contains(text(), 'We offer dresses ')]")
     private WebElement dressesBanner;
 
+    @FindBy(xpath = "//h1/span[contains(text(), 'T-sh')]")
+    private WebElement tShirtPageTitle;
+
+    @FindBy(xpath = "//div[@class='rte']//p[contains(text(), 'must have')]")
+    private WebElement tShirtBanner;
+
+    @FindBy(xpath = "//div[@class='content_scene_cat_bg']")
+    private WebElement blousesBanner;
+
+    @FindBy(xpath = "//h1/span[contains(text(), 'Blouses')]")
+    private WebElement blousesPageTItle;
+
+    @FindBy(xpath = "//h1/span[contains(text(), 'Casual')]")
+    private WebElement casualDressesPageTitle;
+
+    @FindBy(xpath = "//div[@class='rte']//p[contains(text(), 'every day')]")
+    private WebElement casualDressesBanner;
 
 
     public void checkWomenPageTitleAndBannerAndListedItems() {
@@ -39,6 +56,25 @@ public class CatalogPage extends GeneralMethods {
 
     public void checkDressesPageTitleAndBannerAndListedItems(){
         checkPageTitleAndBanner(dressesPageTitle, dressesBanner );
+        compareNumberOfProductsListedAgainstProductCounter(numberOfProductsCounterPerPage, listOfProductsPerPage);
+    }
+
+    public void checkTShirtTitleAndBannerAndListedItems(){
+        checkPageTitleAndBanner(tShirtPageTitle, tShirtBanner);
+        compareNumberOfProductsListedAgainstProductCounter(numberOfProductsCounterPerPage, listOfProductsPerPage);
+    }
+
+    public void checkBlousesSubsectionsTitleBannerAndListeItmes(){
+        checkPageTitleAndBanner(blousesPageTItle, blousesBanner);
+        compareNumberOfProductsListedAgainstProductCounter(numberOfProductsCounterPerPage, listOfProductsPerPage);
+    }
+
+    public void checkTShirtSubsectionsTitleBannerAndListeItmes() {
+        checkPageTitleAndBanner(tShirtPageTitle, tShirtBanner);
+        compareNumberOfProductsListedAgainstProductCounter(numberOfProductsCounterPerPage, listOfProductsPerPage);
+    }
+    public void checkCasualDressesSubSectionFromDressesTitleBannerAndListedItems(){
+        checkPageTitleAndBanner(casualDressesPageTitle, casualDressesBanner);
         compareNumberOfProductsListedAgainstProductCounter(numberOfProductsCounterPerPage, listOfProductsPerPage);
     }
 }
