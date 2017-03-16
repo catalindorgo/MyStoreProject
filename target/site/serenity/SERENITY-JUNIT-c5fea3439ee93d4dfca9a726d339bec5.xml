@@ -1,0 +1,1 @@
+<?xml version="1.0" encoding="UTF-8"?><testsuite errors="0" failures="0" name="com.Tests.AuthenticationTests" skipped="0" tests="1" time="14.52" timestamp="2017-03-72 04:12:25"><testcase classname="com.Tests.AuthenticationTests" name="Check error message at failed authentication"/></testsuite>

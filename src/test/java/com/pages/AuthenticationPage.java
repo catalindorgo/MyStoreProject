@@ -21,18 +21,25 @@ public class AuthenticationPage extends PageObject {
 
     @FindBy(xpath="//input[@name='email_create']")
     private  WebElement emailAddressField;
+
     @FindBy(xpath = "//div//button[@name='SubmitCreate']")
     private WebElement createAccountButton;
+
     @FindBy(xpath = "//div[@class='row']//ol/li")
     private WebElement errorMessageForInvalidEmail;
+
     @FindBy (xpath = "//div/div/input[@name='email']")
     private WebElement logInEmail;
+
     @FindBy(xpath = "//div/span/input[@name= 'passwd']")
     private WebElement logInPassword;
+
     @FindBy (xpath = "//p/button[@type ='submit']")
     private WebElement signInButton;
+
     @FindBy (xpath = "//div/a[@class='account']/span")
     private WebElement loggedInAccount;
+
     @FindBy (xpath = "//div/div/ol")
     private WebElement authenticationErrorMessage;
 

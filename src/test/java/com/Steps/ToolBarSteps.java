@@ -10,5 +10,8 @@ import net.thucydides.core.steps.ScenarioSteps;
 public class ToolBarSteps extends ScenarioSteps{
     ToolBarPage toolBarPage;
 
-    
+    @Step
+    public void checkBottomToolbarElementsPrsence(){
+        toolBarPage.checkBottomToolbarElementsPrsence();
+    }
 }

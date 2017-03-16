@@ -46,6 +46,9 @@ public class AuthenticationTests {
     @Test
     public void checkErrorMessageAtFailedAuthentication(){
         webDriver.get("http://automationpractice.com/index.php");
+        //maximize browser
+       // webDriver.manage().window().maximize();
+
         authenticationSteps.checkErrorMessageAtFailedAuthentication("admin@yahoo.ro", "$%^&*()_");
     }
 }
