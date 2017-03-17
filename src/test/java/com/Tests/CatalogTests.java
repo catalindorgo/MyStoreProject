@@ -57,4 +57,11 @@ public class CatalogTests {
         webDriver.manage().window().maximize();
         catalogSteps.checkCasualDressesSubSectionFromDressesTitleBannerAndListedItems();
     }
+// Testul de mai jos crapa.
+//    @Test
+//    public void checkWomenProductListIsCorrectlySortedByPriceLowToHigh(){
+//        webDriver.get("http://automationpractice.com/index.php");
+//        webDriver.manage().window().maximize();
+//        catalogSteps.checkWomenProductListIsCorrectlySortedByPriceLowToHigh();
+//    }
 }

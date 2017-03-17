@@ -49,4 +49,11 @@ public class CatalogSteps extends ScenarioSteps {
         mainPage.selectCasualDressesSubSectionFromDresses();
         catalogPage.checkCasualDressesSubSectionFromDressesTitleBannerAndListedItems();
     }
+
+    @StepGroup
+    public void checkWomenProductListIsCorrectlySortedByPriceLowToHigh(){
+        mainPage.clickOnWomenSection();
+        catalogPage.sortByPriceLowToHigh();
+        catalogPage.checkIfProductsAreSoretedByPriceLowToHigh();
+    }
 }

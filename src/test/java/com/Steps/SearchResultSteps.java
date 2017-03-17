@@ -24,4 +24,9 @@ public class SearchResultSteps extends ScenarioSteps {
         mainPage.searchForTerm(searchTerm);
         searchResultPage.compareResultsListedAgainstSearchResultsCounter();
     }
+    @StepGroup
+    public void checkErrorMessageIsDisplayedForNoResultsSearch(String searchTerm){
+        mainPage.searchForTerm(searchTerm);
+        searchResultPage.checkErrorMessageForIncorrectSearch();
+    }
 }

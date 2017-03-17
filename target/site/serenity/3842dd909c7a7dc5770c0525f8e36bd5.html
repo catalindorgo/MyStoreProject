@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="UTF-8"/>
-    <title>Compare search listed items to number of search results</title>
+    <title>Check women product list is correctly sorted by price low to high</title>
     <link rel="shortcut icon" href="favicon.ico">
 
 <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
@@ -40,7 +40,7 @@
         <span class="breadcrumbs">
             <a href="index.html" class="breadcrumbs">Home</a>
 
-            > Compare search listed items to number of search results
+            > Check women product list is correctly sorted by price low to high
         </span>
         </div>
         <div class="rightbg"></div>
@@ -64,7 +64,7 @@
             <a href="5f5dee50b3955739bfb580c79f480d2e.html"><i class="fa fa-comments-o"></i> Stories</a>
         </li>
     </ul>
-    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 17-03-2017 10:42</span>
+    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 17-03-2017 16:14</span>
     <br style="clear:left"/>
 </div>
     <div class="clr"></div>
@@ -79,7 +79,7 @@
                             <div>
                                 <h3 class="discreet-story-header">
                                     <i class="fa fa-2x fa-comments-o"></i>
-                                    <span class="story-header-title">Search Result Tests</span>
+                                    <span class="story-header-title">Catalog Tests</span>
                                 </h3>
 
                                 <div class="discreet-requirement-narrative-title">
@@ -97,10 +97,10 @@
                 <table class="outcome-header">
                     <tr>
                         <td colspan="2" class="test-title-bar">
-                            <span class="outcome-icon"><i class='fa fa-check-square-o success-icon fa-3x' title='SUCCESS'></i></span>
+                            <span class="outcome-icon"><i class='fa fa-exclamation-triangle error-icon fa-3x' title='ERROR'></i></span>
                             <span class="test-case-title">
-                                <span class="success-color">
-                                    Compare Search Listed Items To Number Of Search Results
+                                <span class="error-color">
+                                    Check Women Product List Is Correctly Sorted By Price Low To High
                                         <span class="related-issue-title"></span>
                                 </span>
                             </span>
@@ -134,34 +134,79 @@
                 <tr class="step-table-separator">
                     <td colspan="5"></td>
                 </tr>
-                <tr class="test-SUCCESS">
+                <tr class="test-ERROR">
                     <td width="60" class="step-icon">
                         <a name="0"/>
                             <span style="margin-left: 20px; margin-right: 5px;"
-                                  class="top-level-icon"><i class='fa fa-check-square-o success-icon ' title='SUCCESS'></i></span>
+                                  class="top-level-icon"><i class='fa fa-exclamation-triangle error-icon ' title='ERROR'></i></span>
                     </td>
                     <td>
                         <div class="step-description">
-                            <span class="top-level-step">Compare search listed items to number of search results: Summer</span>
+                            <span class="top-level-step">Check women product list is correctly sorted by price low to high</span>
 
                         </div>
                     </td>
-                        <td width="100" class="SUCCESS-text">
-                                <a href="c17ff2a64594670ad0ee3929dc1c48d1_screenshots.html#screenshots?screenshot=0">
+                        <td width="100" class="ERROR-text">
+                                <a href="3842dd909c7a7dc5770c0525f8e36bd5_screenshots.html#screenshots?screenshot=0">
                                     <!-- Added invalid href-attribute to img for imgpreviewer -->
-                                    <img src="b6986c5dddae2636a9eb0b658f0d956f.png"
-                                         href="b6986c5dddae2636a9eb0b658f0d956f.png"
+                                    <img src="76f852479e27a450980711b2d848b309.png"
+                                         href="76f852479e27a450980711b2d848b309.png"
                                          class="screenshot"
                                          width="48" height="48"/>
                                 </a>
                         </td>
-                    <td width="100"><span class="top-level-step">SUCCESS</span></td>
-                    <td width="100"><span class="top-level-step">5.3s</span></td>
+                    <td width="100"><span class="top-level-step">ERROR</span></td>
+                    <td width="100"><span class="top-level-step">6.14s</span></td>
                 </tr>
-                <tr class="test-SUCCESS">
+                    <tr class="test-ERROR">
+                        <td width="40">&nbsp</td>
+                        <td width="%" colspan="4" class="error-message-cell">
+                            <div class="error-message ellipsis"
+                                 title='Unexpected tag name exception: Element should have been &quot;select&quot; but was &quot;form&quot;'>
+                                <pre>Unexpected tag name exception: Element should have been &quot;select&quot; but was &quot;form&quot;</pre>
+                            </div>
+                <div><!-- Stack trace -->
+                    <button type="button" class="btn btn-danger btn-sm" data-toggle="modal"
+                            data-target="#stacktraceModal">
+                        View stack trace
+                    </button>
+                </div>
+                <!-- Modal -->
+                <div class="modal fade" id="stacktraceModal" tabindex="-1" role="dialog"
+                     aria-labelledby="stacktraceModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal"
+                                        aria-label="Close"><span aria-hidden="true">&times;</span>
+                                </button>
+                                <h4 class="modal-title" id="stacktraceModalLabel">
+                                org.openqa.selenium.support.ui.UnexpectedTagNameException
+                                </h4>
+                            </div>
+                            <div class="modal-body">
+                                    <h5>Element should have been "select" but was "form"<br>Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'<br>System info: host: 'IXDELL6NHXRC2', ip: '10.10.70.201', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_111'<br>Driver info: driver.version: unknown</h5>
+                                com.pages.CatalogPage.sortByPriceLowToHigh(CatalogPage.java
+                                    :164) <br>
+                                com.Steps.CatalogSteps.checkWomenProductListIsCorrectlySortedByPriceLowToHigh(CatalogSteps.java
+                                    :56) <br>
+                                com.Tests.CatalogTests.checkWomenProductListIsCorrectlySortedByPriceLowToHigh(CatalogTests.java
+                                    :65) <br>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">
+                                    Close
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                        </td>
+                    </tr>
+                <tr class="test-ERROR">
                     <td colspan="3"></td>
-                    <td width="100"><span class="top-level-step"><em>SUCCESS</em></span></td>
-                    <td width="100"><span class="top-level-step"><em>13.72s</em></span></td>
+                    <td width="100"><span class="top-level-step"><em>ERROR</em></span></td>
+                    <td width="100"><span class="top-level-step"><em>14.58s</em></span></td>
                 </tr>
 
             </table>

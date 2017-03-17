@@ -26,12 +26,16 @@ public class SearchResultTests {
         webDriver.manage().window().maximize();
         searchResultSteps.checkIfSearchResultRetainsTheSearchTerm("SUMMER");
     }
-//IN PROGRESS - below test does not work yet since the Char that I;m getting in the Page Method seems not to be the first in the list since the HTML is written badly
-    //check the xpath for the SearchResultCounter and check the text format in console.
     @Test
     public void compareSearchListedItemsToNumberOfSearchResults(){
         webDriver.get("http://automationpractice.com/index.php");
         webDriver.manage().window().maximize();
         searchResultSteps.compareSearchListedItemsToNumberOfSearchResults("Summer");
+    }
+    @Test
+    public void checkErrorMessageIsDisplayedForNoResultsSearch(){
+        webDriver.get("http://automationpractice.com/index.php");
+        webDriver.manage().window().maximize();
+        searchResultSteps.checkErrorMessageIsDisplayedForNoResultsSearch("ErrorTerm");
     }
 }
