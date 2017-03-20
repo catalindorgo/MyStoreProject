@@ -64,7 +64,7 @@
             <a href="5f5dee50b3955739bfb580c79f480d2e.html"><i class="fa fa-comments-o"></i> Stories</a>
         </li>
     </ul>
-    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 17-03-2017 16:14</span>
+    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 20-03-2017 17:08</span>
     <br style="clear:left"/>
 </div>
     <div class="clr"></div>
@@ -142,7 +142,7 @@
                     </td>
                     <td>
                         <div class="step-description">
-                            <span class="top-level-step">Check women product list is correctly sorted by price low to high</span>
+                            <span class="top-level-step">Check women product list is correctly sorted by price low to high: Price: Lowest first</span>
 
                         </div>
                     </td>
@@ -156,14 +156,14 @@
                                 </a>
                         </td>
                     <td width="100"><span class="top-level-step">ERROR</span></td>
-                    <td width="100"><span class="top-level-step">6.14s</span></td>
+                    <td width="100"><span class="top-level-step">9.84s</span></td>
                 </tr>
                     <tr class="test-ERROR">
                         <td width="40">&nbsp</td>
                         <td width="%" colspan="4" class="error-message-cell">
                             <div class="error-message ellipsis"
-                                 title='Unexpected tag name exception: Element should have been &quot;select&quot; but was &quot;form&quot;'>
-                                <pre>Unexpected tag name exception: Element should have been &quot;select&quot; but was &quot;form&quot;</pre>
+                                 title='Number format exception: empty String'>
+                                <pre>Number format exception: empty String</pre>
                             </div>
                 <div><!-- Stack trace -->
                     <button type="button" class="btn btn-danger btn-sm" data-toggle="modal"
@@ -181,15 +181,15 @@
                                         aria-label="Close"><span aria-hidden="true">&times;</span>
                                 </button>
                                 <h4 class="modal-title" id="stacktraceModalLabel">
-                                org.openqa.selenium.support.ui.UnexpectedTagNameException
+                                java.lang.NumberFormatException
                                 </h4>
                             </div>
                             <div class="modal-body">
-                                    <h5>Element should have been "select" but was "form"<br>Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'<br>System info: host: 'IXDELL6NHXRC2', ip: '10.10.70.201', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_111'<br>Driver info: driver.version: unknown</h5>
-                                com.pages.CatalogPage.sortByPriceLowToHigh(CatalogPage.java
-                                    :164) <br>
+                                    <h5>empty String</h5>
+                                com.pages.CatalogPage.checkIfProductsAreSoretedByPriceLowToHigh(CatalogPage.java
+                                    :116) <br>
                                 com.Steps.CatalogSteps.checkWomenProductListIsCorrectlySortedByPriceLowToHigh(CatalogSteps.java
-                                    :56) <br>
+                                    :57) <br>
                                 com.Tests.CatalogTests.checkWomenProductListIsCorrectlySortedByPriceLowToHigh(CatalogTests.java
                                     :65) <br>
                             </div>
@@ -206,7 +206,7 @@
                 <tr class="test-ERROR">
                     <td colspan="3"></td>
                     <td width="100"><span class="top-level-step"><em>ERROR</em></span></td>
-                    <td width="100"><span class="top-level-step"><em>14.58s</em></span></td>
+                    <td width="100"><span class="top-level-step"><em>18.34s</em></span></td>
                 </tr>
 
             </table>

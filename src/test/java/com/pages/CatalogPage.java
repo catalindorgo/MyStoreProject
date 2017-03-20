@@ -53,14 +53,17 @@ public class CatalogPage extends GeneralMethods {
     @FindBy(xpath = "//div[@class='rte']//p[contains(text(), 'every day')]")
     private WebElement casualDressesBanner;
 
-    @FindBy(xpath = "//li/div/div/div/span[@itemprop]")
-    private List<WebElement> priceOfProductList;
+   // @FindBy(xpath = "//li/div/div/div/span[@itemprop]")
+    //@FindBy(xpath = "//div[@id='center_column']//div[@class='right-block']//span[@itemprop='price']")
+    //private List<WebElement> priceOfProductList;
 
-    @FindBy(xpath = "//form[@id='productsSortForm']")
+    @FindBy(xpath = "//div[@id='uniform-selectProductSort']")
     private WebElement sortByDropDownButton;
 
     @FindBy(xpath = "//select[@id='selectProductSort']/option[@value='position:asc']")
     private WebElement sortByPriceLowToHigh;
+
+    String LIST_OF_PRODUCT_PRICES = "//form[@id='productsSortForm']//span[text()='%value%']/../../../../../..//li/div/div/div/span[@itemprop]";
 
     public void checkWomenPageTitleAndBannerAndListedItems() {
         checkPageTitleAndBanner(womenPageTitle, womenBanner);
@@ -91,97 +94,32 @@ public class CatalogPage extends GeneralMethods {
         checkPageTitleAndBanner(casualDressesPageTitle, casualDressesBanner);
         compareNumberOfProductsListedAgainstProductCounter(numberOfProductsCounterPerPage, listOfProductsPerPage);
     }
-    public void sortByPriceLowToHigh(){
-        WebDriver driver = new WebDriver() {
-            @Override
-            public void get(String url) {
-
-            }
-
-            @Override
-            public String getCurrentUrl() {
-                return null;
-            }
-
-            @Override
-            public String getTitle() {
-                return null;
-            }
-
-            @Override
-            public List<WebElement> findElements(By by) {
-                return null;
-            }
-
-            @Override
-            public WebElement findElement(By by) {
-                return null;
-            }
-
-            @Override
-            public String getPageSource() {
-                return null;
-            }
-
-            @Override
-            public void close() {
-
-            }
-
-            @Override
-            public void quit() {
-
-            }
-
-            @Override
-            public Set<String> getWindowHandles() {
-                return null;
-            }
-
-            @Override
-            public String getWindowHandle() {
-                return null;
-            }
-
-            @Override
-            public TargetLocator switchTo() {
-                return null;
-            }
-
-            @Override
-            public Navigation navigate() {
-                return null;
-            }
-
-            @Override
-            public Options manage() {
-                return null;
-            }
-        };
-        WebDriverWait webDriverWait = new WebDriverWait(driver, 4);
-        webDriverWait.until(ExpectedConditions.visibilityOf(sortByDropDownButton));
+    public void sortByPriceLowToHigh(String sortByOption){
         sortByDropDownButton.click();
-        // nu reusesc sa selectez nicio optiune din acest drop down. Fie cu index fie cu selectbytext sau mai rau cu click.
-        Select dropdown = new Select(sortByDropDownButton);
-        dropdown.selectByIndex(2);
-
+        WebElement dropdown = getDriver().findElement(By.id("selectProductSort"));
+        Select dropdown1 = new Select(dropdown);
+        dropdown1.selectByVisibleText(sortByOption);
+        waitABit(2000);
 
 
     }
-    public void checkIfProductsAreSoretedByPriceLowToHigh() {
-        List<Integer> priceList = new ArrayList<Integer>();
-        int i;
+    public void checkIfProductsAreSoretedByPriceLowToHigh(String sortByOption) {
+        List<Double> priceList = new ArrayList<Double>();
+        int productPositionInList;
         boolean a = false;
+        List<WebElement> listOfProductPrices = getDriver().findElements(By.xpath(LIST_OF_PRODUCT_PRICES.replace("%value%", sortByOption)));
+        for (WebElement wb : listOfProductPrices) {
 
-        for (WebElement wb : priceOfProductList) {
-            String priceString = wb.getText().substring(1, 3);
-            int priceInteger = Integer.parseInt(priceString);
-            priceList.add(priceInteger);
+            String priceString = wb.getText();
+            System.out.println(priceString);
+
+            double priceFloat = Double.parseDouble(priceString);
+            priceList.add(priceFloat);
             System.out.println(priceString);
         }
 
-        for (i = 1; i < priceList.size(); i++) {
-            if (priceList.get(i-1) > priceList.get(i)) {
+        for (productPositionInList = 1; productPositionInList < priceList.size(); productPositionInList++) {
+            if (priceList.get(productPositionInList-1) < priceList.get(productPositionInList)) {
                 a = true;
             }else {
                 a = false;

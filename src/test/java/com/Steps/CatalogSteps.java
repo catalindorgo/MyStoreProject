@@ -51,9 +51,9 @@ public class CatalogSteps extends ScenarioSteps {
     }
 
     @StepGroup
-    public void checkWomenProductListIsCorrectlySortedByPriceLowToHigh(){
+    public void checkWomenProductListIsCorrectlySortedByPriceLowToHigh(String sortByOption){
         mainPage.clickOnWomenSection();
-        catalogPage.sortByPriceLowToHigh();
-        catalogPage.checkIfProductsAreSoretedByPriceLowToHigh();
+        catalogPage.sortByPriceLowToHigh(sortByOption);
+        catalogPage.checkIfProductsAreSoretedByPriceLowToHigh(sortByOption);
     }
 }

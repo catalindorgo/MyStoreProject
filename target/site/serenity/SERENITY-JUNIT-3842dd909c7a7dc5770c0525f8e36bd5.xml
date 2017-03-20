@@ -1,11 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?><testsuite errors="1" failures="0" name="com.Tests.CatalogTests" skipped="0" tests="1" time="14.58" timestamp="2017-03-76 04:14:44"><testcase classname="com.Tests.CatalogTests" name="Check women product list is correctly sorted by price low to high"><error message="Element should have been &quot;select&quot; but was &quot;form&quot;&#10;Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'&#10;System info: host: 'IXDELL6NHXRC2', ip: '10.10.70.201', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_111'&#10;Driver info: driver.version: unknown" type="org.openqa.selenium.support.ui.UnexpectedTagNameException">Element should have been "select" but was "form"
-Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
-System info: host: 'IXDELL6NHXRC2', ip: '10.10.70.201', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_111'
-Driver info: driver.version: unknown</error><system-err>Element should have been "select" but was "form"
-Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
-System info: host: 'IXDELL6NHXRC2', ip: '10.10.70.201', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_111'
-Driver info: driver.version: unknown&#13;
-com.pages.CatalogPage.sortByPriceLowToHigh(CatalogPage.java:164)&#13;
-com.Steps.CatalogSteps.checkWomenProductListIsCorrectlySortedByPriceLowToHigh(CatalogSteps.java:56)&#13;
+<?xml version="1.0" encoding="UTF-8"?><testsuite errors="1" failures="0" name="com.Tests.CatalogTests" skipped="0" tests="1" time="18.34" timestamp="2017-03-79 05:08:50"><testcase classname="com.Tests.CatalogTests" name="Check women product list is correctly sorted by price low to high"><error message="empty String" type="java.lang.NumberFormatException">empty String</error><system-err>empty String&#13;
+com.pages.CatalogPage.checkIfProductsAreSoretedByPriceLowToHigh(CatalogPage.java:116)&#13;
+com.Steps.CatalogSteps.checkWomenProductListIsCorrectlySortedByPriceLowToHigh(CatalogSteps.java:57)&#13;
 com.Tests.CatalogTests.checkWomenProductListIsCorrectlySortedByPriceLowToHigh(CatalogTests.java:65)&#13;
 </system-err></testcase></testsuite>
