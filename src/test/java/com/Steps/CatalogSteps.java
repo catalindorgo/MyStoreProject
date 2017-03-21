@@ -2,12 +2,8 @@ package com.Steps;
 
 import com.pages.CatalogPage;
 import com.pages.MainPage;
-import net.thucydides.core.annotations.Step;
 import net.thucydides.core.annotations.StepGroup;
 import net.thucydides.core.steps.ScenarioSteps;
-import org.openqa.selenium.WebElement;
-
-import java.util.List;
 
 /**
  * Created by catalindorgo on 3/15/2017.
@@ -53,7 +49,33 @@ public class CatalogSteps extends ScenarioSteps {
     @StepGroup
     public void checkWomenProductListIsCorrectlySortedByPriceLowToHigh(String sortByOption){
         mainPage.clickOnWomenSection();
-        catalogPage.sortByPriceLowToHigh(sortByOption);
+        catalogPage.sortByUserOption(sortByOption);
         catalogPage.checkIfProductsAreSoretedByPriceLowToHigh(sortByOption);
     }
+
+    @StepGroup
+    public void checkWomenProductListIsCorrectlySortedByPriceHighToLow(String sortByOption) {
+        mainPage.clickOnWomenSection();
+        catalogPage.sortByUserOption(sortByOption);
+        catalogPage.checkIfProductsAreSoretedByPriceHighToLow(sortByOption);
+    }
+    @StepGroup
+    public void checkIfWomenProductsAreInStock(String sortByOption){
+        mainPage.clickOnWomenSection();
+        catalogPage.sortByUserOption(sortByOption);
+        catalogPage.checkIfProductIsInStock();
+    }
+    @StepGroup
+    public void checkIfWomenProductsAreSortedAlphabeticallyAtoZ(String sortByOption){
+        mainPage.clickOnWomenSection();
+        catalogPage.sortByUserOption(sortByOption);
+        catalogPage.checkIfProductsAreSortedAlphabeticallyAtoZ();
+    }
+    @StepGroup
+    public void checkIfWomenProductsAreSortedAlphabeticallyZtoA(String sortByOption){
+        mainPage.clickOnWomenSection();
+        catalogPage.sortByUserOption(sortByOption);
+        catalogPage.checkIfProductsAreSortedAlphabeticallyZtoA();
+    }
+
 }

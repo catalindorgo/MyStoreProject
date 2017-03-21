@@ -57,11 +57,38 @@ public class CatalogTests {
         webDriver.manage().window().maximize();
         catalogSteps.checkCasualDressesSubSectionFromDressesTitleBannerAndListedItems();
     }
-// Testul de mai jos crapa.
+// Testul de mai jos NU MAI crapa.
     @Test
     public void checkWomenProductListIsCorrectlySortedByPriceLowToHigh(){
         webDriver.get("http://automationpractice.com/index.php");
         webDriver.manage().window().maximize();
         catalogSteps.checkWomenProductListIsCorrectlySortedByPriceLowToHigh("Price: Lowest first");
     }
+
+    @Test
+    public void checkWomenProductListIsCorrectlySortedByPriceHighToLow(){
+        webDriver.get("http://automationpractice.com/index.php");
+        webDriver.manage().window().maximize();
+        catalogSteps.checkWomenProductListIsCorrectlySortedByPriceHighToLow("Price: Highest first");
+    }
+
+    @Test
+    public void checkIfWomenProductsAreInStock(){
+        webDriver.get("http://automationpractice.com/index.php");
+        webDriver.manage().window().maximize();
+        catalogSteps.checkIfWomenProductsAreInStock("In stock");
+    }
+
+    @Test
+    public void checkIfWomenProductsAreSortedAlphabeticallyAtoZ(){
+        webDriver.get("http://automationpractice.com/index.php");
+        webDriver.manage().window().maximize();
+        catalogSteps.checkIfWomenProductsAreSortedAlphabeticallyAtoZ("Product Name: A to Z");
+    }
+    @Test
+    public void checkIfWomenProductsAreSortedAlphabeticallyZtoA(){
+        webDriver.get("http://automationpractice.com/index.php");
+        webDriver.manage().window().maximize();
+        catalogSteps.checkIfWomenProductsAreSortedAlphabeticallyZtoA("Product Name: Z to A");
 }
+    }

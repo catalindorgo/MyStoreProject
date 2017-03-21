@@ -1,5 +1,1 @@
-<?xml version="1.0" encoding="UTF-8"?><testsuite errors="1" failures="0" name="com.Tests.CatalogTests" skipped="0" tests="1" time="18.34" timestamp="2017-03-79 05:08:50"><testcase classname="com.Tests.CatalogTests" name="Check women product list is correctly sorted by price low to high"><error message="empty String" type="java.lang.NumberFormatException">empty String</error><system-err>empty String&#13;
-com.pages.CatalogPage.checkIfProductsAreSoretedByPriceLowToHigh(CatalogPage.java:116)&#13;
-com.Steps.CatalogSteps.checkWomenProductListIsCorrectlySortedByPriceLowToHigh(CatalogSteps.java:57)&#13;
-com.Tests.CatalogTests.checkWomenProductListIsCorrectlySortedByPriceLowToHigh(CatalogTests.java:65)&#13;
-</system-err></testcase></testsuite>
+<?xml version="1.0" encoding="UTF-8"?><testsuite errors="0" failures="0" name="com.Tests.CatalogTests" skipped="0" tests="1" time="16.98" timestamp="2017-03-80 11:41:10"><testcase classname="com.Tests.CatalogTests" name="Check women product list is correctly sorted by price low to high"/></testsuite>

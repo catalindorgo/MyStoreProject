@@ -10,6 +10,7 @@ import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.Set;
 
@@ -63,6 +64,15 @@ public class CatalogPage extends GeneralMethods {
     @FindBy(xpath = "//select[@id='selectProductSort']/option[@value='position:asc']")
     private WebElement sortByPriceLowToHigh;
 
+    @FindBy(xpath = "//form[@id='productsSortForm']//span[text()='In stock']/../../../../../..//li//span[@class='available-now']")
+    private List<WebElement> listOfProductsInStockAttribute;
+
+    @FindBy(xpath = "//form[@id='productsSortForm']//span[text()='Product Name: A to Z']/../../../../../..//li//a[@class='product-name']")
+    private List<WebElement> listOfProductsNamesAtoZ;
+
+    @FindBy(xpath = "//form[@id='productsSortForm']//span[text()='Product Name: Z to A']/../../../../../..//li//a[@class='product-name']")
+    private List<WebElement> listOfProductsNamesZtoA;
+
     String LIST_OF_PRODUCT_PRICES = "//form[@id='productsSortForm']//span[text()='%value%']/../../../../../..//li/div/div/div/span[@itemprop]";
 
     public void checkWomenPageTitleAndBannerAndListedItems() {
@@ -94,7 +104,7 @@ public class CatalogPage extends GeneralMethods {
         checkPageTitleAndBanner(casualDressesPageTitle, casualDressesBanner);
         compareNumberOfProductsListedAgainstProductCounter(numberOfProductsCounterPerPage, listOfProductsPerPage);
     }
-    public void sortByPriceLowToHigh(String sortByOption){
+    public void sortByUserOption(String sortByOption){
         sortByDropDownButton.click();
         WebElement dropdown = getDriver().findElement(By.id("selectProductSort"));
         Select dropdown1 = new Select(dropdown);
@@ -110,12 +120,10 @@ public class CatalogPage extends GeneralMethods {
         List<WebElement> listOfProductPrices = getDriver().findElements(By.xpath(LIST_OF_PRODUCT_PRICES.replace("%value%", sortByOption)));
         for (WebElement wb : listOfProductPrices) {
 
-            String priceString = wb.getText();
-            System.out.println(priceString);
-
+            String priceString = wb.getAttribute("innerHTML").replace("$", "");
+            System.out.println(  priceString);
             double priceFloat = Double.parseDouble(priceString);
             priceList.add(priceFloat);
-            System.out.println(priceString);
         }
 
         for (productPositionInList = 1; productPositionInList < priceList.size(); productPositionInList++) {
@@ -127,5 +135,67 @@ public class CatalogPage extends GeneralMethods {
             }
         }
         Assert.assertTrue("not sorted correctly", a == true);
+    }
+    public void checkIfProductsAreSoretedByPriceHighToLow(String sortByOption) {
+        List<Double> priceList = new ArrayList<Double>();
+        int productPositionInList;
+        boolean a = false;
+        List<WebElement> listOfProductPrices = getDriver().findElements(By.xpath(LIST_OF_PRODUCT_PRICES.replace("%value%", sortByOption)));
+        for (WebElement wb : listOfProductPrices) {
+
+            String priceString = wb.getAttribute("innerHTML").replace("$", "");
+            System.out.println(  priceString);
+            double priceFloat = Double.parseDouble(priceString);
+            priceList.add(priceFloat);
+        }
+
+        for (productPositionInList = 1; productPositionInList < priceList.size(); productPositionInList++) {
+            if (priceList.get(productPositionInList-1) > priceList.get(productPositionInList)) {
+                a = true;
+            }else {
+                a = false;
+                break;
+            }
+        }
+        Assert.assertTrue("not sorted correctly", a == true);
+    }
+
+    public void checkIfProductIsInStock(){
+        for (WebElement webElement : listOfProductsInStockAttribute){
+            Assert.assertTrue("Your product is not on stock", webElement.getText().contains("In stock"));
+            System.out.println(webElement);
+        }
+    }
+
+    public void checkIfProductsAreSortedAlphabeticallyAtoZ(){
+        List<String> productNamesDefaultOrderList = new ArrayList<>();
+        List<String> productNamesSortedAtoZ = new ArrayList<>();
+
+        for(WebElement we : listOfProductsNamesAtoZ){
+            productNamesDefaultOrderList.add(we.getText());}
+        for(String nameString : productNamesDefaultOrderList){
+                productNamesSortedAtoZ.add(nameString);}
+
+        Collections.sort(productNamesSortedAtoZ);
+        System.out.println(productNamesSortedAtoZ);
+        System.out.println("original list"+ productNamesDefaultOrderList);
+        Assert.assertTrue("Your list is not ordered A to Z", productNamesSortedAtoZ.equals(productNamesDefaultOrderList));
+    }
+    public void checkIfProductsAreSortedAlphabeticallyZtoA(){
+        List<String> productNamesDefaultOrderList = new ArrayList<>();
+        List<String> productNamesSortedAtoZ = new ArrayList<>();
+
+        for(WebElement we : listOfProductsNamesZtoA){
+            productNamesDefaultOrderList.add(we.getText());}
+        for(String nameString : productNamesDefaultOrderList){
+            productNamesSortedAtoZ.add(nameString);}
+
+        Collections.sort(productNamesSortedAtoZ);
+        Collections.reverse(productNamesSortedAtoZ);
+
+        System.out.println(productNamesSortedAtoZ);
+        System.out.println("original list"+ productNamesDefaultOrderList);
+        Assert.assertTrue("Your list is not ordered Z to A", productNamesSortedAtoZ.equals(productNamesDefaultOrderList));
+
     }
 }

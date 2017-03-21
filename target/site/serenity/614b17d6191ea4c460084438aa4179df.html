@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="UTF-8"/>
-    <title>Check women product list is correctly sorted by price low to high</title>
+    <title>Check if women products are sorted alphabetically zto a</title>
     <link rel="shortcut icon" href="favicon.ico">
 
 <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
@@ -40,7 +40,7 @@
         <span class="breadcrumbs">
             <a href="index.html" class="breadcrumbs">Home</a>
 
-            > Check women product list is correctly sorted by price low to high
+            > Check if women products are sorted alphabetically zto a
         </span>
         </div>
         <div class="rightbg"></div>
@@ -64,7 +64,7 @@
             <a href="5f5dee50b3955739bfb580c79f480d2e.html"><i class="fa fa-comments-o"></i> Stories</a>
         </li>
     </ul>
-    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 21-03-2017 11:41</span>
+    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 21-03-2017 16:45</span>
     <br style="clear:left"/>
 </div>
     <div class="clr"></div>
@@ -97,10 +97,10 @@
                 <table class="outcome-header">
                     <tr>
                         <td colspan="2" class="test-title-bar">
-                            <span class="outcome-icon"><i class='fa fa-check-square-o success-icon fa-3x' title='SUCCESS'></i></span>
+                            <span class="outcome-icon"><i class='fa fa-times-circle failure-icon fa-3x' title='FAILURE'></i></span>
                             <span class="test-case-title">
-                                <span class="success-color">
-                                    Check Women Product List Is Correctly Sorted By Price Low To High
+                                <span class="failing-color">
+                                    Check If Women Products Are Sorted Alphabetically Zto A
                                         <span class="related-issue-title"></span>
                                 </span>
                             </span>
@@ -134,20 +134,20 @@
                 <tr class="step-table-separator">
                     <td colspan="5"></td>
                 </tr>
-                <tr class="test-SUCCESS">
+                <tr class="test-FAILURE">
                     <td width="60" class="step-icon">
                         <a name="0"/>
                             <span style="margin-left: 20px; margin-right: 5px;"
-                                  class="top-level-icon"><i class='fa fa-check-square-o success-icon ' title='SUCCESS'></i></span>
+                                  class="top-level-icon"><i class='fa fa-times-circle failure-icon ' title='FAILURE'></i></span>
                     </td>
                     <td>
                         <div class="step-description">
-                            <span class="top-level-step">Check women product list is correctly sorted by price low to high: Price: Highest first</span>
+                            <span class="top-level-step">Check if women products are sorted alphabetically zto a: Product Name: Z to A</span>
 
                         </div>
                     </td>
-                        <td width="100" class="SUCCESS-text">
-                                <a href="3842dd909c7a7dc5770c0525f8e36bd5_screenshots.html#screenshots?screenshot=0">
+                        <td width="100" class="FAILURE-text">
+                                <a href="614b17d6191ea4c460084438aa4179df_screenshots.html#screenshots?screenshot=0">
                                     <!-- Added invalid href-attribute to img for imgpreviewer -->
                                     <img src="76f852479e27a450980711b2d848b309.png"
                                          href="76f852479e27a450980711b2d848b309.png"
@@ -155,13 +155,58 @@
                                          width="48" height="48"/>
                                 </a>
                         </td>
-                    <td width="100"><span class="top-level-step">SUCCESS</span></td>
-                    <td width="100"><span class="top-level-step">8.33s</span></td>
+                    <td width="100"><span class="top-level-step">FAILURE</span></td>
+                    <td width="100"><span class="top-level-step">8.67s</span></td>
                 </tr>
-                <tr class="test-SUCCESS">
+                    <tr class="test-FAILURE">
+                        <td width="40">&nbsp</td>
+                        <td width="%" colspan="4" class="error-message-cell">
+                            <div class="error-message ellipsis"
+                                 title='Assertion error: Your list is not ordered Z to A'>
+                                <pre>Assertion error: Your list is not ordered Z to A</pre>
+                            </div>
+                <div><!-- Stack trace -->
+                    <button type="button" class="btn btn-danger btn-sm" data-toggle="modal"
+                            data-target="#stacktraceModal">
+                        View stack trace
+                    </button>
+                </div>
+                <!-- Modal -->
+                <div class="modal fade" id="stacktraceModal" tabindex="-1" role="dialog"
+                     aria-labelledby="stacktraceModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal"
+                                        aria-label="Close"><span aria-hidden="true">&times;</span>
+                                </button>
+                                <h4 class="modal-title" id="stacktraceModalLabel">
+                                java.lang.AssertionError
+                                </h4>
+                            </div>
+                            <div class="modal-body">
+                                    <h5>Your list is not ordered Z to A</h5>
+                                com.pages.CatalogPage.checkIfProductsAreSortedAlphabeticallyZtoA(CatalogPage.java
+                                    :198) <br>
+                                com.Steps.CatalogSteps.checkIfWomenProductsAreSortedAlphabeticallyZtoA(CatalogSteps.java
+                                    :78) <br>
+                                com.Tests.CatalogTests.checkIfWomenProductsAreSortedAlphabeticallyZtoA(CatalogTests.java
+                                    :92) <br>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">
+                                    Close
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                        </td>
+                    </tr>
+                <tr class="test-FAILURE">
                     <td colspan="3"></td>
-                    <td width="100"><span class="top-level-step"><em>SUCCESS</em></span></td>
-                    <td width="100"><span class="top-level-step"><em>16.98s</em></span></td>
+                    <td width="100"><span class="top-level-step"><em>FAILURE</em></span></td>
+                    <td width="100"><span class="top-level-step"><em>17.6s</em></span></td>
                 </tr>
 
             </table>
