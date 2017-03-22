@@ -1,6 +1,7 @@
 package com.Steps;
 
 import com.pages.CatalogPage;
+import com.pages.GeneralMethods;
 import com.pages.MainPage;
 import net.thucydides.core.annotations.StepGroup;
 import net.thucydides.core.steps.ScenarioSteps;
@@ -11,6 +12,7 @@ import net.thucydides.core.steps.ScenarioSteps;
 public class CatalogSteps extends ScenarioSteps {
     MainPage mainPage;
     CatalogPage catalogPage;
+    GeneralMethods generalMethods;
 
     @StepGroup
     public void checkWomenPagesTitleAndBannerAndListedItems(){
@@ -78,4 +80,15 @@ public class CatalogSteps extends ScenarioSteps {
         catalogPage.checkIfProductsAreSortedAlphabeticallyZtoA();
     }
 
+    @StepGroup
+    public void clickCatalogCheckboxFromWomenSectionAndVerifyFiltering(String checkboxName){
+        mainPage.clickOnWomenSection();
+        catalogPage.clickCatalogCheckbox(checkboxName);
+    }
+
+    @StepGroup
+    public void clickColorCheckboxFromWomenSectionAndVerifyFiltering(String colorCheckbox){
+        mainPage.clickOnWomenSection();
+        catalogPage.clickColorCheckbox(colorCheckbox);
+    }
 }

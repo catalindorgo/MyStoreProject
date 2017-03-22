@@ -90,5 +90,19 @@ public class CatalogTests {
         webDriver.get("http://automationpractice.com/index.php");
         webDriver.manage().window().maximize();
         catalogSteps.checkIfWomenProductsAreSortedAlphabeticallyZtoA("Product Name: Z to A");
-}
     }
+
+    @Test
+    public void clickCatalogCheckboxFromWomenSectionAndVerifyFiltering(){
+        webDriver.get("http://automationpractice.com/index.php");
+        webDriver.manage().window().maximize();
+        catalogSteps.clickCatalogCheckboxFromWomenSectionAndVerifyFiltering("Tops");
+    }
+
+    @Test
+    public void clickColorCheckboxFromWomenSectionAndVerifyFiltering(){
+        webDriver.get("http://automationpractice.com/index.php");
+        webDriver.manage().window().maximize();
+        catalogSteps.clickColorCheckboxFromWomenSectionAndVerifyFiltering("Yellow");
+    }
+}

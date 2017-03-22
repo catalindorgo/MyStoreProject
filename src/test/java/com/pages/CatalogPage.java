@@ -73,7 +73,15 @@ public class CatalogPage extends GeneralMethods {
     @FindBy(xpath = "//form[@id='productsSortForm']//span[text()='Product Name: Z to A']/../../../../../..//li//a[@class='product-name']")
     private List<WebElement> listOfProductsNamesZtoA;
 
+    @FindBy(xpath = "//li/a[text()='List']")
+    private WebElement listViewButton;
+
     String LIST_OF_PRODUCT_PRICES = "//form[@id='productsSortForm']//span[text()='%value%']/../../../../../..//li/div/div/div/span[@itemprop]";
+    String LIST_OF_CHECKBOX_TEXT = "//input[@type='checkbox']/../../..//a[text()='%value%']";
+    String LIST_OF_COLOR_CHECKBOX = "//label[@class='layered_color']/a[text()='%value%']";
+    String LIST_OF_PRODUCT_NAMES ="(//div/div/h5/a)[%value%]";
+    String LIST_OF_ADD_TO_CART_BUTTONS ="(//div/a/span[text()='Add to cart'])[%value%]";
+
 
     public void checkWomenPageTitleAndBannerAndListedItems() {
         checkPageTitleAndBanner(womenPageTitle, womenBanner);
@@ -198,4 +206,24 @@ public class CatalogPage extends GeneralMethods {
         Assert.assertTrue("Your list is not ordered Z to A", productNamesSortedAtoZ.equals(productNamesDefaultOrderList));
 
     }
+
+    public void clickCatalogCheckbox(String checkboxName){
+        WebElement checkbox = getDriver().findElement(By.xpath(LIST_OF_CHECKBOX_TEXT.replace("%value%", checkboxName)));
+        checkbox.click();
+        compareNumberOfProductsListedAgainstProductCounter(numberOfProductsCounterPerPage, listOfProductsPerPage);
+    }
+
+    public void clickColorCheckbox(String checkboxColorName){
+        WebElement checkbox = getDriver().findElement(By.xpath(LIST_OF_COLOR_CHECKBOX.replace("%value%", checkboxColorName)));
+        checkbox.click();
+        compareNumberOfProductsListedAgainstProductCounter(numberOfProductsCounterPerPage, listOfProductsPerPage);
+    }
+
+    public void selectPriceRange(){}
+
+    public void viewProductsAsList(){
+        listViewButton.click();
+    }
+
+
 }
