@@ -18,7 +18,7 @@ public class CartPopUpSteps extends ScenarioSteps {
     public void addProductToCartAndCheckIfSuccessfullyAdded(String productIndex){
         mainPage.clickOnWomenSection();
         catalogPage.viewProductsAsList();
-        cartPopUpPage.addProductToCartAndCheckIfSuccessfullyAdded(productIndex);
-
+        catalogPage.addProductToCart(productIndex);
+        cartPopUpPage.checkAddedProductIsPresentInCartPopUp(productIndex);
     }
 }

@@ -64,7 +64,7 @@
             <a href="5f5dee50b3955739bfb580c79f480d2e.html"><i class="fa fa-comments-o"></i> Stories</a>
         </li>
     </ul>
-    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 10-03-2017 15:52</span>
+    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 24-03-2017 14:53</span>
     <br style="clear:left"/>
 </div>
     <div class="clr"></div>
@@ -97,9 +97,9 @@
                 <table class="outcome-header">
                     <tr>
                         <td colspan="2" class="test-title-bar">
-                            <span class="outcome-icon"><i class='fa fa-check-square-o success-icon fa-3x' title='SUCCESS'></i></span>
+                            <span class="outcome-icon"><i class='fa fa-exclamation-triangle error-icon fa-3x' title='ERROR'></i></span>
                             <span class="test-case-title">
-                                <span class="success-color">
+                                <span class="error-color">
                                     Register With Invalid Credentials And Check Error
                                         <span class="related-issue-title"></span>
                                 </span>
@@ -134,19 +134,19 @@
                 <tr class="step-table-separator">
                     <td colspan="5"></td>
                 </tr>
-                <tr class="test-SUCCESS">
+                <tr class="test-ERROR">
                     <td width="60" class="step-icon">
                         <a name="0"/>
                             <span style="margin-left: 20px; margin-right: 5px;"
-                                  class="top-level-icon"><i class='fa fa-check-square-o success-icon ' title='SUCCESS'></i></span>
+                                  class="top-level-icon"><i class='fa fa-exclamation-triangle error-icon ' title='ERROR'></i></span>
                     </td>
                     <td>
                         <div class="step-description">
-                            <span class="top-level-step">Register with invalid credentials and check error: matei@corvin.ro</span>
+                            <span class="top-level-step">Register with invalid credentials and check error: matei1@corvin.ro</span>
 
                         </div>
                     </td>
-                        <td width="100" class="SUCCESS-text">
+                        <td width="100" class="ERROR-text">
                                 <a href="c8984373f1cbbda9226aa491f190388e_screenshots.html#screenshots?screenshot=0">
                                     <!-- Added invalid href-attribute to img for imgpreviewer -->
                                     <img src="7ef6c8ee40b87a8277deac3ce14b327e.png"
@@ -155,13 +155,58 @@
                                          width="48" height="48"/>
                                 </a>
                         </td>
-                    <td width="100"><span class="top-level-step">SUCCESS</span></td>
-                    <td width="100"><span class="top-level-step">7.68s</span></td>
+                    <td width="100"><span class="top-level-step">ERROR</span></td>
+                    <td width="100"><span class="top-level-step">7.45s</span></td>
                 </tr>
-                <tr class="test-SUCCESS">
+                    <tr class="test-ERROR">
+                        <td width="40">&nbsp</td>
+                        <td width="%" colspan="4" class="error-message-cell">
+                            <div class="error-message ellipsis"
+                                 title='No such element exception: Timed out after 2 seconds. Element not found'>
+                                <pre>No such element exception: Timed out after 2 seconds. Element not found</pre>
+                            </div>
+                <div><!-- Stack trace -->
+                    <button type="button" class="btn btn-danger btn-sm" data-toggle="modal"
+                            data-target="#stacktraceModal">
+                        View stack trace
+                    </button>
+                </div>
+                <!-- Modal -->
+                <div class="modal fade" id="stacktraceModal" tabindex="-1" role="dialog"
+                     aria-labelledby="stacktraceModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal"
+                                        aria-label="Close"><span aria-hidden="true">&times;</span>
+                                </button>
+                                <h4 class="modal-title" id="stacktraceModalLabel">
+                                org.openqa.selenium.NoSuchElementException
+                                </h4>
+                            </div>
+                            <div class="modal-body">
+                                    <h5>Timed out after 2 seconds. Element not found<br>For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html<br>Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'<br>System info: host: 'IXDELL6NHXRC2', ip: '10.10.70.201', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_111'<br>Driver info: driver.version: unknown</h5>
+                                com.pages.AuthenticationPage.createAccountWithValidEmail(AuthenticationPage.java
+                                    :52) <br>
+                                com.Steps.SignUpSteps.registerWithInvalidCredentialsAndCheckError(SignUpSteps.java
+                                    :18) <br>
+                                com.Tests.SignUpTests.registerWithInvalidCredentialsAndCheckError(SignUpTests.java
+                                    :31) <br>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">
+                                    Close
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                        </td>
+                    </tr>
+                <tr class="test-ERROR">
                     <td colspan="3"></td>
-                    <td width="100"><span class="top-level-step"><em>SUCCESS</em></span></td>
-                    <td width="100"><span class="top-level-step"><em>16.63s</em></span></td>
+                    <td width="100"><span class="top-level-step"><em>ERROR</em></span></td>
+                    <td width="100"><span class="top-level-step"><em>15.51s</em></span></td>
                 </tr>
 
             </table>

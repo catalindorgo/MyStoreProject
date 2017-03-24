@@ -34,7 +34,7 @@ public class SignUpTests  {
     @Test
     public void registerNewAccountSuccessfully(){
         webDriver.get("http://automationpractice.com/index.php");
-        authenticationSteps.createAccountWithValidEmailAndVerifyLandingPage("admin1@yahoo.ro", "CREATE AN ACCOUNT");
+        authenticationSteps.createAccountWithValidEmailAndVerifyLandingPage("admin5@yahoo.ro", "CREATE AN ACCOUNT");
         signUpSteps.registerNewAccountSuccessfully("mr", "firstname", "lastname", "", "password", "4", "June", "1986", "randomAddress", "theaddress", "homeAdd", "chicago","Iowa", "00000", "2321312", "alias" );
     }
 }

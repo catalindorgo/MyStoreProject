@@ -16,7 +16,7 @@ import java.util.Set;
 /**
  * Created by catalindorgo on 3/10/2017.
  */
-public class SignUpPage extends PageObject {
+public class SignUpPage extends GeneralMethods {
 
     private String ERROR_MESSAGE_FOR_INVALID_CREDENTIALS = "//div//div[@class='alert alert-danger']";
     private String DAY_OF_BIRTH = "//select[@id='days']//option[@value='%value%']";
@@ -200,8 +200,12 @@ public class SignUpPage extends PageObject {
     }
     public void fillInAndRegisterUserAccountCredentials(String gender, String firstName, String lastName, String email,String password, String dayOfBirth, String month, String year, String addressFirstname, String addressLastname, String homeAddress, String cityName,String state, String zipCodeNumber, String mobilePhoneNumber, String alias ){
         String expectedWelcomingText = "Welcome to your account";
+        userMobilePhoneNumber = mobilePhoneNumber;
+        userFirstName = firstName;
+
+
         selectGender(gender);
-        firstNameField.sendKeys(firstName);;
+        firstNameField.sendKeys(firstName);
         lastNameField.sendKeys(lastName);
         emailField.sendKeys(email);
         passwordField.sendKeys( password);
@@ -218,5 +222,6 @@ public class SignUpPage extends PageObject {
         aliasAddress.sendKeys(alias);
         submitAccountButton.click();
         Assert.assertTrue("SingUp failed", welcomeToAccountText.getText().contains(expectedWelcomingText));
+        System.out.println(userFirstName +" and " +userMobilePhoneNumber);
     }
 }

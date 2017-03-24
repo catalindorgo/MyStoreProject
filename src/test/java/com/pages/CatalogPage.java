@@ -81,6 +81,7 @@ public class CatalogPage extends GeneralMethods {
     String LIST_OF_COLOR_CHECKBOX = "//label[@class='layered_color']/a[text()='%value%']";
     String LIST_OF_PRODUCT_NAMES ="(//div/div/h5/a)[%value%]";
     String LIST_OF_ADD_TO_CART_BUTTONS ="(//div/a/span[text()='Add to cart'])[%value%]";
+    public static String PRODUCT_NAME;
 
 
     public void checkWomenPageTitleAndBannerAndListedItems() {
@@ -217,6 +218,14 @@ public class CatalogPage extends GeneralMethods {
         WebElement checkbox = getDriver().findElement(By.xpath(LIST_OF_COLOR_CHECKBOX.replace("%value%", checkboxColorName)));
         checkbox.click();
         compareNumberOfProductsListedAgainstProductCounter(numberOfProductsCounterPerPage, listOfProductsPerPage);
+    }
+
+    public void addProductToCart (String productIndex){
+        WebElement product = getDriver().findElement(By.xpath(LIST_OF_PRODUCT_NAMES.replace("%value%", productIndex)));
+        WebElement addToCartButton = getDriver().findElement(By.xpath(LIST_OF_ADD_TO_CART_BUTTONS.replace("%value%", productIndex)));
+        addToCartButton.click();
+        PRODUCT_NAME = product.getText();
+        System.out.println(PRODUCT_NAME +  "   first");
     }
 
     public void selectPriceRange(){}

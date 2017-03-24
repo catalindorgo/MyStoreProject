@@ -7,7 +7,7 @@ import org.openqa.selenium.WebElement;
 /**
  * Created by catalindorgo on 3/14/2017.
  */
-public class ToolBarPage extends PageObject{
+public class ToolBarPage extends GeneralMethods{
     @FindBy(xpath = "//a[@class='login']")
     private WebElement signInButtonFromToolbar;
 

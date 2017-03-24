@@ -11,6 +11,9 @@ import java.util.List;
  * Created by catalindorgo on 3/15/2017.
  */
 public class GeneralMethods extends PageObject {
+    public static String userFirstName;
+    public static String userMobilePhoneNumber;
+
     public void compareNumberOfProductsListedAgainstProductCounter(WebElement nrOfProducts, List<WebElement> entriesPerPage ){
         String productCounterString = nrOfProducts.getText();
         int productCounter = 0;
