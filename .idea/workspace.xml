@@ -2,25 +2,46 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="345ba2e8-7730-427c-b4d4-e04fe2198b70" name="Default" comment="commit 2">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/com/Steps/ShoppingCartSteps.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/com/Tests/ShoppingCartTests.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/com/pages/ShoppingCartPage.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/com/Steps/CartPopUpSteps.class" afterPath="$PROJECT_DIR$/target/test-classes/com/Steps/CartPopUpSteps.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/com/pages/CartPopUpPage.class" afterPath="$PROJECT_DIR$/target/test-classes/com/pages/CartPopUpPage.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/com/pages/CatalogPage.class" afterPath="$PROJECT_DIR$/target/test-classes/com/pages/CatalogPage.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/com/Steps/QuickViewSteps.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/com/Tests/QuickViewTests.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/com/pages/QuickViewPage.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/com/Steps/ToolBarSteps.class" afterPath="$PROJECT_DIR$/target/test-classes/com/Steps/ToolBarSteps.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/com/Tests/CatalogTests.class" afterPath="$PROJECT_DIR$/target/test-classes/com/Tests/CatalogTests.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/com/Tests/MainTests.class" afterPath="$PROJECT_DIR$/target/test-classes/com/Tests/MainTests.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/com/Tests/SearchResultTests.class" afterPath="$PROJECT_DIR$/target/test-classes/com/Tests/SearchResultTests.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/com/Tests/ShoppingCartTests.class" afterPath="$PROJECT_DIR$/target/test-classes/com/Tests/ShoppingCartTests.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/com/Tests/SignUpTests.class" afterPath="$PROJECT_DIR$/target/test-classes/com/Tests/SignUpTests.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/com/Tests/ToolBarTests.class" afterPath="$PROJECT_DIR$/target/test-classes/com/Tests/ToolBarTests.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/com/pages/ToolBarPage.class" afterPath="$PROJECT_DIR$/target/test-classes/com/pages/ToolBarPage.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/Steps/CartPopUpSteps.java" afterPath="$PROJECT_DIR$/src/test/java/com/Steps/CartPopUpSteps.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/Steps/ToolBarSteps.java" afterPath="$PROJECT_DIR$/src/test/java/com/Steps/ToolBarSteps.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/Tests/AuthenticationTests.java" afterPath="$PROJECT_DIR$/src/test/java/com/Tests/AuthenticationTests.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/Tests/CartPopUpTests.java" afterPath="$PROJECT_DIR$/src/test/java/com/Tests/CartPopUpTests.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/Tests/CatalogTests.java" afterPath="$PROJECT_DIR$/src/test/java/com/Tests/CatalogTests.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/Tests/MainTests.java" afterPath="$PROJECT_DIR$/src/test/java/com/Tests/MainTests.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/Tests/SearchResultTests.java" afterPath="$PROJECT_DIR$/src/test/java/com/Tests/SearchResultTests.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/Tests/ShoppingCartTests.java" afterPath="$PROJECT_DIR$/src/test/java/com/Tests/ShoppingCartTests.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/Tests/SignUpTests.java" afterPath="$PROJECT_DIR$/src/test/java/com/Tests/SignUpTests.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/pages/CartPopUpPage.java" afterPath="$PROJECT_DIR$/src/test/java/com/pages/CartPopUpPage.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/Tests/ToolBarTests.java" afterPath="$PROJECT_DIR$/src/test/java/com/Tests/ToolBarTests.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/pages/CatalogPage.java" afterPath="$PROJECT_DIR$/src/test/java/com/pages/CatalogPage.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/pages/GeneralMethods.java" afterPath="$PROJECT_DIR$/src/test/java/com/pages/GeneralMethods.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/pages/SignUpPage.java" afterPath="$PROJECT_DIR$/src/test/java/com/pages/SignUpPage.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/pages/ToolBarPage.java" afterPath="$PROJECT_DIR$/src/test/java/com/pages/ToolBarPage.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/site/serenity/SERENITY-JUNIT-f6e7ff34c55f224e4b4e374cf72916c2.xml" afterPath="$PROJECT_DIR$/target/site/serenity/SERENITY-JUNIT-f6e7ff34c55f224e4b4e374cf72916c2.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/site/serenity/3842dd909c7a7dc5770c0525f8e36bd5.html" afterPath="$PROJECT_DIR$/target/site/serenity/3842dd909c7a7dc5770c0525f8e36bd5.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/site/serenity/3842dd909c7a7dc5770c0525f8e36bd5.json" afterPath="$PROJECT_DIR$/target/site/serenity/3842dd909c7a7dc5770c0525f8e36bd5.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/site/serenity/3842dd909c7a7dc5770c0525f8e36bd5_screenshots.html" afterPath="$PROJECT_DIR$/target/site/serenity/3842dd909c7a7dc5770c0525f8e36bd5_screenshots.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/site/serenity/614b17d6191ea4c460084438aa4179df.html" afterPath="$PROJECT_DIR$/target/site/serenity/614b17d6191ea4c460084438aa4179df.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/site/serenity/614b17d6191ea4c460084438aa4179df.json" afterPath="$PROJECT_DIR$/target/site/serenity/614b17d6191ea4c460084438aa4179df.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/site/serenity/614b17d6191ea4c460084438aa4179df_screenshots.html" afterPath="$PROJECT_DIR$/target/site/serenity/614b17d6191ea4c460084438aa4179df_screenshots.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/site/serenity/6f31b71e47a301dc43c9950932b5dbfd.html" afterPath="$PROJECT_DIR$/target/site/serenity/6f31b71e47a301dc43c9950932b5dbfd.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/site/serenity/6f31b71e47a301dc43c9950932b5dbfd.json" afterPath="$PROJECT_DIR$/target/site/serenity/6f31b71e47a301dc43c9950932b5dbfd.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/site/serenity/6f31b71e47a301dc43c9950932b5dbfd_screenshots.html" afterPath="$PROJECT_DIR$/target/site/serenity/6f31b71e47a301dc43c9950932b5dbfd_screenshots.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/site/serenity/795ded8e4d59300bfcbf2f599a18550b.html" afterPath="$PROJECT_DIR$/target/site/serenity/795ded8e4d59300bfcbf2f599a18550b.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/site/serenity/795ded8e4d59300bfcbf2f599a18550b.json" afterPath="$PROJECT_DIR$/target/site/serenity/795ded8e4d59300bfcbf2f599a18550b.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/site/serenity/795ded8e4d59300bfcbf2f599a18550b_screenshots.html" afterPath="$PROJECT_DIR$/target/site/serenity/795ded8e4d59300bfcbf2f599a18550b_screenshots.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/site/serenity/SERENITY-JUNIT-3842dd909c7a7dc5770c0525f8e36bd5.xml" afterPath="$PROJECT_DIR$/target/site/serenity/SERENITY-JUNIT-3842dd909c7a7dc5770c0525f8e36bd5.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/site/serenity/SERENITY-JUNIT-614b17d6191ea4c460084438aa4179df.xml" afterPath="$PROJECT_DIR$/target/site/serenity/SERENITY-JUNIT-614b17d6191ea4c460084438aa4179df.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/site/serenity/SERENITY-JUNIT-6f31b71e47a301dc43c9950932b5dbfd.xml" afterPath="$PROJECT_DIR$/target/site/serenity/SERENITY-JUNIT-6f31b71e47a301dc43c9950932b5dbfd.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/site/serenity/SERENITY-JUNIT-795ded8e4d59300bfcbf2f599a18550b.xml" afterPath="$PROJECT_DIR$/target/site/serenity/SERENITY-JUNIT-795ded8e4d59300bfcbf2f599a18550b.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/site/serenity/browser-firefox.properties" afterPath="$PROJECT_DIR$/target/site/serenity/browser-firefox.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/site/serenity/f6e7ff34c55f224e4b4e374cf72916c2.html" afterPath="$PROJECT_DIR$/target/site/serenity/f6e7ff34c55f224e4b4e374cf72916c2.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/site/serenity/f6e7ff34c55f224e4b4e374cf72916c2.json" afterPath="$PROJECT_DIR$/target/site/serenity/f6e7ff34c55f224e4b4e374cf72916c2.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/site/serenity/f6e7ff34c55f224e4b4e374cf72916c2_screenshots.html" afterPath="$PROJECT_DIR$/target/site/serenity/f6e7ff34c55f224e4b4e374cf72916c2_screenshots.html" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -36,87 +57,77 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="CatalogPage.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="CatalogPage.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/com/pages/CatalogPage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="206">
-              <caret line="83" column="38" lean-forward="true" selection-start-line="83" selection-start-column="38" selection-end-line="83" selection-end-column="38" />
+            <state relative-caret-position="568">
+              <caret line="233" column="0" lean-forward="false" selection-start-line="233" selection-start-column="0" selection-end-line="233" selection-end-column="0" />
               <folding>
-                <marker date="1490272104746" expanded="true" signature="5195:5384" ph="..." />
+                <marker date="1490622459813" expanded="true" signature="5290:5479" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AuthenticationPage.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/com/pages/AuthenticationPage.java">
+      <file leaf-file-name="ToolBarTests.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/com/Tests/ToolBarTests.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="206">
-              <caret line="50" column="16" lean-forward="false" selection-start-line="50" selection-start-column="16" selection-end-line="50" selection-end-column="16" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SignUpPage.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/com/pages/SignUpPage.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="750">
-              <caret line="224" column="71" lean-forward="false" selection-start-line="224" selection-start-column="0" selection-end-line="225" selection-end-column="0" />
+            <state relative-caret-position="356">
+              <caret line="34" column="20" lean-forward="true" selection-start-line="34" selection-start-column="20" selection-end-line="34" selection-end-column="20" />
               <folding>
-                <element signature="class#3425:4791" expanded="false" />
+                <element signature="e#757#758#0" expanded="true" />
+                <element signature="e#821#822#0" expanded="true" />
+                <element signature="e#1020#1021#0" expanded="true" />
+                <element signature="e#1098#1099#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GeneralMethods.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/com/pages/GeneralMethods.java">
+      <file leaf-file-name="QuickViewPage.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/com/pages/QuickViewPage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="156">
-              <caret line="13" column="38" lean-forward="false" selection-start-line="13" selection-start-column="25" selection-end-line="13" selection-end-column="38" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SignUpTests.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/com/Tests/SignUpTests.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="266">
-              <caret line="30" column="40" lean-forward="true" selection-start-line="30" selection-start-column="40" selection-end-line="30" selection-end-column="40" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SignUpSteps.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/com/Steps/SignUpSteps.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="286">
-              <caret line="17" column="40" lean-forward="false" selection-start-line="17" selection-start-column="40" selection-end-line="17" selection-end-column="40" />
-              <folding>
-                <element signature="method#registerNewAccountSuccessfully#0;class#SignUpSteps#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ShoppingCartPage.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/com/pages/ShoppingCartPage.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="402">
-              <caret line="92" column="108" lean-forward="false" selection-start-line="92" selection-start-column="108" selection-end-line="92" selection-end-column="108" />
+            <state relative-caret-position="594">
+              <caret line="27" column="84" lean-forward="false" selection-start-line="27" selection-start-column="84" selection-end-line="27" selection-end-column="84" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#3413#3414#0" expanded="true" />
-                <element signature="e#3457#3458#0" expanded="true" />
-                <element signature="e#3515#3516#0" expanded="true" />
-                <element signature="e#3584#3585#0" expanded="true" />
-                <element signature="e#3633#3634#0" expanded="true" />
-                <element signature="e#3687#3688#0" expanded="true" />
-                <element signature="e#3726#3727#0" expanded="true" />
-                <element signature="e#3777#3778#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="QuickViewSteps.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/com/Steps/QuickViewSteps.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="242">
+              <caret line="11" column="9" lean-forward="false" selection-start-line="11" selection-start-column="9" selection-end-line="11" selection-end-column="9" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SearchResultPage.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/com/pages/SearchResultPage.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="682">
+              <caret line="36" column="52" lean-forward="false" selection-start-line="36" selection-start-column="52" selection-end-line="36" selection-end-column="52" />
+              <folding>
+                <element signature="e#1460#1461#0" expanded="true" />
+                <element signature="e#1517#1518#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="QuickViewTests.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/com/Tests/QuickViewTests.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="594">
+              <caret line="27" column="47" lean-forward="true" selection-start-line="27" selection-start-column="4" selection-end-line="27" selection-end-column="47" />
+              <folding>
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -125,8 +136,8 @@
       <file leaf-file-name="ShoppingCartSteps.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/com/Steps/ShoppingCartSteps.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="266">
-              <caret line="68" column="43" lean-forward="false" selection-start-line="68" selection-start-column="16" selection-end-line="68" selection-end-column="43" />
+            <state relative-caret-position="466">
+              <caret line="71" column="26" lean-forward="false" selection-start-line="71" selection-start-column="26" selection-end-line="71" selection-end-column="26" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -134,18 +145,12 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ShoppingCartTests.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/test/java/com/Tests/ShoppingCartTests.java">
+      <file leaf-file-name="SearchResultTests.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/com/Tests/SearchResultTests.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="732">
-              <caret line="50" column="26" lean-forward="true" selection-start-line="50" selection-start-column="26" selection-end-line="50" selection-end-column="26" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1453#1454#0" expanded="true" />
-                <element signature="e#1531#1532#0" expanded="true" />
-                <element signature="e#1588#1589#0" expanded="true" />
-                <element signature="e#1665#1666#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="388">
+              <caret line="26" column="48" lean-forward="true" selection-start-line="23" selection-start-column="4" selection-end-line="26" selection-end-column="48" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -153,8 +158,18 @@
       <file leaf-file-name="AuthenticationTests.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/com/Tests/AuthenticationTests.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="474">
-              <caret line="43" column="95" lean-forward="false" selection-start-line="43" selection-start-column="81" selection-end-line="43" selection-end-column="95" />
+            <state relative-caret-position="496">
+              <caret line="51" column="49" lean-forward="false" selection-start-line="51" selection-start-column="49" selection-end-line="51" selection-end-column="49" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ToolBarSteps.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/com/Steps/ToolBarSteps.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="430">
+              <caret line="27" column="42" lean-forward="true" selection-start-line="27" selection-start-column="42" selection-end-line="27" selection-end-column="42" />
               <folding />
             </state>
           </provider>
@@ -173,6 +188,7 @@
     <findStrings>
       <find>dr</find>
       <find>move</find>
+      <find>select</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -190,37 +206,40 @@
         <option value="$PROJECT_DIR$/src/test/java/com/Tests/SearchByKeywordStory.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/Steps/SignUpSteps.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/Steps/AuthenticationSteps.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/Tests/AuthenticationTests.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/Steps/MainSteps.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/Tests/MainTests.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/Steps/ToolBarSteps.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/Tests/ToolBarTests.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/pages/AuthenticationPage.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/pages/MainPage.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/pages/SearchResultPage.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/Steps/SearchResultSteps.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/Tests/SearchResultTests.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/Steps/CatalogSteps.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/Tests/CatalogTests.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/Tests/CartPopUpTests.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/pages/CartPopUpPage.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/Steps/CartPopUpSteps.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/pages/CatalogPage.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/pages/SignUpPage.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/pages/ToolBarPage.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/pages/GeneralMethods.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/Tests/SignUpTests.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/pages/ShoppingCartPage.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/Steps/ShoppingCartSteps.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/Steps/ToolBarSteps.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/pages/ToolBarPage.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/Tests/ToolBarTests.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/Tests/SignUpTests.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/Tests/ShoppingCartTests.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/Tests/SearchResultTests.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/Tests/MainTests.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/Tests/CatalogTests.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/Tests/CartPopUpTests.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/Tests/AuthenticationTests.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/Tests/QuickViewTests.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/Steps/QuickViewSteps.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/pages/QuickViewPage.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/pages/CatalogPage.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-9" />
-    <option name="y" value="-9" />
-    <option name="width" value="1938" />
-    <option name="height" value="1048" />
+    <option name="x" value="239" />
+    <option name="y" value="202" />
+    <option name="width" value="1550" />
+    <option name="height" value="830" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -240,7 +259,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -399,15 +418,15 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="D:/SerenityEx" />
   </component>
-  <component name="RunManager" selected="JUnit.ShoppingCartTests.buyAProductCompleteTestFlow">
-    <configuration default="false" name="ShoppingCartTests.checkAddressPageDetailsAreCorrect" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.CatalogTests.checkWomenProductListIsCorrectlySortedByPriceLowToHigh">
+    <configuration default="false" name="ToolBarTests.clickOnFollowUsIconAndCheckLandingPage" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
           <option name="PATTERN" value="com.Tests.*" />
@@ -418,8 +437,8 @@
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="com.Tests" />
-      <option name="MAIN_CLASS_NAME" value="com.Tests.ShoppingCartTests" />
-      <option name="METHOD_NAME" value="checkAddressPageDetailsAreCorrect" />
+      <option name="MAIN_CLASS_NAME" value="com.Tests.ToolBarTests" />
+      <option name="METHOD_NAME" value="clickOnFollowUsIconAndCheckLandingPage" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -433,7 +452,7 @@
       <patterns />
       <method />
     </configuration>
-    <configuration default="false" name="ShoppingCartTests.checkShippingPageDetailsAreCorrect" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration default="false" name="ToolBarTests.subscribeToNewsletterWithInvalidEmail" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
           <option name="PATTERN" value="com.Tests.*" />
@@ -444,8 +463,8 @@
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="com.Tests" />
-      <option name="MAIN_CLASS_NAME" value="com.Tests.ShoppingCartTests" />
-      <option name="METHOD_NAME" value="checkShippingPageDetailsAreCorrect" />
+      <option name="MAIN_CLASS_NAME" value="com.Tests.ToolBarTests" />
+      <option name="METHOD_NAME" value="subscribeToNewsletterWithInvalidEmail" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -459,7 +478,7 @@
       <patterns />
       <method />
     </configuration>
-    <configuration default="false" name="SignUpTests.registerWithInvalidCredentialsAndCheckError" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration default="false" name="SearchResultTests.checkErrorMessageIsDisplayedForNoResultsSearch" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
           <option name="PATTERN" value="com.Tests.*" />
@@ -470,8 +489,8 @@
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="com.Tests" />
-      <option name="MAIN_CLASS_NAME" value="com.Tests.SignUpTests" />
-      <option name="METHOD_NAME" value="registerWithInvalidCredentialsAndCheckError" />
+      <option name="MAIN_CLASS_NAME" value="com.Tests.SearchResultTests" />
+      <option name="METHOD_NAME" value="checkErrorMessageIsDisplayedForNoResultsSearch" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -485,7 +504,7 @@
       <patterns />
       <method />
     </configuration>
-    <configuration default="false" name="ShoppingCartTests.checkPaymentDetailsAreCorrect" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration default="false" name="MainTests.checkTshirtElementPresence" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
           <option name="PATTERN" value="com.Tests.*" />
@@ -496,8 +515,8 @@
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="com.Tests" />
-      <option name="MAIN_CLASS_NAME" value="com.Tests.ShoppingCartTests" />
-      <option name="METHOD_NAME" value="checkPaymentDetailsAreCorrect" />
+      <option name="MAIN_CLASS_NAME" value="com.Tests.MainTests" />
+      <option name="METHOD_NAME" value="checkTshirtElementPresence" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -511,7 +530,7 @@
       <patterns />
       <method />
     </configuration>
-    <configuration default="false" name="ShoppingCartTests.buyAProductCompleteTestFlow" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration default="false" name="CatalogTests.checkWomenProductListIsCorrectlySortedByPriceLowToHigh" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
           <option name="PATTERN" value="com.Tests.*" />
@@ -522,8 +541,8 @@
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="com.Tests" />
-      <option name="MAIN_CLASS_NAME" value="com.Tests.ShoppingCartTests" />
-      <option name="METHOD_NAME" value="buyAProductCompleteTestFlow" />
+      <option name="MAIN_CLASS_NAME" value="com.Tests.CatalogTests" />
+      <option name="METHOD_NAME" value="checkWomenProductListIsCorrectlySortedByPriceLowToHigh" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -742,19 +761,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="JUnit.ShoppingCartTests.checkAddressPageDetailsAreCorrect" />
-      <item index="1" class="java.lang.String" itemvalue="JUnit.ShoppingCartTests.checkShippingPageDetailsAreCorrect" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.SignUpTests.registerWithInvalidCredentialsAndCheckError" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.ShoppingCartTests.checkPaymentDetailsAreCorrect" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.ShoppingCartTests.buyAProductCompleteTestFlow" />
+      <item index="0" class="java.lang.String" itemvalue="JUnit.ToolBarTests.clickOnFollowUsIconAndCheckLandingPage" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.ToolBarTests.subscribeToNewsletterWithInvalidEmail" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.SearchResultTests.checkErrorMessageIsDisplayedForNoResultsSearch" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.MainTests.checkTshirtElementPresence" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.CatalogTests.checkWomenProductListIsCorrectlySortedByPriceLowToHigh" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.ShoppingCartTests.buyAProductCompleteTestFlow" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.ShoppingCartTests.checkPaymentDetailsAreCorrect" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.ShoppingCartTests.checkShippingPageDetailsAreCorrect" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.ShoppingCartTests.checkAddressPageDetailsAreCorrect" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.SignUpTests.registerWithInvalidCredentialsAndCheckError" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.CatalogTests.checkWomenProductListIsCorrectlySortedByPriceLowToHigh" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.MainTests.checkTshirtElementPresence" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.SearchResultTests.checkErrorMessageIsDisplayedForNoResultsSearch" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.ToolBarTests.subscribeToNewsletterWithInvalidEmail" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.ToolBarTests.clickOnFollowUsIconAndCheckLandingPage" />
       </list>
     </recent_temporary>
   </component>
@@ -780,35 +799,35 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="ShoppingCartTests_buyAProductCompleteTestFlow - 2017.03.24 at 15h 36m 27s.xml">
-      <configuration name="ShoppingCartTests.buyAProductCompleteTestFlow" configurationId="JUnit" />
+    <history-entry file="CatalogTests_checkWomenProductListIsCorrectlySortedByPriceLowToHigh - 2017.03.27 at 13h 57m 16s.xml">
+      <configuration name="CatalogTests.checkWomenProductListIsCorrectlySortedByPriceLowToHigh" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ShoppingCartTests_checkAddressPageDetailsAreCorrect - 2017.03.24 at 14h 54m 55s.xml">
-      <configuration name="ShoppingCartTests.checkAddressPageDetailsAreCorrect" configurationId="JUnit" />
+    <history-entry file="MainTests_checkTshirtElementPresence - 2017.03.27 at 13h 55m 06s.xml">
+      <configuration name="MainTests.checkTshirtElementPresence" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ShoppingCartTests_checkPaymentDetailsAreCorrect - 2017.03.24 at 15h 15m 48s.xml">
-      <configuration name="ShoppingCartTests.checkPaymentDetailsAreCorrect" configurationId="JUnit" />
+    <history-entry file="SearchResultTests_checkErrorMessageIsDisplayedForNoResultsSearch - 2017.03.27 at 13h 53m 26s.xml">
+      <configuration name="SearchResultTests.checkErrorMessageIsDisplayedForNoResultsSearch" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ShoppingCartTests_checkPaymentDetailsAreCorrect - 2017.03.24 at 15h 23m 08s.xml">
-      <configuration name="ShoppingCartTests.checkPaymentDetailsAreCorrect" configurationId="JUnit" />
+    <history-entry file="ToolBarTests_clickOnFollowUsIconAndCheckLandingPage - 2017.03.27 at 13h 23m 29s.xml">
+      <configuration name="ToolBarTests.clickOnFollowUsIconAndCheckLandingPage" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ShoppingCartTests_checkShippingPageDetailsAreCorrect - 2017.03.24 at 14h 56m 02s.xml">
-      <configuration name="ShoppingCartTests.checkShippingPageDetailsAreCorrect" configurationId="JUnit" />
+    <history-entry file="ToolBarTests_clickOnFollowUsIconAndCheckLandingPage - 2017.03.27 at 13h 24m 23s.xml">
+      <configuration name="ToolBarTests.clickOnFollowUsIconAndCheckLandingPage" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ShoppingCartTests_checkShippingPageDetailsAreCorrect - 2017.03.24 at 14h 59m 54s.xml">
-      <configuration name="ShoppingCartTests.checkShippingPageDetailsAreCorrect" configurationId="JUnit" />
+    <history-entry file="ToolBarTests_clickOnFollowUsIconAndCheckLandingPage - 2017.03.27 at 13h 24m 48s.xml">
+      <configuration name="ToolBarTests.clickOnFollowUsIconAndCheckLandingPage" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ShoppingCartTests_checkShippingPageDetailsAreCorrect - 2017.03.24 at 15h 00m 59s.xml">
-      <configuration name="ShoppingCartTests.checkShippingPageDetailsAreCorrect" configurationId="JUnit" />
+    <history-entry file="ToolBarTests_clickOnFollowUsIconAndCheckLandingPage - 2017.03.27 at 13h 25m 20s.xml">
+      <configuration name="ToolBarTests.clickOnFollowUsIconAndCheckLandingPage" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SignUpTests_registerWithInvalidCredentialsAndCheckError - 2017.03.24 at 14h 48m 35s.xml">
-      <configuration name="SignUpTests.registerWithInvalidCredentialsAndCheckError" configurationId="JUnit" />
+    <history-entry file="ToolBarTests_subscribeToNewsletterWithInvalidEmail - 2017.03.27 at 13h 49m 59s.xml">
+      <configuration name="ToolBarTests.subscribeToNewsletterWithInvalidEmail" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SignUpTests_registerWithInvalidCredentialsAndCheckError - 2017.03.24 at 14h 52m 14s.xml">
-      <configuration name="SignUpTests.registerWithInvalidCredentialsAndCheckError" configurationId="JUnit" />
+    <history-entry file="ToolBarTests_subscribeToNewsletterWithInvalidEmail - 2017.03.27 at 13h 50m 31s.xml">
+      <configuration name="ToolBarTests.subscribeToNewsletterWithInvalidEmail" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="SignUpTests_registerWithInvalidCredentialsAndCheckError - 2017.03.24 at 14h 53m 37s.xml">
-      <configuration name="SignUpTests.registerWithInvalidCredentialsAndCheckError" configurationId="JUnit" />
+    <history-entry file="ToolBarTests_subscribeToNewsletterWithInvalidEmail - 2017.03.27 at 13h 51m 32s.xml">
+      <configuration name="ToolBarTests.subscribeToNewsletterWithInvalidEmail" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TodoView">
@@ -821,8 +840,8 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-9" y="-9" width="1938" height="1048" extended-state="0" />
-    <editor active="true" />
+    <frame x="239" y="202" width="1550" height="830" extended-state="0" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295583" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -833,19 +852,19 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22650057" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295583" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22650057" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295583" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24892704" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3184282" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3997735" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3997735" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -870,37 +889,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/pages/SignUpPage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3828">
-          <caret line="174" column="251" lean-forward="false" selection-start-line="174" selection-start-column="251" selection-end-line="174" selection-end-column="251" />
-          <folding>
-            <element signature="class#3425:4791" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/Steps/SignUpSteps.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="22" column="168" lean-forward="false" selection-start-line="22" selection-start-column="168" selection-end-line="22" selection-end-column="168" />
-          <folding>
-            <element signature="method#registerWithInvalidCredentialsAndCheckError#0;class#SignUpSteps#0" expanded="false" />
-            <element signature="method#registerNewAccountSuccessfully#0;class#SignUpSteps#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/Steps/AuthenticationSteps.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="660">
-          <caret line="35" column="0" lean-forward="false" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/Tests/SignUpTests.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="572">
@@ -923,7 +911,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="550">
           <caret line="36" column="23" lean-forward="false" selection-start-line="36" selection-start-column="23" selection-end-line="36" selection-end-column="23" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -940,7 +930,28 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
+            <element signature="imports" expanded="false" />
             <element signature="class#3425:4791" expanded="false" />
+            <element signature="e#3583#3584#0" expanded="false" />
+            <element signature="e#3626#3627#0" expanded="false" />
+            <element signature="e#3688#3689#0" expanded="false" />
+            <element signature="e#3731#3732#0" expanded="false" />
+            <element signature="e#3812#3813#0" expanded="false" />
+            <element signature="e#3855#3856#0" expanded="false" />
+            <element signature="e#3929#3930#0" expanded="false" />
+            <element signature="e#3972#3973#0" expanded="false" />
+            <element signature="e#4039#4040#0" expanded="false" />
+            <element signature="e#4082#4083#0" expanded="false" />
+            <element signature="e#4300#4301#0" expanded="false" />
+            <element signature="e#4343#4344#0" expanded="false" />
+            <element signature="e#4412#4413#0" expanded="false" />
+            <element signature="e#4455#4456#0" expanded="false" />
+            <element signature="e#4524#4525#0" expanded="false" />
+            <element signature="e#4567#4568#0" expanded="false" />
+            <element signature="e#4633#4634#0" expanded="false" />
+            <element signature="e#4676#4677#0" expanded="false" />
+            <element signature="e#4737#4738#0" expanded="false" />
+            <element signature="e#4780#4781#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -970,7 +981,7 @@
         <state relative-caret-position="264">
           <caret line="15" column="59" lean-forward="false" selection-start-line="15" selection-start-column="16" selection-end-line="15" selection-end-column="59" />
           <folding>
-            <element signature="method#registerWithInvalidCredentialsAndCheckError#0;class#SignUpSteps#0" expanded="false" />
+            <element signature="imports" expanded="false" />
             <element signature="method#registerNewAccountSuccessfully#0;class#SignUpSteps#0" expanded="false" />
           </folding>
         </state>
@@ -1037,49 +1048,11 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/Tests/package-info.java" />
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/Steps/ToolBarSteps.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="14" column="56" lean-forward="false" selection-start-line="14" selection-start-column="56" selection-end-line="14" selection-end-column="56" />
-          <folding>
-            <element signature="e#333#334#0" expanded="false" />
-            <element signature="e#396#397#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/Tests/MainTests.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="25" column="47" lean-forward="false" selection-start-line="24" selection-start-column="8" selection-end-line="25" selection-end-column="47" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/pages/MainPage.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2596">
           <caret line="134" column="16" lean-forward="false" selection-start-line="134" selection-start-column="16" selection-end-line="134" selection-end-column="16" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/pages/SearchResultPage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="682">
-          <caret line="36" column="52" lean-forward="false" selection-start-line="36" selection-start-column="52" selection-end-line="36" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/Tests/ToolBarTests.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="23" column="52" lean-forward="false" selection-start-line="23" selection-start-column="30" selection-end-line="23" selection-end-column="52" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1124,34 +1097,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/Tests/CatalogTests.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="814">
-          <caret line="44" column="47" lean-forward="false" selection-start-line="43" selection-start-column="7" selection-end-line="44" selection-end-column="47" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/Tests/SearchResultTests.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="660">
-          <caret line="37" column="47" lean-forward="true" selection-start-line="36" selection-start-column="8" selection-end-line="37" selection-end-column="47" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/Steps/CartPopUpSteps.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
           <caret line="21" column="35" lean-forward="false" selection-start-line="21" selection-start-column="35" selection-end-line="21" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/Tests/CartPopUpTests.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="23" column="44" lean-forward="false" selection-start-line="23" selection-start-column="44" selection-end-line="23" selection-end-column="44" />
           <folding />
         </state>
       </provider>
@@ -1161,27 +1110,6 @@
         <state relative-caret-position="572">
           <caret line="30" column="5" lean-forward="false" selection-start-line="30" selection-start-column="5" selection-end-line="30" selection-end-column="5" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/Steps/MainSteps.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="484">
-          <caret line="35" column="115" lean-forward="false" selection-start-line="35" selection-start-column="115" selection-end-line="35" selection-end-column="115" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#305#306#0" expanded="false" />
-            <element signature="e#349#350#0" expanded="false" />
-            <element signature="method#checkShoppingChartPresence#0;class#MainSteps#0" expanded="false" />
-            <element signature="e#521#522#0" expanded="false" />
-            <element signature="e#586#587#0" expanded="false" />
-            <element signature="e#656#657#0" expanded="false" />
-            <element signature="e#723#724#0" expanded="false" />
-            <element signature="e#779#780#0" expanded="false" />
-            <element signature="e#832#833#0" expanded="false" />
-            <element signature="e#882#883#0" expanded="false" />
-            <element signature="e#929#930#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1195,55 +1123,44 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/pages/ToolBarPage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="22">
-          <caret line="9" column="40" lean-forward="false" selection-start-line="9" selection-start-column="40" selection-end-line="9" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/pages/CatalogPage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="206">
-          <caret line="83" column="38" lean-forward="true" selection-start-line="83" selection-start-column="38" selection-end-line="83" selection-end-column="38" />
-          <folding>
-            <marker date="1490272104746" expanded="true" signature="5195:5384" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/pages/GeneralMethods.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
+        <state relative-caret-position="176">
           <caret line="13" column="38" lean-forward="false" selection-start-line="13" selection-start-column="25" selection-end-line="13" selection-end-column="38" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/pages/SignUpPage.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="750">
+        <state relative-caret-position="3256">
           <caret line="224" column="71" lean-forward="false" selection-start-line="224" selection-start-column="0" selection-end-line="225" selection-end-column="0" />
           <folding>
+            <element signature="imports" expanded="false" />
             <element signature="class#3425:4791" expanded="false" />
+            <element signature="e#3583#3584#0" expanded="false" />
+            <element signature="e#3626#3627#0" expanded="false" />
+            <element signature="e#3688#3689#0" expanded="false" />
+            <element signature="e#3731#3732#0" expanded="false" />
+            <element signature="e#3812#3813#0" expanded="false" />
+            <element signature="e#3855#3856#0" expanded="false" />
+            <element signature="e#3929#3930#0" expanded="false" />
+            <element signature="e#3972#3973#0" expanded="false" />
+            <element signature="e#4039#4040#0" expanded="false" />
+            <element signature="e#4082#4083#0" expanded="false" />
+            <element signature="e#4300#4301#0" expanded="false" />
+            <element signature="e#4343#4344#0" expanded="false" />
+            <element signature="e#4412#4413#0" expanded="false" />
+            <element signature="e#4455#4456#0" expanded="false" />
+            <element signature="e#4524#4525#0" expanded="false" />
+            <element signature="e#4567#4568#0" expanded="false" />
+            <element signature="e#4633#4634#0" expanded="false" />
+            <element signature="e#4676#4677#0" expanded="false" />
+            <element signature="e#4737#4738#0" expanded="false" />
+            <element signature="e#4780#4781#0" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/Tests/AuthenticationTests.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="474">
-          <caret line="43" column="95" lean-forward="false" selection-start-line="43" selection-start-column="81" selection-end-line="43" selection-end-column="95" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/Tests/SignUpTests.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="30" column="40" lean-forward="true" selection-start-line="30" selection-start-column="40" selection-end-line="30" selection-end-column="40" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1252,6 +1169,7 @@
         <state relative-caret-position="286">
           <caret line="17" column="40" lean-forward="false" selection-start-line="17" selection-start-column="40" selection-end-line="17" selection-end-column="40" />
           <folding>
+            <element signature="imports" expanded="false" />
             <element signature="method#registerNewAccountSuccessfully#0;class#SignUpSteps#0" expanded="false" />
           </folding>
         </state>
@@ -1259,50 +1177,201 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/pages/AuthenticationPage.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="206">
+        <state relative-caret-position="858">
           <caret line="50" column="16" lean-forward="false" selection-start-line="50" selection-start-column="16" selection-end-line="50" selection-end-column="16" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/pages/ShoppingCartPage.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="402">
+        <state relative-caret-position="1782">
           <caret line="92" column="108" lean-forward="false" selection-start-line="92" selection-start-column="108" selection-end-line="92" selection-end-column="108" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/pages/ToolBarPage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="402">
+          <caret line="75" column="147" lean-forward="false" selection-start-line="75" selection-start-column="147" selection-end-line="75" selection-end-column="147" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#3413#3414#0" expanded="true" />
-            <element signature="e#3457#3458#0" expanded="true" />
-            <element signature="e#3515#3516#0" expanded="true" />
-            <element signature="e#3584#3585#0" expanded="true" />
-            <element signature="e#3633#3634#0" expanded="true" />
-            <element signature="e#3687#3688#0" expanded="true" />
-            <element signature="e#3726#3727#0" expanded="true" />
-            <element signature="e#3777#3778#0" expanded="true" />
+            <element signature="e#2028#2036#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/Tests/SignUpTests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="40" column="0" lean-forward="false" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/Tests/ShoppingCartTests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="376">
+          <caret line="49" column="0" lean-forward="false" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1589#1590#0" expanded="true" />
+            <element signature="e#1666#1667#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/Steps/MainSteps.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="27" column="25" lean-forward="false" selection-start-line="27" selection-start-column="25" selection-end-line="27" selection-end-column="25" />
+          <folding>
+            <element signature="method#checkShoppingChartPresence#0;class#MainSteps#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/Tests/MainTests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="426">
+          <caret line="48" column="47" lean-forward="false" selection-start-line="48" selection-start-column="47" selection-end-line="48" selection-end-column="47" />
+          <folding>
+            <element signature="e#725#726#0" expanded="true" />
+            <element signature="e#770#771#0" expanded="true" />
+            <element signature="e#826#827#0" expanded="true" />
+            <element signature="e#880#881#0" expanded="true" />
+            <element signature="e#948#949#0" expanded="true" />
+            <element signature="e#1014#1015#0" expanded="true" />
+            <element signature="e#1085#1086#0" expanded="true" />
+            <element signature="e#1153#1154#0" expanded="true" />
+            <element signature="e#1210#1211#0" expanded="true" />
+            <element signature="e#1264#1265#0" expanded="true" />
+            <element signature="e#1314#1315#0" expanded="true" />
+            <element signature="e#1362#1363#0" expanded="true" />
+            <element signature="e#1435#1436#0" expanded="true" />
+            <element signature="e#1505#1506#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/Tests/CatalogTests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="156">
+          <caret line="55" column="54" lean-forward="false" selection-start-line="55" selection-start-column="54" selection-end-line="55" selection-end-column="54" />
+          <folding>
+            <element signature="e#1084#1085#0" expanded="true" />
+            <element signature="e#1154#1155#0" expanded="true" />
+            <element signature="e#2131#2132#0" expanded="true" />
+            <element signature="e#2202#2203#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/Tests/CartPopUpTests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="462">
+          <caret line="29" column="62" lean-forward="false" selection-start-line="29" selection-start-column="62" selection-end-line="29" selection-end-column="62" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/Tests/AuthenticationTests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="496">
+          <caret line="51" column="49" lean-forward="false" selection-start-line="51" selection-start-column="49" selection-end-line="51" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/Steps/ToolBarSteps.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="430">
+          <caret line="27" column="42" lean-forward="true" selection-start-line="27" selection-start-column="42" selection-end-line="27" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/Tests/ToolBarTests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="356">
+          <caret line="34" column="20" lean-forward="true" selection-start-line="34" selection-start-column="20" selection-end-line="34" selection-end-column="20" />
+          <folding>
+            <element signature="e#757#758#0" expanded="true" />
+            <element signature="e#821#822#0" expanded="true" />
+            <element signature="e#1020#1021#0" expanded="true" />
+            <element signature="e#1098#1099#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/Tests/SearchResultTests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="388">
+          <caret line="26" column="48" lean-forward="true" selection-start-line="23" selection-start-column="4" selection-end-line="26" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/Tests/QuickViewTests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="594">
+          <caret line="27" column="47" lean-forward="true" selection-start-line="27" selection-start-column="4" selection-end-line="27" selection-end-column="47" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/Steps/QuickViewSteps.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="11" column="9" lean-forward="false" selection-start-line="11" selection-start-column="9" selection-end-line="11" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/pages/SearchResultPage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="682">
+          <caret line="36" column="52" lean-forward="false" selection-start-line="36" selection-start-column="52" selection-end-line="36" selection-end-column="52" />
+          <folding>
+            <element signature="e#1460#1461#0" expanded="true" />
+            <element signature="e#1517#1518#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/pages/QuickViewPage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="594">
+          <caret line="27" column="84" lean-forward="false" selection-start-line="27" selection-start-column="84" selection-end-line="27" selection-end-column="84" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/Steps/ShoppingCartSteps.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="68" column="43" lean-forward="false" selection-start-line="68" selection-start-column="16" selection-end-line="68" selection-end-column="43" />
+        <state relative-caret-position="466">
+          <caret line="71" column="26" lean-forward="false" selection-start-line="71" selection-start-column="26" selection-end-line="71" selection-end-column="26" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/Tests/ShoppingCartTests.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/pages/CatalogPage.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="732">
-          <caret line="50" column="26" lean-forward="true" selection-start-line="50" selection-start-column="26" selection-end-line="50" selection-end-column="26" />
+        <state relative-caret-position="568">
+          <caret line="233" column="0" lean-forward="false" selection-start-line="233" selection-start-column="0" selection-end-line="233" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1453#1454#0" expanded="true" />
-            <element signature="e#1531#1532#0" expanded="true" />
-            <element signature="e#1588#1589#0" expanded="true" />
-            <element signature="e#1665#1666#0" expanded="true" />
+            <marker date="1490622459813" expanded="true" signature="5290:5479" ph="..." />
           </folding>
         </state>
       </provider>

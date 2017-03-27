@@ -47,6 +47,7 @@ public class ShoppingCartTests {
     public void checkPaymentDetailsAreCorrect(){
         shoppingCartSteps.checkPaymentDetailsAreCorrect("1","7432221");
     }
+
     @Test
     public void buyAProductCompleteTestFlow(){
         shoppingCartSteps.buyAProductCompleteTestFlow("1","7432221" );

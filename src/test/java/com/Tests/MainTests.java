@@ -4,6 +4,7 @@ import com.Steps.MainSteps;
 import net.serenitybdd.junit.runners.SerenityRunner;
 import net.thucydides.core.annotations.Managed;
 import net.thucydides.core.annotations.Steps;
+import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.openqa.selenium.WebDriver;
@@ -20,46 +21,40 @@ public class MainTests {
     @Steps
     MainSteps mainSteps;
 
+    @Before
+    public void launchFireFox(){
+        webDriver.get("http://automationpractice.com/index.php");
+        webDriver.manage().window().maximize();}
+
     @Test
     public void checkLogoPresence(){
-        webDriver.get("http://automationpractice.com/index.php");
-        webDriver.manage().window().maximize();
         mainSteps.checkLogoPresence();
     }
     @Test
     public void checkShoppingChartPresence(){
-        webDriver.get("http://automationpractice.com/index.php");
-        webDriver.manage().window().maximize();
         mainSteps.checkShoppingChartPresence();
     }
     @Test
     public void checkElementsPresenceFromWomenDropDown(){
-        webDriver.get("http://automationpractice.com/index.php");
-        webDriver.manage().window().maximize();
         mainSteps.checkElementsPresenceFromWomenDropDown();
     }
 
     @Test
     public void checkElementsPresenceFromDressesDropDown(){
-        webDriver.get("http://automationpractice.com/index.php");
-        webDriver.manage().window().maximize();
         mainSteps.checkElementsPresenceFromDressesDropDown();
     }
+
     @Test
-    public void checkTshirtElementPresence(){
-        webDriver.get("http://automationpractice.com/index.php");
-        checkTshirtElementPresence();
+    public void checkTShirtElementPresence(){
+        mainSteps.checkTShirtElementPresence();
     }
     @Test
     public void checkBannersPresence(){
-        webDriver.get("http://automationpractice.com/index.php");
-        webDriver.manage().window().maximize();
         mainSteps.checkBannersPresence();
     }
+
     @Test
     public void checkPopularAndBestSellersSectionsPresence(){
-        webDriver.get("http://automationpractice.com/index.php");
-        webDriver.manage().window().maximize();
         mainSteps.checkPopularAndBestSellersSectionsPresence();
     }
 }

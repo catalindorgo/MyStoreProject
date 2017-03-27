@@ -80,6 +80,7 @@ public class CatalogPage extends GeneralMethods {
     String LIST_OF_CHECKBOX_TEXT = "//input[@type='checkbox']/../../..//a[text()='%value%']";
     String LIST_OF_COLOR_CHECKBOX = "//label[@class='layered_color']/a[text()='%value%']";
     String LIST_OF_PRODUCT_NAMES ="(//div/div/h5/a)[%value%]";
+    String LIST_OF_PRODUCT_IMAGES = "//ul[contains(@class, 'product_list')]/li//img[%value%]";
     String LIST_OF_ADD_TO_CART_BUTTONS ="(//div/a/span[text()='Add to cart'])[%value%]";
     public static String PRODUCT_NAME;
 
@@ -226,6 +227,12 @@ public class CatalogPage extends GeneralMethods {
         addToCartButton.click();
         PRODUCT_NAME = product.getText();
         System.out.println(PRODUCT_NAME +  "   first");
+    }
+
+    public void quickViewProduct(String productIndex){
+        WebElement productImage = getDriver().findElement(By.xpath(LIST_OF_PRODUCT_IMAGES.replace("%value%", productIndex)));
+
+
     }
 
     public void selectPriceRange(){}

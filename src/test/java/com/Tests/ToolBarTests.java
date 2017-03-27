@@ -4,6 +4,7 @@ import com.Steps.ToolBarSteps;
 import net.serenitybdd.junit.runners.SerenityRunner;
 import net.thucydides.core.annotations.Managed;
 import net.thucydides.core.annotations.Steps;
+import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.openqa.selenium.WebDriver;
@@ -19,10 +20,30 @@ public class ToolBarTests {
     @Steps
     ToolBarSteps toolBarSteps;
 
-    @Test
-    public void checkBottomToolbarElementsPrsence(){
+    @Before
+    public void launchFireFox(){
         webDriver.get("http://automationpractice.com/index.php");
         webDriver.manage().window().maximize();
+    }
+
+    @Test
+    public void checkBottomToolbarElementsPrsence(){
         toolBarSteps.checkBottomToolbarElementsPrsence();
+    }
+
+    @Test
+    public void clickOnFollowUsIconAndCheckLandingPage(){
+        toolBarSteps.clickOnFollowUsIconAndCheckLandingPage("twitter");
+    }
+
+    @Test
+    public void subscribeToNewsletter(){
+        toolBarSteps.subscribeToNewsletter("mremailaddress@yahoo.com");
+    }
+
+    @Test
+    public void subscribeToNewsletterWithInvalidEmail(){
+        toolBarSteps.subscribeToNewsletterWithInvalidEmail("zzzssdsds");
+
     }
 }

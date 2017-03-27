@@ -14,4 +14,18 @@ public class ToolBarSteps extends ScenarioSteps{
     public void checkBottomToolbarElementsPrsence(){
         toolBarPage.checkBottomToolbarElementsPrsence();
     }
+
+    @Step
+    public void clickOnFollowUsIconAndCheckLandingPage(String followUsButton){
+        toolBarPage.clickOnFollowUsIconAndCheckLandingPage(followUsButton);
+    }
+    @Step
+    public void subscribeToNewsletter(String emailAddress){
+        toolBarPage.subscribeToNewsletter(emailAddress);
+    }
+    @Step
+    public void subscribeToNewsletterWithInvalidEmail(String invalidEmail){
+        toolBarPage.subscribeToNewsletterWithInvalidEmail(invalidEmail);
+
+    }
 }

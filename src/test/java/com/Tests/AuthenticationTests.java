@@ -7,6 +7,7 @@ import net.thucydides.core.annotations.Managed;
 import net.thucydides.core.annotations.ManagedPages;
 import net.thucydides.core.annotations.Steps;
 import net.thucydides.core.pages.Pages;
+import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.openqa.selenium.WebDriver;
@@ -26,29 +27,29 @@ public class AuthenticationTests {
     @Steps
     SignUpSteps signUpSteps;
 
+    @Before
+    public void launchFireFox(){
+        webDriver.get("http://automationpractice.com/index.php");
+        webDriver.manage().window().maximize();}
+
     @Test
     public void createAccountWithInvalidEmailAndVerifyThrownError(){
-        webDriver.get("http://automationpractice.com/index.php");
         authenticationSteps.createAccountWithIncorrectEmailAndVerifyThrownError("invalidEmail", "Invalid email address.");
     }
 
     @Test
     public void createAccountWithValidEmailAndVerifyLandingPage(){
-        webDriver.get("http://automationpractice.com/index.php");
         authenticationSteps.createAccountWithValidEmailAndVerifyLandingPage("domnul1@copac.com", "CREATE AN ACCOUNT");
     }
 
     @Test
     public void logInAndVerifyAccount(){
-        webDriver.get("http://automationpractice.com/index.php");
         authenticationSteps.logInAndVerifyAccount("admin@yahoo.ro", "password", "Admin lastName");
     }
     @Test
     public void checkErrorMessageAtFailedAuthentication(){
-        webDriver.get("http://automationpractice.com/index.php");
         //maximize browser
        // webDriver.manage().window().maximize();
-
         authenticationSteps.checkErrorMessageAtFailedAuthentication("admin@yahoo.ro", "$%^&*()_");
     }
 }
