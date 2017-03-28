@@ -9,7 +9,6 @@ import org.openqa.selenium.WebElement;
 import com.pages.SignUpPage;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-
 import java.util.List;
 import java.util.Set;
 
@@ -20,22 +19,22 @@ import java.util.Set;
 public class AuthenticationPage extends PageObject {
 
     @FindBy(xpath="//input[@name='email_create']")
-    private  WebElement emailAddressField;
+      WebElement emailAddressField;
 
     @FindBy(xpath = "//div//button[@name='SubmitCreate']")
-    private WebElement createAccountButton;
+     WebElement createAccountButton;
 
     @FindBy(xpath = "//div[@class='row']//ol/li")
-    private WebElement errorMessageForInvalidEmail;
+     WebElement errorMessageForInvalidEmail;
 
     @FindBy (xpath = "//div/div/input[@name='email']")
-    private WebElement logInEmail;
+     WebElement logInEmail;
 
     @FindBy(xpath = "//div/span/input[@name= 'passwd']")
-    private WebElement logInPassword;
+     WebElement logInPassword;
 
     @FindBy (xpath = "//p/button[@type ='submit']")
-    private WebElement signInButton;
+     WebElement signInButton;
 
     @FindBy (xpath = "//div/a[@class='account']/span")
     private WebElement loggedInAccount;
@@ -54,6 +53,7 @@ public class AuthenticationPage extends PageObject {
     }
 
     public void logInAndVerifyAccount (String userName, String password, String expectedLoggedInAccount){
+
         logInEmail.sendKeys(userName);
         logInPassword.sendKeys(password);
         signInButton.click();

@@ -82,6 +82,7 @@ public class CatalogPage extends GeneralMethods {
     String LIST_OF_PRODUCT_NAMES ="(//div/div/h5/a)[%value%]";
     String LIST_OF_PRODUCT_IMAGES = "//ul[contains(@class, 'product_list')]/li//img[%value%]";
     String LIST_OF_ADD_TO_CART_BUTTONS ="(//div/a/span[text()='Add to cart'])[%value%]";
+    String LIST_OF_QUICK_VIEW_BUTTONS ="(//ul[contains(@class, 'product_list')]//a[@class='quick-view'])[%value%]";
     public static String PRODUCT_NAME;
 
 
@@ -224,15 +225,16 @@ public class CatalogPage extends GeneralMethods {
     public void addProductToCart (String productIndex){
         WebElement product = getDriver().findElement(By.xpath(LIST_OF_PRODUCT_NAMES.replace("%value%", productIndex)));
         WebElement addToCartButton = getDriver().findElement(By.xpath(LIST_OF_ADD_TO_CART_BUTTONS.replace("%value%", productIndex)));
-        addToCartButton.click();
         PRODUCT_NAME = product.getText();
+        addToCartButton.click();
         System.out.println(PRODUCT_NAME +  "   first");
     }
 
     public void quickViewProduct(String productIndex){
         WebElement productImage = getDriver().findElement(By.xpath(LIST_OF_PRODUCT_IMAGES.replace("%value%", productIndex)));
-
-
+        WebElement productQuickViewButton = getDriver().findElement(By.xpath(LIST_OF_QUICK_VIEW_BUTTONS.replace("%value%", productIndex)));
+        hoverOverWebElement(productImage);
+        productQuickViewButton.click();
     }
 
     public void selectPriceRange(){}
