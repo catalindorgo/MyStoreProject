@@ -45,16 +45,17 @@ public class ShoppingCartPage extends CatalogPage {
     @FindBy(xpath = "//div/p/strong")
     private WebElement titleOfOrderConfirmationMessage;
 
-    String LIST_OF_PRODUCTS_IN_SHOPPING_CHART_SUMMARY ="(//td/p[@class='product-name']/a)[%value%]";
+    String PRODUCT_IN_SHOPPING_CHART_SUMMARY ="//td/p[@class='product-name']/a[text()='%value%']";
+    String PRODUCT_NAME_IN_PAYMENT_PAGE = "//td/p/a[text()= '%value%']";
 
 
-    public void checkIfProductIsSuccessfullyAddedToShoppingChartSummary(String productIndex){
-        WebElement productInShoppingChartSummary = getDriver().findElement(By.xpath(LIST_OF_PRODUCTS_IN_SHOPPING_CHART_SUMMARY.replace("%value%", productIndex)));
-        String productNameInTheShoppingChartSummary = productInShoppingChartSummary.getText();
+    public void checkIfProductIsSuccessfullyAddedToShoppingChartSummary(String productTitle){
+        WebElement productInShoppingChartSummary = getDriver().findElement(By.xpath(PRODUCT_IN_SHOPPING_CHART_SUMMARY.replace("%value%", productTitle)));
+        //String productNameInTheShoppingChartSummary = productInShoppingChartSummary.getText();
 
         Assert.assertTrue("Incorrect title", shoppingCartPageTitle.getText().contains("SHOPPING-CART SUMMARY"));
         System.out.println(PRODUCT_NAME);
-        Assert.assertTrue("Name of the added/ selected product from list is not the same as in Shopping Cart Summary", PRODUCT_NAME.contentEquals(productNameInTheShoppingChartSummary));
+        Assert.assertTrue("Name of the added/ selected product from list is not the same as in Shopping Cart Summary", productInShoppingChartSummary.getText().contentEquals(productTitle));
     }
 
     public void checkAddressPageDetailsAreCorrect( String userMobileNumber){
@@ -68,12 +69,11 @@ public class ShoppingCartPage extends CatalogPage {
         shippingPriceBox.isDisplayed();
     }
 
-    public void checkPaymentPageDetailsAreCorrect(){
-        WebElement productNameInPaymentSection = getDriver().findElement(By.xpath("//td/p/a"));
-        String productNameInPaymentSectionText = productNameInPaymentSection.getText();
-        Assert.assertTrue("Name of the added/ selected product from list is not the same as in Shopping Cart Summary", PRODUCT_NAME.contentEquals(productNameInPaymentSectionText));
-
+    public void checkPaymentPageDetailsAreCorrect(String productTitle){
+        WebElement productNameInPaymentSection = getDriver().findElement(By.xpath(PRODUCT_NAME_IN_PAYMENT_PAGE.replace("%value%", productTitle)));
+        Assert.assertTrue("Name of the added/ selected product from list is not the same as in Shopping Cart Summary", productNameInPaymentSection.getText().contentEquals(productTitle));
     }
+
     public void clickTheAgreeToTermsButton(){
         agreeToTermsCheckBox.click();
     }

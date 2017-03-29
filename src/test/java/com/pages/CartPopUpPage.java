@@ -22,11 +22,11 @@ public class CartPopUpPage extends CatalogPage {
     @FindBy(xpath = "//a[contains(@title,'checkout')]")
     private WebElement proceedToCheckoutButton;
 
-    public void checkAddedProductIsPresentInCartPopUp (String productIndex){
-        WebElement product = getDriver().findElement(By.xpath(LIST_OF_PRODUCT_NAMES.replace("%value%", productIndex)));
-        WebElement addToCartButton = getDriver().findElement(By.xpath(LIST_OF_ADD_TO_CART_BUTTONS.replace("%value%", productIndex)));
-        String productsName = product.getText();
-        Assert.assertTrue("The product you clicked AddToCart is not the same as in the basket", productsNameInCartPopUp.getText().equals(productsName));
+    public void checkAddedProductIsPresentInCartPopUp (String productTitle){
+       // WebElement product = getDriver().findElement(By.xpath(LIST_OF_PRODUCT_NAMES.replace("%value%", productIndex)));
+        WebElement addToCartButton = getDriver().findElement(By.xpath(ADD_TO_CART_BUTTON.replace("%value%", productTitle)));
+        //String productsName = product.getText();
+        Assert.assertTrue("The product you clicked AddToCart is not the same as in the basket", productsNameInCartPopUp.getText().equals(productTitle));
         Assert.assertTrue("The Product Successfully added message was not received", productSuccessfullyAddedMessage.getText().contains("successfully added"));
     }
 

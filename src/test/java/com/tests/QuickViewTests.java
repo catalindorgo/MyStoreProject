@@ -26,6 +26,7 @@ public class QuickViewTests {
     @Steps
     CatalogSteps catalogSteps;
 
+
     @Before
     public void launchFireFox(){
         webDriver.get("http://automationpractice.com/index.php");
@@ -34,20 +35,24 @@ public class QuickViewTests {
     @Test
     public void shareProductOnSocialNetworkAndChekLauncedPopUp(){
         mainSteps.clickOnWomenSection();
-        catalogSteps.quickViewProduct("1");
-        quickViewSteps.shareProductOnSocialNetworkAndCheckLaunchedPopUp("facebook",  0);
+        catalogSteps.quickViewProduct("Blouse");
+        catalogSteps.switchToQuickViewPopUp();
+        //metoda de mai jos nu merge bine inca.
+        quickViewSteps.shareProductOnSocialNetworkAndCheckLaunchedPopUp("facebook");
     }
 
     @Test
-    public void addProductToWishList()   {
+    public void addProductToWishListAndCheckConfirmation()   {
         mainSteps.clickOnWomenSection();
-        catalogSteps.quickViewProduct("1");
-        quickViewSteps.addProductToWishList(1);
+        catalogSteps.quickViewProduct("Blouse");
+        catalogSteps.switchToQuickViewPopUp();
+        quickViewSteps.addProductToWishListAndCheckConfirmation();
     }
     @Test
     public void checkProductNameIsCorrect(){
         mainSteps.clickOnWomenSection();
-        catalogSteps.quickViewProduct("1");
-        quickViewSteps.checkProductNameIsCorrect("1");
+        catalogSteps.quickViewProduct("Blouse");
+        catalogSteps.switchToQuickViewPopUp();
+        quickViewSteps.checkProductNameIsCorrect("Blouse");
     }
 }

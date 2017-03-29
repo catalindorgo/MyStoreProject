@@ -42,7 +42,7 @@ public class ShoppingCartTests {
     public void addProductToCartAndCheckIfPresentInShoppingSummary(){
         mainSteps.clickOnWomenSection();
         catalogSteps.viewProductsAsList();
-        catalogSteps.addProductToCart("1");
+        catalogSteps.addProductToCart("Faded Short Sleeve T-shirts");
         cartPopUpSteps.clickProceedToCheckout();
         shoppingCartSteps.addProductToCartAndCheckIfPresentInShoppingSummary("1");
     }
@@ -51,34 +51,34 @@ public class ShoppingCartTests {
     public void checkAddressPageDetailsAreCorrect(){
         mainSteps.clickOnWomenSection();
         catalogSteps.viewProductsAsList();
-        catalogSteps.addProductToCart("1");
+        catalogSteps.addProductToCart("Faded Short Sleeve T-shirts");
         cartPopUpSteps.clickProceedToCheckout();
-        shoppingCartSteps.checkAddressPageDetailsAreCorrect("1", "7432221");
+        shoppingCartSteps.checkAddressPageDetailsAreCorrect("Faded Short Sleeve T-shirts", "7432221");
     }
 
     @Test
     public void checkShippingPageDetailsAreCorrect(){
         mainSteps.clickOnWomenSection();
         catalogSteps.viewProductsAsList();
-        catalogSteps.addProductToCart("1");
+        catalogSteps.addProductToCart("Faded Short Sleeve T-shirts");
         cartPopUpSteps.clickProceedToCheckout();
-        shoppingCartSteps.checkShippingPageDetailsAreCorrect("1", "7432221");
+        shoppingCartSteps.checkShippingPageDetailsAreCorrect("Faded Short Sleeve T-shirts", "7432221");
     }
     @Test
     public void checkPaymentDetailsAreCorrect(){
         mainSteps.clickOnWomenSection();
         catalogSteps.viewProductsAsList();
-        catalogSteps.addProductToCart("1");
+        catalogSteps.addProductToCart("Faded Short Sleeve T-shirts");
         cartPopUpSteps.clickProceedToCheckout();
-        shoppingCartSteps.checkPaymentDetailsAreCorrect("1","7432221");
+        shoppingCartSteps.checkPaymentDetailsAreCorrect("Faded Short Sleeve T-shirts","7432221");
     }
 
     @Test
     public void buyAProductCompleteTestFlow(){
         mainSteps.clickOnWomenSection();
         catalogSteps.viewProductsAsList();
-        catalogSteps.addProductToCart("1");
+        catalogSteps.addProductToCart("Faded Short Sleeve T-shirts");
         cartPopUpSteps.clickProceedToCheckout();
-        shoppingCartSteps.buyAProductCompleteTestFlow("1","7432221" );
+        shoppingCartSteps.buyAProductCompleteTestFlow("Faded Short Sleeve T-shirts","7432221" );
     }
 }

@@ -76,14 +76,18 @@ public class CatalogPage extends GeneralMethods {
     @FindBy(xpath = "//li/a[text()='List']")
     private WebElement listViewButton;
 
+    @FindBy(xpath = "//div/iframe")
+    private WebElement quickViewWindowiFrame;
+
+
     String LIST_OF_PRODUCT_PRICES = "//form[@id='productsSortForm']//span[text()='%value%']/../../../../../..//li/div/div/div/span[@itemprop]";
     String LIST_OF_CHECKBOX_TEXT = "//input[@type='checkbox']/../../..//a[text()='%value%']";
     String LIST_OF_COLOR_CHECKBOX = "//label[@class='layered_color']/a[text()='%value%']";
-    String LIST_OF_PRODUCT_NAMES ="(//div/div/h5/a)[%value%]";
-    String LIST_OF_PRODUCT_IMAGES = "//ul[contains(@class, 'product_list')]/li//img[%value%]";
-    String LIST_OF_ADD_TO_CART_BUTTONS ="(//div/a/span[text()='Add to cart'])[%value%]";
-    String LIST_OF_QUICK_VIEW_BUTTONS ="(//ul[contains(@class, 'product_list')]//a[@class='quick-view'])[%value%]";
-    public static String PRODUCT_NAME;
+    String PRODUCT_NAME ="//div/div/h5/a[@title='%value%']";
+    String PRODUCT_IMAGES = "//img[@title='%value%']";
+    String ADD_TO_CART_BUTTON ="//h5/a[@title='%value%']/../../../div//a[contains(@class, 'add_to_cart')]";
+    String QUICK_VIEW_BUTTONS ="//img[@title='%value%']/../../a[@class='quick-view']";
+
 
 
     public void checkWomenPageTitleAndBannerAndListedItems() {
@@ -222,19 +226,23 @@ public class CatalogPage extends GeneralMethods {
         compareNumberOfProductsListedAgainstProductCounter(numberOfProductsCounterPerPage, listOfProductsPerPage);
     }
 
-    public void addProductToCart (String productIndex){
-        WebElement product = getDriver().findElement(By.xpath(LIST_OF_PRODUCT_NAMES.replace("%value%", productIndex)));
-        WebElement addToCartButton = getDriver().findElement(By.xpath(LIST_OF_ADD_TO_CART_BUTTONS.replace("%value%", productIndex)));
-        PRODUCT_NAME = product.getText();
+    public void addProductToCart (String producTitle){
+        //WebElement product = getDriver().findElement(By.xpath(LIST_OF_PRODUCT_NAMES.replace("%value%", productIndex)));
+        WebElement addToCartButton = getDriver().findElement(By.xpath(ADD_TO_CART_BUTTON.replace("%value%", producTitle)));
+        //PRODUCT_NAME = product.getText();
         addToCartButton.click();
-        System.out.println(PRODUCT_NAME +  "   first");
+        //System.out.println( +  "   first");
     }
 
-    public void quickViewProduct(String productIndex){
-        WebElement productImage = getDriver().findElement(By.xpath(LIST_OF_PRODUCT_IMAGES.replace("%value%", productIndex)));
-        WebElement productQuickViewButton = getDriver().findElement(By.xpath(LIST_OF_QUICK_VIEW_BUTTONS.replace("%value%", productIndex)));
+    public void quickViewProduct(String productTitle){
+        WebElement productImage = getDriver().findElement(By.xpath(PRODUCT_IMAGES.replace("%value%", productTitle)));
+        WebElement productQuickViewButton = getDriver().findElement(By.xpath(QUICK_VIEW_BUTTONS.replace("%value%", productTitle)));
         hoverOverWebElement(productImage);
         productQuickViewButton.click();
+    }
+
+    public void switchToQuickViewPopUp(){
+        switchToFrame(quickViewWindowiFrame);
     }
 
     public void selectPriceRange(){}

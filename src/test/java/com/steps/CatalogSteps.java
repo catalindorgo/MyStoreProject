@@ -84,12 +84,17 @@ public class CatalogSteps extends ScenarioSteps {
     }
 
     @Step
-    public void addProductToCart(String productIndex){
-        catalogPage.addProductToCart(productIndex);
+    public void addProductToCart(String productTitle){
+        catalogPage.addProductToCart(productTitle);
     }
 
     @Step
-    public void quickViewProduct(String prodcutIndex){
-        catalogPage.quickViewProduct(prodcutIndex);
+    public void quickViewProduct(String productTitle){
+        catalogPage.quickViewProduct(productTitle);
+    }
+
+    @Step
+    public void switchToQuickViewPopUp(){
+        catalogPage.switchToQuickViewPopUp();
     }
 }

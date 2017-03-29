@@ -1,5 +1,6 @@
 package com.pages;
 
+import net.serenitybdd.core.annotations.findby.FindBy;
 import net.thucydides.core.pages.PageObject;
 import org.junit.Assert;
 import org.openqa.selenium.By;
@@ -17,8 +18,10 @@ import java.util.Set;
  * Created by catalindorgo on 3/15/2017.
  */
 public class GeneralMethods extends PageObject {
+
     public static String userFirstName;
     public static String userMobilePhoneNumber;
+
 
     public void compareNumberOfProductsListedAgainstProductCounter(WebElement nrOfProducts, List<WebElement> entriesPerPage ){
         String productCounterString = nrOfProducts.getText();
@@ -115,10 +118,23 @@ public class GeneralMethods extends PageObject {
         webDriverWait.until(ExpectedConditions.visibilityOf(element));
     }
 
-    public void switchToLaunchedPopUp(Integer tabNumber){
-        ArrayList<String> tabList = new ArrayList<String>(getDriver().getWindowHandles());
-        getDriver().switchTo().window(tabList.get(tabNumber));
-        System.out.println("U   R     L" + getDriver().getCurrentUrl());
+    public void switchToLaunchedPopUp(){
+        String currentHandle = getDriver().getWindowHandle();
+        ArrayList<String> tabListHandles = new ArrayList<String>(getDriver().getWindowHandles());
+
+        for (String windowHandle : tabListHandles){
+            if(currentHandle != windowHandle ){
+                getDriver().switchTo().window(windowHandle);
+                System.out.println("This is the new window handle" + windowHandle);
+            }
+            break;
+        }
+        System.out.println("This is the tablistHandles, so multiple" + tabListHandles);
+        System.out.println("This is the current tab handle" + currentHandle);
+    }
+
+    public void switchToFrame(WebElement iFrameName){
+        getDriver().switchTo().frame(iFrameName);
     }
 
 }

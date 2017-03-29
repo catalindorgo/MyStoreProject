@@ -31,31 +31,28 @@ public class QuickViewPage extends CatalogPage {
     private WebElement addedToWishlistConfirmationMessage;
 
     String SHARE_ON_SOCIAL_NETWORK_BUTTON ="//p/button/i[@class='icon-%value%']/..";
+    String PRODUCT_NAME_IN_QUICK_VIEW_POP_UP ="//div/div/h1[text()='%value%']";
 
     //@FindBy(css = )
 
     public void shareProductOnSocialNetworkAndCheckLaunchedPopUp(String socialNetwork){
        WebElement socialNetworkButton = getDriver().findElement(By.xpath(SHARE_ON_SOCIAL_NETWORK_BUTTON.replace("%value%",socialNetwork)));
-        //waitMethod(socialNetworkButton);
-        socialNetworkButton.click();
-        ArrayList<String> tabList = new ArrayList<String>(getDriver().getWindowHandles());
-        getDriver().switchTo().window(tabList.get(1));
         String currentUrl = getDriver().getCurrentUrl();
+        socialNetworkButton.click();
+        switchToLaunchedPopUp();
+        System.out.println(currentUrl);
         Assert.assertTrue("expected url is incorrect compared to your input", currentUrl.contains(socialNetwork));
     }
 
     public void clickAddToWishlistButtonAndCheckConfirmationPopUp() {
         System.out.print("--------------" + addToWishListButton.getText());
         addToWishListButton.click();
-      //  addedToWishlistConfirmationMessage.isDisplayed();
+        addedToWishlistConfirmationMessage.isDisplayed();
     }
 
-    public void checkProductNameIsCorrect(String productIndex){
-        WebElement product = getDriver().findElement(By.xpath(LIST_OF_PRODUCT_NAMES.replace("%value%", productIndex)));
-        WebElement addToCartButton = getDriver().findElement(By.xpath(LIST_OF_ADD_TO_CART_BUTTONS.replace("%value%", productIndex)));
-        PRODUCT_NAME = product.getText();
-
-        Assert.assertTrue("name not correct", productName.getText().contains(PRODUCT_NAME));
+    public void checkProductNameIsCorrect(String productTitle){
+        WebElement productName = getDriver().findElement(By.xpath(PRODUCT_NAME_IN_QUICK_VIEW_POP_UP.replace("%value%", productTitle)));
+        Assert.assertTrue("name not correct", productName.getText().contains(productTitle));
 
     }
 }

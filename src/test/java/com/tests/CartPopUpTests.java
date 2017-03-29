@@ -34,8 +34,8 @@ public class CartPopUpTests {
     public void addProductToCartAndCheckIfSuccessfullyAdded(){
         mainSteps.clickOnWomenSection();
         catalogSteps.viewProductsAsList();
-        catalogSteps.addProductToCart("2");
-        cartPopUpSteps.addProductToCartAndCheckIfSuccessfullyAdded("2");
+        catalogSteps.addProductToCart("Faded Short Sleeve T-shirts");
+        cartPopUpSteps.addProductToCartAndCheckIfSuccessfullyAdded("Faded Short Sleeve T-shirts");
     }
 
 }
