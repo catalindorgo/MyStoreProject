@@ -10,6 +10,7 @@ import org.openqa.selenium.WebElement;
  * Created by catalindorgo on 3/22/2017.
  */
 public class CartPopUpPage extends CatalogPage {
+
     @FindBy(xpath = "//div/span[@class='product-name']")
     private WebElement productsNameInCartPopUp;
 

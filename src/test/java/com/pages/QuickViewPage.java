@@ -12,6 +12,10 @@ import java.util.ArrayList;
  * Created by catalindorgo on 3/27/2017.
  */
 public class QuickViewPage extends CatalogPage {
+
+    String SHARE_ON_SOCIAL_NETWORK_BUTTON ="//p/button/i[@class='icon-%value%']/..";
+    String PRODUCT_NAME_IN_QUICK_VIEW_POP_UP ="//div/div/h1[text()='%value%']";
+
     @FindBy(xpath ="" )
     private WebElement productDescription;
 
@@ -30,22 +34,23 @@ public class QuickViewPage extends CatalogPage {
     @FindBy(xpath = "//div//p[@class='fancybox-error']")
     private WebElement addedToWishlistConfirmationMessage;
 
-    String SHARE_ON_SOCIAL_NETWORK_BUTTON ="//p/button/i[@class='icon-%value%']/..";
-    String PRODUCT_NAME_IN_QUICK_VIEW_POP_UP ="//div/div/h1[text()='%value%']";
+    @FindBy(xpath = "//span/i[@class='icon-plus']")
+    private WebElement plusQuantityButton;
 
-    //@FindBy(css = )
+    @FindBy(xpath = "//p/input[@type='text']")
+    private WebElement quantityInputField;
 
-    public void shareProductOnSocialNetworkAndCheckLaunchedPopUp(String socialNetwork){
+
+    public void shareProductOnSocialNetwork(String socialNetwork){
        WebElement socialNetworkButton = getDriver().findElement(By.xpath(SHARE_ON_SOCIAL_NETWORK_BUTTON.replace("%value%",socialNetwork)));
-        String currentUrl = getDriver().getCurrentUrl();
         socialNetworkButton.click();
+    }
+    public void switchToNewLaunchedTabAndCheckIfURLContainsSocialNetworkName(String socialNetwork){
         switchToLaunchedPopUp();
-        System.out.println(currentUrl);
-        Assert.assertTrue("expected url is incorrect compared to your input", currentUrl.contains(socialNetwork));
+        Assert.assertTrue("Your URL does not contain the Social Network name", getDriver().getCurrentUrl().contains(socialNetwork));
     }
 
     public void clickAddToWishlistButtonAndCheckConfirmationPopUp() {
-        System.out.print("--------------" + addToWishListButton.getText());
         addToWishListButton.click();
         addedToWishlistConfirmationMessage.isDisplayed();
     }
@@ -54,5 +59,13 @@ public class QuickViewPage extends CatalogPage {
         WebElement productName = getDriver().findElement(By.xpath(PRODUCT_NAME_IN_QUICK_VIEW_POP_UP.replace("%value%", productTitle)));
         Assert.assertTrue("name not correct", productName.getText().contains(productTitle));
 
+    }
+
+    public void increaseProductQuantityAndCheckQuantityFieldInput(Integer quantity){
+        for(int i =0; i < quantity; i++){
+            plusQuantityButton.click();
+        }
+        Integer quantityAfterUpdate = Integer.valueOf(quantityInputField.getAttribute("value"));
+        Assert.assertTrue("the quantity is not updated correctly", quantity.equals(quantityAfterUpdate -1 ) );
     }
 }

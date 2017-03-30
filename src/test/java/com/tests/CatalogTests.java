@@ -59,7 +59,7 @@ public class CatalogTests {
         mainSteps.selectCasualDressesSubSectionFromDresses();
         catalogSteps.checkCasualDressesSubSectionFromDressesTitleBannerAndListedItems();
     }
-// Testul de mai jos NU MAI crapa.
+// Testul de mai jos NU MAI crapa.yey
     @Test
     public void checkWomenProductListIsCorrectlySortedByPriceLowToHigh(){
         mainSteps.clickOnWomenSection();

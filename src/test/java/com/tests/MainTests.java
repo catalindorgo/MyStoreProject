@@ -30,10 +30,12 @@ public class MainTests {
     public void checkLogoPresence(){
         mainSteps.checkLogoPresence();
     }
+
     @Test
     public void checkShoppingChartPresence(){
         mainSteps.checkShoppingChartPresence();
     }
+
     @Test
     public void checkElementsPresenceFromWomenDropDown(){
         mainSteps.checkElementsPresenceFromWomenDropDown();
@@ -48,6 +50,7 @@ public class MainTests {
     public void checkTShirtElementPresence(){
         mainSteps.checkTShirtElementPresence();
     }
+
     @Test
     public void checkBannersPresence(){
         mainSteps.checkBannersPresence();

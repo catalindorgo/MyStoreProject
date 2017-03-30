@@ -203,7 +203,6 @@ public class SignUpPage extends GeneralMethods {
         userMobilePhoneNumber = mobilePhoneNumber;
         userFirstName = firstName;
 
-
         selectGender(gender);
         firstNameField.sendKeys(firstName);
         lastNameField.sendKeys(lastName);

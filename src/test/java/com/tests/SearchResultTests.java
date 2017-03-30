@@ -33,11 +33,13 @@ public class SearchResultTests {
         mainSteps.searchForTerm("SUMMER");
         searchResultSteps.checkIfSearchResultRetainsTheSearchTerm("SUMMER");
     }
+
     @Test
     public void compareSearchListedItemsToNumberOfSearchResults(){
         mainSteps.searchForTerm("Summer");
         searchResultSteps.compareSearchListedItemsToNumberOfSearchResults();
     }
+
     @Test
     public void checkErrorMessageIsDisplayedForNoResultsSearch(){
         mainSteps.searchForTerm("ErrorTerm");

@@ -14,11 +14,12 @@ public class QuickViewSteps extends ScenarioSteps {
     QuickViewPage quickViewPage;
 
     @StepGroup
-    public void shareProductOnSocialNetworkAndCheckLaunchedPopUp(String socialNetwork){
-        quickViewPage.shareProductOnSocialNetworkAndCheckLaunchedPopUp(socialNetwork);
+    public void shareProductOnSocialNetworkAndCheckLaunchedPopUpsURL(String socialNetwork){
+        quickViewPage.shareProductOnSocialNetwork(socialNetwork);
+        quickViewPage.switchToNewLaunchedTabAndCheckIfURLContainsSocialNetworkName(socialNetwork);
     }
 
-    @StepGroup
+    @Step
     public void addProductToWishListAndCheckConfirmation()   {
         quickViewPage.clickAddToWishlistButtonAndCheckConfirmationPopUp();
     }
@@ -26,5 +27,10 @@ public class QuickViewSteps extends ScenarioSteps {
     @Step
     public void checkProductNameIsCorrect(String productTitle ){
         quickViewPage.checkProductNameIsCorrect(productTitle);
+    }
+
+    @Step
+    public void increaseProductQuantity(Integer quantity){
+        quickViewPage.increaseProductQuantityAndCheckQuantityFieldInput(quantity);
     }
 }

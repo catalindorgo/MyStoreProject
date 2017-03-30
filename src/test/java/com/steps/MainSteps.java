@@ -9,6 +9,7 @@ import net.thucydides.core.steps.ScenarioSteps;
  */
 public class MainSteps extends ScenarioSteps {
     MainPage mainPage;
+
     @Step
     public void checkLogoPresence(){
         mainPage.checkLogoPresence();

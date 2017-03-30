@@ -9,6 +9,10 @@ import org.openqa.selenium.WebElement;
  * Created by catalindorgo on 3/23/2017.
  */
 public class ShoppingCartPage extends CatalogPage {
+
+    String PRODUCT_IN_SHOPPING_CHART_SUMMARY ="//td/p[@class='product-name']/a[text()='%value%']";
+    String PRODUCT_NAME_IN_PAYMENT_PAGE = "//td/p/a[text()= '%value%']";
+
     @FindBy(xpath = "//div/h1")
     private WebElement shoppingCartPageTitle;
 
@@ -44,10 +48,6 @@ public class ShoppingCartPage extends CatalogPage {
 
     @FindBy(xpath = "//div/p/strong")
     private WebElement titleOfOrderConfirmationMessage;
-
-    String PRODUCT_IN_SHOPPING_CHART_SUMMARY ="//td/p[@class='product-name']/a[text()='%value%']";
-    String PRODUCT_NAME_IN_PAYMENT_PAGE = "//td/p/a[text()= '%value%']";
-
 
     public void checkIfProductIsSuccessfullyAddedToShoppingChartSummary(String productTitle){
         WebElement productInShoppingChartSummary = getDriver().findElement(By.xpath(PRODUCT_IN_SHOPPING_CHART_SUMMARY.replace("%value%", productTitle)));

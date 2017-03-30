@@ -18,6 +18,7 @@ import java.util.Set;
  * Created by catalindorgo on 3/15/2017.
  */
 public class CatalogPage extends GeneralMethods {
+
     @FindBy(xpath = "//div[@class='rte']//p[contains(text(), 'category includes all ')]")
     private WebElement womenBanner;
 
@@ -53,10 +54,6 @@ public class CatalogPage extends GeneralMethods {
 
     @FindBy(xpath = "//div[@class='rte']//p[contains(text(), 'every day')]")
     private WebElement casualDressesBanner;
-
-   // @FindBy(xpath = "//li/div/div/div/span[@itemprop]")
-    //@FindBy(xpath = "//div[@id='center_column']//div[@class='right-block']//span[@itemprop='price']")
-    //private List<WebElement> priceOfProductList;
 
     @FindBy(xpath = "//div[@id='uniform-selectProductSort']")
     private WebElement sortByDropDownButton;

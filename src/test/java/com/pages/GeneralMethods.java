@@ -22,7 +22,6 @@ public class GeneralMethods extends PageObject {
     public static String userFirstName;
     public static String userMobilePhoneNumber;
 
-
     public void compareNumberOfProductsListedAgainstProductCounter(WebElement nrOfProducts, List<WebElement> entriesPerPage ){
         String productCounterString = nrOfProducts.getText();
         int productCounter = 0;
@@ -119,18 +118,14 @@ public class GeneralMethods extends PageObject {
     }
 
     public void switchToLaunchedPopUp(){
-        String currentHandle = getDriver().getWindowHandle();
+        String parentHandle = getDriver().getWindowHandle();
         ArrayList<String> tabListHandles = new ArrayList<String>(getDriver().getWindowHandles());
 
         for (String windowHandle : tabListHandles){
-            if(currentHandle != windowHandle ){
+            if(!windowHandle.contentEquals(parentHandle) ){
                 getDriver().switchTo().window(windowHandle);
-                System.out.println("This is the new window handle" + windowHandle);
             }
-            break;
         }
-        System.out.println("This is the tablistHandles, so multiple" + tabListHandles);
-        System.out.println("This is the current tab handle" + currentHandle);
     }
 
     public void switchToFrame(WebElement iFrameName){

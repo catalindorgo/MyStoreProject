@@ -11,6 +11,7 @@ import java.util.List;
  * Created by catalindorgo on 3/16/2017.
  */
 public class SearchResultPage extends PageObject {
+
     @FindBy(xpath = ".//h1/span[@class='lighter']")
     private WebElement searchResultTerm;
 

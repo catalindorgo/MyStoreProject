@@ -14,6 +14,7 @@ import java.util.Set;
  * Created by catalindorgo on 3/14/2017.
  */
 public class MainPage extends GeneralMethods {
+
     @FindBy(xpath = "//a/img[@alt='My Store']")
     private WebElement siteLogo;
 

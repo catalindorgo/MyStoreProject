@@ -52,6 +52,7 @@ public class AuthenticationTests {
         toolBarSteps.clickSignInButton();
         authenticationSteps.logInAndVerifyAccount("admin@yahoo.ro", "password", "Admin lastName");
     }
+
     @Test
     public void checkErrorMessageAtFailedAuthentication(){
         toolBarSteps.clickSignInButton();

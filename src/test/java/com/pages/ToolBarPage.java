@@ -13,6 +13,7 @@ import java.util.ArrayList;
  * Created by catalindorgo on 3/14/2017.
  */
 public class ToolBarPage extends GeneralMethods{
+
     @FindBy(xpath = "//a[@class='login']")
     private WebElement signInButtonFromToolbar;
 

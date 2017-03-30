@@ -19,22 +19,22 @@ import java.util.Set;
 public class AuthenticationPage extends PageObject {
 
     @FindBy(xpath="//input[@name='email_create']")
-      WebElement emailAddressField;
+    private WebElement emailAddressField;
 
     @FindBy(xpath = "//div//button[@name='SubmitCreate']")
-     WebElement createAccountButton;
+    private WebElement createAccountButton;
 
     @FindBy(xpath = "//div[@class='row']//ol/li")
-     WebElement errorMessageForInvalidEmail;
+    private WebElement errorMessageForInvalidEmail;
 
     @FindBy (xpath = "//div/div/input[@name='email']")
-     WebElement logInEmail;
+    private WebElement logInEmail;
 
     @FindBy(xpath = "//div/span/input[@name= 'passwd']")
-     WebElement logInPassword;
+    private WebElement logInPassword;
 
     @FindBy (xpath = "//p/button[@type ='submit']")
-     WebElement signInButton;
+    private WebElement signInButton;
 
     @FindBy (xpath = "//div/a[@class='account']/span")
     private WebElement loggedInAccount;

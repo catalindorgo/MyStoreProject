@@ -1,8 +1,6 @@
 package com.tests;
 
-import com.steps.CatalogSteps;
-import com.steps.MainSteps;
-import com.steps.QuickViewSteps;
+import com.steps.*;
 import net.serenitybdd.junit.runners.SerenityRunner;
 import net.thucydides.core.annotations.Managed;
 import net.thucydides.core.annotations.Steps;
@@ -25,6 +23,10 @@ public class QuickViewTests {
     MainSteps mainSteps;
     @Steps
     CatalogSteps catalogSteps;
+    @Steps
+    AuthenticationSteps authenticationSteps;
+    @Steps
+    ToolBarSteps toolBarSteps;
 
 
     @Before
@@ -37,22 +39,32 @@ public class QuickViewTests {
         mainSteps.clickOnWomenSection();
         catalogSteps.quickViewProduct("Blouse");
         catalogSteps.switchToQuickViewPopUp();
-        //metoda de mai jos nu merge bine inca.
-        quickViewSteps.shareProductOnSocialNetworkAndCheckLaunchedPopUp("facebook");
+        quickViewSteps.shareProductOnSocialNetworkAndCheckLaunchedPopUpsURL("facebook");
     }
 
     @Test
     public void addProductToWishListAndCheckConfirmation()   {
+        toolBarSteps.clickSignInButton();
+        authenticationSteps.logInAndVerifyAccount("admin@yahoo.ro", "password", "Admin lastName");
         mainSteps.clickOnWomenSection();
         catalogSteps.quickViewProduct("Blouse");
         catalogSteps.switchToQuickViewPopUp();
         quickViewSteps.addProductToWishListAndCheckConfirmation();
     }
+
     @Test
     public void checkProductNameIsCorrect(){
         mainSteps.clickOnWomenSection();
         catalogSteps.quickViewProduct("Blouse");
         catalogSteps.switchToQuickViewPopUp();
         quickViewSteps.checkProductNameIsCorrect("Blouse");
+    }
+
+    @Test
+    public void increaseProductQuantityAndCheckQuantityFieldInput(){
+        mainSteps.clickOnWomenSection();
+        catalogSteps.quickViewProduct("Blouse");
+        catalogSteps.switchToQuickViewPopUp();
+        quickViewSteps.increaseProductQuantity(3);
     }
 }
