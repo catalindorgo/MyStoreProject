@@ -1,0 +1,5 @@
+"Story","Title","Result","Date","Stability","Duration (s)"
+"Quick view tests","Add product to wish list and check confirmation","SUCCESS","2017-03-31T14:32:56.996+03:00","0.0","27.57"
+"Quick view tests","Check product name is correct","SUCCESS","2017-03-31T14:33:47.725+03:00","0.0","24.26"
+"Quick view tests","Increase product quantity and check quantity field input","SUCCESS","2017-03-31T14:33:25.226+03:00","0.0","21.83"
+"Quick view tests","Share product on social network and chek launced pop up","SUCCESS","2017-03-31T14:32:32.023+03:00","0.0","24.32"

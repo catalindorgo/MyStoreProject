@@ -1,0 +1,1 @@
+<?xml version="1.0" encoding="UTF-8"?><testsuite errors="0" failures="0" name="com.tests.SignUpTests" skipped="0" tests="2" time="39.08" timestamp="2017-03-90 02:38:08"><testcase classname="com.tests.SignUpTests" name="Register with invalid credentials and check error"/><testcase classname="com.tests.SignUpTests" name="Register new account successfully"/></testsuite>

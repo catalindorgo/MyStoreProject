@@ -44,7 +44,7 @@ public class ShoppingCartTests {
         catalogSteps.viewProductsAsList();
         catalogSteps.addProductToCart("Faded Short Sleeve T-shirts");
         cartPopUpSteps.clickProceedToCheckout();
-        shoppingCartSteps.addProductToCartAndCheckIfPresentInShoppingSummary("1");
+        shoppingCartSteps.addProductToCartAndCheckIfPresentInShoppingSummary("Faded Short Sleeve T-shirts");
     }
 
     @Test

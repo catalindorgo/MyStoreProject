@@ -1,0 +1,5 @@
+"Story","Title","Result","Date","Stability","Duration (s)"
+"Authentication tests","Check error message at failed authentication","SUCCESS","2017-03-31T14:25:33.808+03:00","0.0","14.26"
+"Authentication tests","Create account with invalid email and verify thrown error","SUCCESS","2017-03-31T14:25:17.225+03:00","0.0","15.57"
+"Authentication tests","Create account with valid email and verify landing page","SUCCESS","2017-03-31T14:25:48.601+03:00","0.0","16.47"
+"Authentication tests","Log in and verify account","SUCCESS","2017-03-31T14:26:05.687+03:00","0.0","15.05"

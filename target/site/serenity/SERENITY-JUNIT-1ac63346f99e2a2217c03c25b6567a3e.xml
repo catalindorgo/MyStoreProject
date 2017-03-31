@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?><testsuite errors="0" failures="1" name="com.tests.CatalogTests" skipped="0" tests="1" time="19.48" timestamp="2017-03-89 03:12:34"><testcase classname="com.tests.CatalogTests" name="Check if women products are sorted alphabetically zto a"><failure message="Your list is not ordered Z to A" type="java.lang.AssertionError">Your list is not ordered Z to A</failure><system-err>Your list is not ordered Z to A&#13;
-com.pages.CatalogPage.checkIfProductsAreSortedAlphabeticallyZtoA(CatalogPage.java:209)&#13;
-com.steps.CatalogSteps.checkIfWomenProductsAreSortedAlphabeticallyZtoA(CatalogSteps.java:68)&#13;
-com.tests.CatalogTests.checkIfWomenProductsAreSortedAlphabeticallyZtoA(CatalogTests.java:89)&#13;
-</system-err></testcase></testsuite>

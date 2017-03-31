@@ -1,0 +1,8 @@
+"Story","Title","Result","Date","Stability","Duration (s)"
+"Main tests","Check banners presence","SUCCESS","2017-03-31T14:31:18.351+03:00","0.0","14.4"
+"Main tests","Check elements presence from dresses drop down","SUCCESS","2017-03-31T14:30:47.188+03:00","0.0","14.5"
+"Main tests","Check elements presence from women drop down","SUCCESS","2017-03-31T14:31:02.322+03:00","0.0","15.29"
+"Main tests","Check logo presence","SUCCESS","2017-03-31T14:32:17.491+03:00","0.0","13.13"
+"Main tests","Check popular and best sellers sections presence","SUCCESS","2017-03-31T14:32:03.144+03:00","0.0","13.73"
+"Main tests","Check shopping chart presence","SUCCESS","2017-03-31T14:31:48.272+03:00","0.0","14.21"
+"Main tests","Check t shirt element presence","SUCCESS","2017-03-31T14:31:33.389+03:00","0.0","14.27"

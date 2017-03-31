@@ -14,8 +14,8 @@ public class ShoppingCartSteps extends ScenarioSteps {
     ShoppingCartPage shoppingCartPage;
 
     @StepGroup
-    public void addProductToCartAndCheckIfPresentInShoppingSummary(String productIndex){
-        shoppingCartPage.checkIfProductIsSuccessfullyAddedToShoppingChartSummary(productIndex);
+    public void addProductToCartAndCheckIfPresentInShoppingSummary(String productTitle){
+        shoppingCartPage.checkIfProductIsSuccessfullyAddedToShoppingChartSummary(productTitle);
     }
 
     @StepGroup

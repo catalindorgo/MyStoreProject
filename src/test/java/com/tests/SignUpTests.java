@@ -2,6 +2,7 @@ package com.tests;
 
 import com.steps.AuthenticationSteps;
 import com.steps.SignUpSteps;
+import com.steps.ToolBarSteps;
 import net.serenitybdd.junit.runners.SerenityRunner;
 import net.thucydides.core.annotations.Managed;
 import net.thucydides.core.annotations.Steps;
@@ -22,6 +23,8 @@ public class SignUpTests  {
     SignUpSteps signUpSteps;
     @Steps
     AuthenticationSteps authenticationSteps;
+    @Steps
+    ToolBarSteps toolBarSteps;
 
     @Before
     public void launchFireFox(){
@@ -30,13 +33,15 @@ public class SignUpTests  {
 
     @Test
     public void registerWithInvalidCredentialsAndCheckError(){
+        toolBarSteps.clickSignInButton();
         authenticationSteps.createAccountWithValidEmail("matei@corvin.ro");
         signUpSteps.registerWithInvalidCredentialsAndCheckError();
     }
 
     @Test
     public void registerNewAccountSuccessfully(){
-        authenticationSteps.createAccountWithValidEmail("admin7@yahoo.ro");
+        toolBarSteps.clickSignInButton();
+        authenticationSteps.createAccountWithValidEmail("admin91@yahoo.ro");
         signUpSteps.registerNewAccountSuccessfully("mr", "firstname", "lastname", "", "password", "4", "June", "1986", "randomAddress", "theaddress", "homeAdd", "chicago","Iowa", "00000", "2321312", "alias" );
     }
 }

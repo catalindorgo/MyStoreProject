@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?><testsuite errors="0" failures="1" name="com.Tests.CatalogTests" skipped="0" tests="1" time="17.34" timestamp="2017-03-80 11:45:20"><testcase classname="com.Tests.CatalogTests" name="Check women product list is correctly sorted by price high to low"><failure message="not sorted correctly" type="java.lang.AssertionError">not sorted correctly</failure><system-err>not sorted correctly&#13;
-com.pages.CatalogPage.checkIfProductsAreSoretedByPriceHighToLow(CatalogPage.java:150)&#13;
-com.Steps.CatalogSteps.checkWomenProductListIsCorrectlySortedByPriceHighToLow(CatalogSteps.java:64)&#13;
-com.Tests.CatalogTests.checkWomenProductListIsCorrectlySortedByPriceHighToLow(CatalogTests.java:72)&#13;
-</system-err></testcase></testsuite>

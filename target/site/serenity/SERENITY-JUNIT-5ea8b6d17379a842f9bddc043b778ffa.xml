@@ -1,1 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?><testsuite errors="0" failures="0" name="com.Tests.AuthenticationTests" skipped="0" tests="1" time="14.53" timestamp="2017-03-73 10:49:36"><testcase classname="com.Tests.AuthenticationTests" name="Create account with valid email and verify landing page"/></testsuite>

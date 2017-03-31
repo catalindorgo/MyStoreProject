@@ -38,7 +38,7 @@ public class ToolBarTests {
 
     @Test
     public void subscribeToNewsletter(){
-        toolBarSteps.subscribeToNewsletter("mremailaddress@yahoo.com");
+        toolBarSteps.subscribeToNewsletter("mrreemmailaddress@yahoo.com");
     }
 
     @Test
