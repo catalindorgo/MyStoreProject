@@ -1,16 +1,9 @@
 package com.pages;
 
-import net.thucydides.core.pages.PageObject;
 import net.serenitybdd.core.annotations.findby.FindBy;
+import net.thucydides.core.pages.PageObject;
 import org.junit.Assert;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import com.pages.SignUpPage;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
-import java.util.List;
-import java.util.Set;
 
 
 /**
@@ -47,6 +40,8 @@ public class AuthenticationPage extends PageObject {
         createAccountButton.click();
         Assert.assertTrue("The expected error is not received for inccorect Email address",errorMessageForInvalidEmail.getText().contentEquals(expectedErrorMessage) );
     }
+
+    //TODO: Assert user is on the expected page- Create an account
     public void createAccountWithValidEmail(String emailAddress){
         emailAddressField.sendKeys(emailAddress);
         createAccountButton.click();

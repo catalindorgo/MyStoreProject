@@ -1,7 +1,6 @@
 package com.pages;
 
 import net.serenitybdd.core.annotations.findby.FindBy;
-import net.thucydides.core.pages.PageObject;
 import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -43,6 +42,7 @@ public class ToolBarPage extends GeneralMethods{
 
     String FOLLOW_US_BUTTON_STANDARD_STRING = "//li[@class='%value%']";
 
+    //TODO: Assert that you are on the desired page- Authentication
     public void clickSignInButton(){
         signInButtonFromToolbar.click();
     }

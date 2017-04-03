@@ -1,4 +1,0 @@
-"Story","Title","Result","Date","Stability","Duration (s)"
-"Search result tests","Check error message is displayed for no results search","SUCCESS","2017-03-31T14:34:17.312+03:00","0.0","15.18"
-"Search result tests","Check if search result retains the search term","SUCCESS","2017-03-31T14:34:51.722+03:00","0.0","16.52"
-"Search result tests","Compare search listed items to number of search results","SUCCESS","2017-03-31T14:34:33.435+03:00","0.0","17.62"

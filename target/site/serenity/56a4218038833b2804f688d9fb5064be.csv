@@ -1,6 +1,0 @@
-"Story","Title","Result","Date","Stability","Duration (s)"
-"Shopping cart tests","Add product to cart and check if present in shopping summary","SUCCESS","2017-03-31T14:35:08.883+03:00","0.0","31.66"
-"Shopping cart tests","Buy a product complete test flow","SUCCESS","2017-03-31T14:36:12.504+03:00","0.0","38.57"
-"Shopping cart tests","Check address page details are correct","SUCCESS","2017-03-31T14:37:29.918+03:00","0.0","35.99"
-"Shopping cart tests","Check payment details are correct","SUCCESS","2017-03-31T14:36:51.607+03:00","0.0","37.57"
-"Shopping cart tests","Check shipping page details are correct","SUCCESS","2017-03-31T14:35:41.257+03:00","0.0","30.63"

@@ -31,6 +31,11 @@ public class SignUpTests  {
         webDriver.get("http://automationpractice.com/index.php");
         webDriver.manage().window().maximize();}
 
+    /*
+    TODO: registerWithInvalidCredentialsAndCheckError- poor name for the method: no invalid credentials + error message is not checked (only verifies that the message is displayed but can be any error message);
+    TODO: decide what you want to to achieve with this method and change it accordingly; I would propose different approach but it depends on what you want to do with it:
+    TODO: change test's name accordingly
+    */
     @Test
     public void registerWithInvalidCredentialsAndCheckError(){
         toolBarSteps.clickSignInButton();

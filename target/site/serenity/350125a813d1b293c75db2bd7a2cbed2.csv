@@ -1,3 +1,0 @@
-"Story","Title","Result","Date","Stability","Duration (s)"
-"Catalog tests","Check if women products are sorted alphabetically zto a","FAILURE","2017-03-31T14:29:15.357+03:00","0.0","19.83"
-"Catalog tests","Check women product list is correctly sorted by price high to low","FAILURE","2017-03-31T14:28:00.362+03:00","0.0","19.34"

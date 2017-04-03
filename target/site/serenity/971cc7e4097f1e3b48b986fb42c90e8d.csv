@@ -1,5 +1,0 @@
-"Story","Title","Result","Date","Stability","Duration (s)"
-"Tool bar tests","Check bottom toolbar elements prsence","SUCCESS","2017-03-31T14:39:23.787+03:00","0.0","14.04"
-"Tool bar tests","Click on follow us icon and check landing page","SUCCESS","2017-03-31T14:39:06.469+03:00","0.0","16.3"
-"Tool bar tests","Subscribe to newsletter","SUCCESS","2017-03-31T14:39:38.405+03:00","0.0","16.09"
-"Tool bar tests","Subscribe to newsletter with invalid email","SUCCESS","2017-03-31T14:38:49.249+03:00","0.0","16.38"
