@@ -33,12 +33,15 @@ public class AuthenticationTests {
         webDriver.get("http://automationpractice.com/index.php");
         webDriver.manage().window().maximize();}
 
+    //TODO: I would split these tests in 2 classed: Create Account tests and Sign in tests- I think it's a bit confusing because even if they are on the same page, it's different functionality
+
     @Test
     public void createAccountWithInvalidEmailAndVerifyThrownError(){
         toolBarSteps.clickSignInButton();
         authenticationSteps.createAccountWithIncorrectEmailAndVerifyThrownError("invalidEmail", "Invalid email address.");
     }
 
+    //TODO: waitForSignUpPageHeader method should be removed from the test; wait should be included in createAccountWithValidEmail method
     @Test
     public void createAccountWithValidEmailAndVerifyLandingPage(){
         toolBarSteps.clickSignInButton();
@@ -53,6 +56,8 @@ public class AuthenticationTests {
         authenticationSteps.logInAndVerifyAccount("admin@yahoo.ro", "password", "Admin lastName");
     }
 
+    //TODO: Change method name to reflect all you are doing: signInWithWrongCredentialsAndVerifyErrormessage
+    //TODO: Personally, I like to use Verify instead of Check. Check is used only on checking radio buttons...
     @Test
     public void checkErrorMessageAtFailedAuthentication(){
         toolBarSteps.clickSignInButton();

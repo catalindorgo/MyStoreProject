@@ -26,6 +26,7 @@ public class SignUpTests  {
     @Steps
     ToolBarSteps toolBarSteps;
 
+    //TODO: maybe change method's name?
     @Before
     public void launchFireFox(){
         webDriver.get("http://automationpractice.com/index.php");

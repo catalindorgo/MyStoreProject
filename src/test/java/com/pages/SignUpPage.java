@@ -91,6 +91,8 @@ public class SignUpPage extends GeneralMethods {
     private WebElement submitAccountButton;
 
 
+    //TODO: Remove System.out.println
+    //TODO: Change assert error to be thrown to reflect reality
     public void verifyCurrentPageTitle(String expectedPageTitle) {
         System.out.print(signUpPageTitle);
         Assert.assertTrue("page title not found", expectedPageTitle.contentEquals(signUpPageTitle.getText()));
