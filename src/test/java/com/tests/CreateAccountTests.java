@@ -16,7 +16,7 @@ import org.openqa.selenium.WebDriver;
  */
 
 @RunWith(SerenityRunner.class)
-public class AuthenticationTests {
+public class CreateAccountTests {
     @Managed (uniqueSession = true)
     public WebDriver webDriver;
 //    @ManagedPages( defaultUrl = "http://automationpractice.com/index.php")
@@ -34,14 +34,15 @@ public class AuthenticationTests {
         webDriver.manage().window().maximize();}
 
     //TODO: I would split these tests in 2 classed: Create Account tests and Sign in tests- I think it's a bit confusing because even if they are on the same page, it's different functionality
-
+    // Done - I agree, it's easier to follow. 2 classes present - CreateAccountTests and - SignInTests.
     @Test
     public void createAccountWithInvalidEmailAndVerifyThrownError(){
         toolBarSteps.clickSignInButton();
-        authenticationSteps.createAccountWithIncorrectEmailAndVerifyThrownError("invalidEmail", "Invalid email address.");
+        authenticationSteps.createAccountWithIncorrectEmailAndVerifyThrownError("invalidEmail");
     }
 
     //TODO: waitForSignUpPageHeader method should be removed from the test; wait should be included in createAccountWithValidEmail method
+    // NOT DONE - The WebElement that I'm waiting for, the page header is from a different Class so that's why I didn't include it in the suggested method
     @Test
     public void createAccountWithValidEmailAndVerifyLandingPage(){
         toolBarSteps.clickSignInButton();
@@ -50,17 +51,4 @@ public class AuthenticationTests {
         signUpSteps.verifyCurrentPageTitle("CREATE AN ACCOUNT");
     }
 
-    @Test
-    public void logInAndVerifyAccount(){
-        toolBarSteps.clickSignInButton();
-        authenticationSteps.logInAndVerifyAccount("admin@yahoo.ro", "password", "Admin lastName");
-    }
-
-    //TODO: Change method name to reflect all you are doing: signInWithWrongCredentialsAndVerifyErrormessage
-    //TODO: Personally, I like to use Verify instead of Check. Check is used only on checking radio buttons...
-    @Test
-    public void checkErrorMessageAtFailedAuthentication(){
-        toolBarSteps.clickSignInButton();
-        authenticationSteps.checkErrorMessageAtFailedAuthentication("admin@yahoo.ro", "$%^&*()_");
-    }
 }

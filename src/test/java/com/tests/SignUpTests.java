@@ -47,7 +47,7 @@ public class SignUpTests  {
     @Test
     public void registerNewAccountSuccessfully(){
         toolBarSteps.clickSignInButton();
-        authenticationSteps.createAccountWithValidEmail("admin91@yahoo.ro");
+        authenticationSteps.createAccountWithValidEmail("admin991@yahoo.ro");
         signUpSteps.registerNewAccountSuccessfully("mr", "firstname", "lastname", "", "password", "4", "June", "1986", "randomAddress", "theaddress", "homeAdd", "chicago","Iowa", "00000", "2321312", "alias" );
     }
 }

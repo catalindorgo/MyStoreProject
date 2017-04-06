@@ -14,8 +14,8 @@ public class AuthenticationSteps extends ScenarioSteps {
     AuthenticationPage authenticationPage;
 
     @Step
-    public void createAccountWithIncorrectEmailAndVerifyThrownError(String emailAdrres, String errorMessage) {
-        authenticationPage.createAccountWithIncorrectEmailAndVerifyThrownError(emailAdrres, errorMessage);
+    public void createAccountWithIncorrectEmailAndVerifyThrownError(String emailAdrres) {
+        authenticationPage.createAccountWithIncorrectEmailAndVerifyThrownError(emailAdrres);
     }
 
     @Step

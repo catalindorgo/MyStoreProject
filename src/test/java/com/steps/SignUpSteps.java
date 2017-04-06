@@ -14,11 +14,11 @@ public class SignUpSteps extends ScenarioSteps{
 
     @Step
     public void registerWithInvalidCredentialsAndCheckError(){
-        signUpPage.registerWithInvalidCredentialsAndVerifyThrownError();
+        signUpPage.clickRegisterButtonWithAllFieldsLeftBlankAndVerifyTheErrorMessageIsThrown();
     }
     @Step
-    public void registerNewAccountSuccessfully(String gender, String firstName, String lastName, String email,String password, String dayOfBirth, String month, String year, String addressFirstname, String addressLastname, String homeAddress,String cityName ,String state,String zipCodeNumber, String mobilePhoneNumber, String alias ){
-        signUpPage.fillInAndRegisterUserAccountCredentials(gender, firstName,lastName,email,password,dayOfBirth,month,year,addressFirstname,addressLastname,homeAddress,cityName,state,zipCodeNumber,mobilePhoneNumber,alias);
+    public void registerNewAccountSuccessfully(String gender, String firstName, String lastName, String email,String password, String dayOfBirthNumber, String monthName, String year, String addressFirstname, String addressLastname, String homeAddress,String cityName ,String state,String zipCodeNumber, String mobilePhoneNumber, String alias ){
+        signUpPage.fillInAndRegisterUserAccountCredentials(gender, firstName, lastName, email, password, dayOfBirthNumber, monthName, year, addressFirstname, addressLastname, homeAddress, cityName, state, zipCodeNumber, mobilePhoneNumber, alias);
     }
 
     @Step
