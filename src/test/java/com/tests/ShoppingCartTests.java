@@ -40,7 +40,7 @@ public class ShoppingCartTests {
 
     @Test
     public void addProductToCartAndCheckIfPresentInShoppingSummary(){
-        mainSteps.clickOnWomenSection();
+        mainSteps.clickOnWomenSectionAndVerifyLandingPageBreadCrumb();
         catalogSteps.viewProductsAsList();
         catalogSteps.addProductToCart("Faded Short Sleeve T-shirts");
         cartPopUpSteps.clickProceedToCheckout();
@@ -49,7 +49,7 @@ public class ShoppingCartTests {
 
     @Test
     public void checkAddressPageDetailsAreCorrect(){
-        mainSteps.clickOnWomenSection();
+        mainSteps.clickOnWomenSectionAndVerifyLandingPageBreadCrumb();
         catalogSteps.viewProductsAsList();
         catalogSteps.addProductToCart("Faded Short Sleeve T-shirts");
         cartPopUpSteps.clickProceedToCheckout();
@@ -58,7 +58,7 @@ public class ShoppingCartTests {
 
     @Test
     public void checkShippingPageDetailsAreCorrect(){
-        mainSteps.clickOnWomenSection();
+        mainSteps.clickOnWomenSectionAndVerifyLandingPageBreadCrumb();
         catalogSteps.viewProductsAsList();
         catalogSteps.addProductToCart("Faded Short Sleeve T-shirts");
         cartPopUpSteps.clickProceedToCheckout();
@@ -66,7 +66,7 @@ public class ShoppingCartTests {
     }
     @Test
     public void checkPaymentDetailsAreCorrect(){
-        mainSteps.clickOnWomenSection();
+        mainSteps.clickOnWomenSectionAndVerifyLandingPageBreadCrumb();
         catalogSteps.viewProductsAsList();
         catalogSteps.addProductToCart("Faded Short Sleeve T-shirts");
         cartPopUpSteps.clickProceedToCheckout();
@@ -75,7 +75,7 @@ public class ShoppingCartTests {
 
     @Test
     public void buyAProductCompleteTestFlow(){
-        mainSteps.clickOnWomenSection();
+        mainSteps.clickOnWomenSectionAndVerifyLandingPageBreadCrumb();
         catalogSteps.viewProductsAsList();
         catalogSteps.addProductToCart("Faded Short Sleeve T-shirts");
         cartPopUpSteps.clickProceedToCheckout();

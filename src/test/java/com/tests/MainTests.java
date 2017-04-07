@@ -32,7 +32,7 @@ public class MainTests {
     }
 
     @Test
-    public void checkShoppingChartPresence(){
+    public void checkShoppingCartPresence(){
         mainSteps.checkShoppingChartPresence();
     }
 

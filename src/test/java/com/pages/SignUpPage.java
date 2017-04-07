@@ -109,74 +109,7 @@ public class SignUpPage extends GeneralMethods {
     }
 
     public void waitForSignUpPageHeader() {
-        WebDriver driver = new WebDriver() {
-            @Override
-            public void get(String url) {
-
-            }
-
-            @Override
-            public String getCurrentUrl() {
-                return null;
-            }
-
-            @Override
-            public String getTitle() {
-                return null;
-            }
-
-            @Override
-            public List<WebElement> findElements(By by) {
-                return null;
-            }
-
-            @Override
-            public WebElement findElement(By by) {
-                return null;
-            }
-
-            @Override
-            public String getPageSource() {
-                return null;
-            }
-
-            @Override
-            public void close() {
-
-            }
-
-            @Override
-            public void quit() {
-
-            }
-
-            @Override
-            public Set<String> getWindowHandles() {
-                return null;
-            }
-
-            @Override
-            public String getWindowHandle() {
-                return null;
-            }
-
-            @Override
-            public TargetLocator switchTo() {
-                return null;
-            }
-
-            @Override
-            public Navigation navigate() {
-                return null;
-            }
-
-            @Override
-            public Options manage() {
-                return null;
-            }
-        };
-        WebDriverWait webDriverWait = new WebDriverWait(driver, 5);
-        webDriverWait.until(ExpectedConditions.visibilityOf(signUpPageTitle));
+        waitMethod(signUpPageTitle);
     }
 
     /*TODO: Change the method to reflect what you intend to do in the test

@@ -37,8 +37,8 @@ public class GeneralMethods extends PageObject {
         Assert.assertTrue("The number of listed products is not equal to the top product counter", productCounter  == entriesPerPage.size());
     }
     public void checkPageTitleAndBanner(WebElement pageTitle, WebElement banner){
-        pageTitle.isDisplayed();
-        banner.isDisplayed();
+        Assert.assertTrue("The expected current page title is not displayed", pageTitle.isDisplayed());
+        Assert.assertTrue("The expected current page banner is not displayed ", banner.isDisplayed());
     }
 
     public void hoverOverWebElement(WebElement button){
@@ -47,73 +47,7 @@ public class GeneralMethods extends PageObject {
     }
 
     public void waitMethod(WebElement element){
-        WebDriver driver = new WebDriver() {
-            @Override
-            public void get(String url) {
-
-            }
-
-            @Override
-            public String getCurrentUrl() {
-                return null;
-            }
-
-            @Override
-            public String getTitle() {
-                return null;
-            }
-
-            @Override
-            public List<WebElement> findElements(By by) {
-                return null;
-            }
-
-            @Override
-            public WebElement findElement(By by) {
-                return null;
-            }
-
-            @Override
-            public String getPageSource() {
-                return null;
-            }
-
-            @Override
-            public void close() {
-
-            }
-
-            @Override
-            public void quit() {
-
-            }
-
-            @Override
-            public Set<String> getWindowHandles() {
-                return null;
-            }
-
-            @Override
-            public String getWindowHandle() {
-                return null;
-            }
-
-            @Override
-            public TargetLocator switchTo() {
-                return null;
-            }
-
-            @Override
-            public Navigation navigate() {
-                return null;
-            }
-
-            @Override
-            public Options manage() {
-                return null;
-            }
-        };
-        WebDriverWait webDriverWait = new WebDriverWait(driver, 4);
+        WebDriverWait webDriverWait = new WebDriverWait(getDriver(), 4);
         webDriverWait.until(ExpectedConditions.visibilityOf(element));
     }
 

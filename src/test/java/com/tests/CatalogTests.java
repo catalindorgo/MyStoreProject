@@ -29,75 +29,74 @@ public class CatalogTests {
 
     @Test
     public void navigateToWomenSectionAndCheckLandingPage(){
-        mainSteps.clickOnWomenSection();
-        catalogSteps.checkWomenPagesTitleAndBannerAndListedItems();
+        mainSteps.clickOnWomenSectionAndVerifyLandingPageBreadCrumb();
     }
 
     @Test
     public void checkDressesPagesTitleAndBannerAndListedItems(){
-        mainSteps.clickOnDressesSection();
-        catalogSteps.checkDressesPagesTitleAndBannerAndListedItems();
+        mainSteps.clickOnDressesSectionAndVerifyLandingPageBreadCrumb();
+        catalogSteps.checkIfPageTitleBannerAndListedItemsAreCorrectlyDisplayed();
     }
     @Test
     public void checkTShirtTitleAndBannerAndListedItems(){
         mainSteps.clickTShirtSection();
-        catalogSteps.checkTShirtTitleAndBannerAndListedItems();
+        catalogSteps.checkIfPageTitleBannerAndListedItemsAreCorrectlyDisplayed();
     }
 
     @Test
     public void checkBlousesSubsectionsTitleBannerAndListeItmes(){
         mainSteps.selectBlousesSubSection();
-        catalogSteps.checkBlousesSubsectionsTitleBannerAndListedItmes();
+        catalogSteps.checkIfPageTitleBannerAndListedItemsAreCorrectlyDisplayed();
     }
     @Test
     public void checkTShirtSubSectionTitleBannerAndListedItems(){
         mainSteps.selectTShirtSubSection();
-        catalogSteps.checkTShirtSubSectionTitleBannerAndListedItems();
+        catalogSteps.checkIfPageTitleBannerAndListedItemsAreCorrectlyDisplayed();
     }
     @Test
     public void checkCasualDressesSubSectionFromDressesTitleBannerAndListedItems(){
         mainSteps.selectCasualDressesSubSectionFromDresses();
-        catalogSteps.checkCasualDressesSubSectionFromDressesTitleBannerAndListedItems();
+        catalogSteps.checkIfPageTitleBannerAndListedItemsAreCorrectlyDisplayed();
     }
-// Testul de mai jos NU MAI crapa.yey
+
     @Test
     public void checkWomenProductListIsCorrectlySortedByPriceLowToHigh(){
-        mainSteps.clickOnWomenSection();
-        catalogSteps.checkWomenProductListIsCorrectlySortedByPriceLowToHigh("Price: Lowest first");
+        mainSteps.clickOnWomenSectionAndVerifyLandingPageBreadCrumb();
+        catalogSteps.checkIfProductListIsCorrectlySortedByPriceLowToHigh("Price: Lowest first");
     }
 
     @Test
     public void checkWomenProductListIsCorrectlySortedByPriceHighToLow(){
-        mainSteps.clickOnWomenSection();
-        catalogSteps.checkWomenProductListIsCorrectlySortedByPriceHighToLow("Price: Highest first");
+        mainSteps.clickOnWomenSectionAndVerifyLandingPageBreadCrumb();
+        catalogSteps.checkIfProductListIsCorrectlySortedByPriceHighToLow("Price: Highest first");
     }
 
     @Test
     public void checkIfWomenProductsAreInStock(){
-        mainSteps.clickOnWomenSection();
-        catalogSteps.checkIfWomenProductsAreInStock("In stock");
+        mainSteps.clickOnWomenSectionAndVerifyLandingPageBreadCrumb();
+        catalogSteps.checkIfProductsAreInStock("In stock");
     }
 
     @Test
     public void checkIfWomenProductsAreSortedAlphabeticallyAtoZ(){
-        mainSteps.clickOnWomenSection();
-        catalogSteps.checkIfWomenProductsAreSortedAlphabeticallyAtoZ("Product Name: A to Z");
+        mainSteps.clickOnWomenSectionAndVerifyLandingPageBreadCrumb();
+        catalogSteps.checkIfProductsAreSortedAlphabeticallyAtoZ("Product Name: A to Z");
     }
     @Test
     public void checkIfWomenProductsAreSortedAlphabeticallyZtoA(){
-        mainSteps.clickOnWomenSection();
-        catalogSteps.checkIfWomenProductsAreSortedAlphabeticallyZtoA("Product Name: Z to A");
+        mainSteps.clickOnWomenSectionAndVerifyLandingPageBreadCrumb();
+        catalogSteps.checkIfProductsAreSortedAlphabeticallyZtoA("Product Name: Z to A");
     }
 
     @Test
     public void clickCatalogCheckboxFromWomenSectionAndVerifyFiltering(){
-        mainSteps.clickOnWomenSection();
-        catalogSteps.clickCatalogCheckboxFromWomenSectionAndVerifyFiltering("Tops");
+        mainSteps.clickOnWomenSectionAndVerifyLandingPageBreadCrumb();
+        catalogSteps.clickACatalogCheckboxAndVerifyFilteringIsApplied("Tops");
     }
 
     @Test
     public void clickColorCheckboxFromWomenSectionAndVerifyFiltering(){
-        mainSteps.clickOnWomenSection();
-        catalogSteps.clickColorCheckboxFromWomenSectionAndVerifyFiltering("Yellow");
+        mainSteps.clickOnWomenSectionAndVerifyLandingPageBreadCrumb();
+        catalogSteps.clickColorCheckboxAndVerifyFiltering("Yellow");
     }
 }

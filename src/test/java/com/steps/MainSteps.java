@@ -48,17 +48,17 @@ public class MainSteps extends ScenarioSteps {
     }
 
     @Step
-    public void clickOnWomenSection(){
-        mainPage.clickOnWomenSection();
+    public void clickOnWomenSectionAndVerifyLandingPageBreadCrumb(){
+        mainPage.clickOnWomenSectionAndVerifyLandingPageBreadCrumb();
     }
     @Step
-    public void clickOnDressesSection(){
-        mainPage.clickOnDressesSection();
+    public void clickOnDressesSectionAndVerifyLandingPageBreadCrumb(){
+        mainPage.clickOnDressesSectionAndVerifyLandingPageBreadCrumb();
     }
 
     @Step
     public void clickTShirtSection(){
-        mainPage.clickTShirtSection();
+        mainPage.clickTShirtSectionAndVerifyLandingPageBreadCrumb();
     }
 
     @Step

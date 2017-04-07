@@ -1,8 +1,6 @@
 package com.steps;
 
 import com.pages.CatalogPage;
-import com.pages.GeneralMethods;
-import com.pages.MainPage;
 import net.thucydides.core.annotations.Step;
 import net.thucydides.core.annotations.StepGroup;
 import net.thucydides.core.steps.ScenarioSteps;
@@ -14,68 +12,45 @@ public class CatalogSteps extends ScenarioSteps {
     CatalogPage catalogPage;
 
     @Step
-    public void checkWomenPagesTitleAndBannerAndListedItems(){
-        catalogPage.checkWomenPageTitleAndBannerAndListedItems();
-    }
-
-    @Step
-    public void checkDressesPagesTitleAndBannerAndListedItems(){
-        catalogPage.checkDressesPageTitleAndBannerAndListedItems();
-    }
-
-    @Step
-    public void checkTShirtTitleAndBannerAndListedItems(){
-        catalogPage.checkTShirtTitleAndBannerAndListedItems();
-    }
-
-    @Step
-    public void checkBlousesSubsectionsTitleBannerAndListedItmes(){
-        catalogPage.checkBlousesSubsectionsTitleBannerAndListeItmes();
-    }
-    @Step
-    public void checkTShirtSubSectionTitleBannerAndListedItems(){
-        catalogPage.checkTShirtSubsectionsTitleBannerAndListeItmes();
-    }
-    @Step
-    public void checkCasualDressesSubSectionFromDressesTitleBannerAndListedItems(){
-        catalogPage.checkCasualDressesSubSectionFromDressesTitleBannerAndListedItems();
+    public void checkIfPageTitleBannerAndListedItemsAreCorrectlyDisplayed(){
+        catalogPage.checkIfProductIsInStock();
     }
 
     @StepGroup
-    public void checkWomenProductListIsCorrectlySortedByPriceLowToHigh(String sortByOption){
+    public void checkIfProductListIsCorrectlySortedByPriceLowToHigh(String sortByOption){
         catalogPage.sortByUserOption(sortByOption);
         catalogPage.checkIfProductsAreSoretedByPriceLowToHigh(sortByOption);
     }
 
     @StepGroup
-    public void checkWomenProductListIsCorrectlySortedByPriceHighToLow(String sortByOption) {
+    public void checkIfProductListIsCorrectlySortedByPriceHighToLow(String sortByOption) {
         catalogPage.sortByUserOption(sortByOption);
         catalogPage.checkIfProductsAreSoretedByPriceHighToLow(sortByOption);
     }
     @StepGroup
-    public void checkIfWomenProductsAreInStock(String sortByOption){
+    public void checkIfProductsAreInStock(String sortByOption){
         catalogPage.sortByUserOption(sortByOption);
         catalogPage.checkIfProductIsInStock();
     }
     @StepGroup
-    public void checkIfWomenProductsAreSortedAlphabeticallyAtoZ(String sortByOption){
+    public void checkIfProductsAreSortedAlphabeticallyAtoZ(String sortByOption){
         catalogPage.sortByUserOption(sortByOption);
         catalogPage.checkIfProductsAreSortedAlphabeticallyAtoZ();
     }
     @StepGroup
-    public void checkIfWomenProductsAreSortedAlphabeticallyZtoA(String sortByOption){
+    public void checkIfProductsAreSortedAlphabeticallyZtoA(String sortByOption){
         catalogPage.sortByUserOption(sortByOption);
         catalogPage.checkIfProductsAreSortedAlphabeticallyZtoA();
     }
 
     @Step
-    public void clickCatalogCheckboxFromWomenSectionAndVerifyFiltering(String checkboxName){
-        catalogPage.clickCatalogCheckbox(checkboxName);
+    public void clickACatalogCheckboxAndVerifyFilteringIsApplied(String checkboxName){
+        catalogPage.clickACatalogCheckboxAndVerifyFilteringIsApplied(checkboxName);
     }
 
     @Step
-    public void clickColorCheckboxFromWomenSectionAndVerifyFiltering(String colorCheckbox){
-        catalogPage.clickColorCheckbox(colorCheckbox);
+    public void clickColorCheckboxAndVerifyFiltering(String colorCheckbox){
+        catalogPage.clickColorCheckboxAndVerifyFilteringIsApplied(colorCheckbox);
     }
 
     @Step

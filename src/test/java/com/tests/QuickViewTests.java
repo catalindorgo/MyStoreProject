@@ -36,7 +36,7 @@ public class QuickViewTests {
 
     @Test
     public void shareProductOnSocialNetworkAndChekLauncedPopUp(){
-        mainSteps.clickOnWomenSection();
+        mainSteps.clickOnWomenSectionAndVerifyLandingPageBreadCrumb();
         catalogSteps.quickViewProduct("Blouse");
         catalogSteps.switchToQuickViewPopUp();
         quickViewSteps.shareProductOnSocialNetworkAndCheckLaunchedPopUpsURL("facebook");
@@ -46,7 +46,7 @@ public class QuickViewTests {
     public void addProductToWishListAndCheckConfirmation()   {
         toolBarSteps.clickSignInButton();
         authenticationSteps.logInAndVerifyAccount("admin@yahoo.ro", "password", "Admin lastName");
-        mainSteps.clickOnWomenSection();
+        mainSteps.clickOnWomenSectionAndVerifyLandingPageBreadCrumb();
         catalogSteps.quickViewProduct("Blouse");
         catalogSteps.switchToQuickViewPopUp();
         quickViewSteps.addProductToWishListAndCheckConfirmation();
@@ -54,7 +54,7 @@ public class QuickViewTests {
 
     @Test
     public void checkProductNameIsCorrect(){
-        mainSteps.clickOnWomenSection();
+        mainSteps.clickOnWomenSectionAndVerifyLandingPageBreadCrumb();
         catalogSteps.quickViewProduct("Blouse");
         catalogSteps.switchToQuickViewPopUp();
         quickViewSteps.checkProductNameIsCorrect("Blouse");
@@ -62,7 +62,7 @@ public class QuickViewTests {
 
     @Test
     public void increaseProductQuantityAndCheckQuantityFieldInput(){
-        mainSteps.clickOnWomenSection();
+        mainSteps.clickOnWomenSectionAndVerifyLandingPageBreadCrumb();
         catalogSteps.quickViewProduct("Blouse");
         catalogSteps.switchToQuickViewPopUp();
         quickViewSteps.increaseProductQuantity(3);

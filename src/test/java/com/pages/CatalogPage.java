@@ -3,57 +3,29 @@ package com.pages;
 import net.serenitybdd.core.annotations.findby.FindBy;
 import org.junit.Assert;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
-import java.util.Set;
 
 /**
  * Created by catalindorgo on 3/15/2017.
  */
 public class CatalogPage extends GeneralMethods {
 
-    @FindBy(xpath = "//div[@class='rte']//p[contains(text(), 'category includes all ')]")
-    private WebElement womenBanner;
+    @FindBy(xpath = "//div[contains(@class, 'rte')]")
+    private WebElement pageBannerText;
 
-    @FindBy(xpath = "//h1/span[contains(text(), 'Women')]")
-    private WebElement womenPageTitle;
+    @FindBy(xpath = "//span[contains(@class, 'cat-name')]")
+    private WebElement pageTitle;
 
-    @FindBy(xpath = "//ul/li[contains(@class, 'block_product')]")
+    @FindBy(xpath = "//li[contains(@class, 'block_product')]")
     private List<WebElement> listOfProductsPerPage;
 
     @FindBy(xpath = "//span[@class='heading-counter']")
     private WebElement numberOfProductsCounterPerPage;
-
-    @FindBy(xpath = "//h1/span[contains(text(), 'Dresses')]")
-    private WebElement dressesPageTitle;
-
-    @FindBy(xpath = "//div[@class='rte']//p[contains(text(), 'We offer dresses ')]")
-    private WebElement dressesBanner;
-
-    @FindBy(xpath = "//h1/span[contains(text(), 'T-sh')]")
-    private WebElement tShirtPageTitle;
-
-    @FindBy(xpath = "//div[@class='rte']//p[contains(text(), 'must have')]")
-    private WebElement tShirtBanner;
-
-    @FindBy(xpath = "//div[@class='content_scene_cat_bg']")
-    private WebElement blousesBanner;
-
-    @FindBy(xpath = "//h1/span[contains(text(), 'Blouses')]")
-    private WebElement blousesPageTItle;
-
-    @FindBy(xpath = "//h1/span[contains(text(), 'Casual')]")
-    private WebElement casualDressesPageTitle;
-
-    @FindBy(xpath = "//div[@class='rte']//p[contains(text(), 'every day')]")
-    private WebElement casualDressesBanner;
 
     @FindBy(xpath = "//div[@id='uniform-selectProductSort']")
     private WebElement sortByDropDownButton;
@@ -76,6 +48,9 @@ public class CatalogPage extends GeneralMethods {
     @FindBy(xpath = "//div/iframe")
     private WebElement quickViewWindowiFrame;
 
+    @FindBy(xpath = "//ul[contains(@class, 'product_list')]")
+    private WebElement entireProductListBodyOnCurrentPage;
+
 
     String LIST_OF_PRODUCT_PRICES = "//form[@id='productsSortForm']//span[text()='%value%']/../../../../../..//li/div/div/div/span[@itemprop]";
     String LIST_OF_CHECKBOX_TEXT = "//input[@type='checkbox']/../../..//a[text()='%value%']";
@@ -87,35 +62,11 @@ public class CatalogPage extends GeneralMethods {
 
 
 
-    public void checkWomenPageTitleAndBannerAndListedItems() {
-        checkPageTitleAndBanner(womenPageTitle, womenBanner);
+    public void checkIfPageTitleBannerAndListedItemsAreCorrectlyDisplayed() {
+        checkPageTitleAndBanner(pageTitle, pageBannerText);
         compareNumberOfProductsListedAgainstProductCounter(numberOfProductsCounterPerPage, listOfProductsPerPage);
     }
 
-    public void checkDressesPageTitleAndBannerAndListedItems() {
-        checkPageTitleAndBanner(dressesPageTitle, dressesBanner);
-        compareNumberOfProductsListedAgainstProductCounter(numberOfProductsCounterPerPage, listOfProductsPerPage);
-    }
-
-    public void checkTShirtTitleAndBannerAndListedItems() {
-        checkPageTitleAndBanner(tShirtPageTitle, tShirtBanner);
-        compareNumberOfProductsListedAgainstProductCounter(numberOfProductsCounterPerPage, listOfProductsPerPage);
-    }
-
-    public void checkBlousesSubsectionsTitleBannerAndListeItmes() {
-        checkPageTitleAndBanner(blousesPageTItle, blousesBanner);
-        compareNumberOfProductsListedAgainstProductCounter(numberOfProductsCounterPerPage, listOfProductsPerPage);
-    }
-
-    public void checkTShirtSubsectionsTitleBannerAndListeItmes() {
-        checkPageTitleAndBanner(tShirtPageTitle, tShirtBanner);
-        compareNumberOfProductsListedAgainstProductCounter(numberOfProductsCounterPerPage, listOfProductsPerPage);
-    }
-
-    public void checkCasualDressesSubSectionFromDressesTitleBannerAndListedItems() {
-        checkPageTitleAndBanner(casualDressesPageTitle, casualDressesBanner);
-        compareNumberOfProductsListedAgainstProductCounter(numberOfProductsCounterPerPage, listOfProductsPerPage);
-    }
     public void sortByUserOption(String sortByOption){
         sortByDropDownButton.click();
         WebElement dropdown = getDriver().findElement(By.id("selectProductSort"));
@@ -133,7 +84,6 @@ public class CatalogPage extends GeneralMethods {
         for (WebElement wb : listOfProductPrices) {
 
             String priceString = wb.getAttribute("innerHTML").replace("$", "");
-            System.out.println(  priceString);
             double priceFloat = Double.parseDouble(priceString);
             priceList.add(priceFloat);
         }
@@ -156,7 +106,6 @@ public class CatalogPage extends GeneralMethods {
         for (WebElement wb : listOfProductPrices) {
 
             String priceString = wb.getAttribute("innerHTML").replace("$", "");
-            System.out.println(  priceString);
             double priceFloat = Double.parseDouble(priceString);
             priceList.add(priceFloat);
         }
@@ -175,7 +124,6 @@ public class CatalogPage extends GeneralMethods {
     public void checkIfProductIsInStock(){
         for (WebElement webElement : listOfProductsInStockAttribute){
             Assert.assertTrue("Your product is not on stock", webElement.getText().contains("In stock"));
-            System.out.println(webElement);
         }
     }
 
@@ -211,13 +159,13 @@ public class CatalogPage extends GeneralMethods {
 
     }
 
-    public void clickCatalogCheckbox(String checkboxName){
+    public void clickACatalogCheckboxAndVerifyFilteringIsApplied(String checkboxName){
         WebElement checkbox = getDriver().findElement(By.xpath(LIST_OF_CHECKBOX_TEXT.replace("%value%", checkboxName)));
         checkbox.click();
         compareNumberOfProductsListedAgainstProductCounter(numberOfProductsCounterPerPage, listOfProductsPerPage);
     }
 
-    public void clickColorCheckbox(String checkboxColorName){
+    public void clickColorCheckboxAndVerifyFilteringIsApplied(String checkboxColorName){
         WebElement checkbox = getDriver().findElement(By.xpath(LIST_OF_COLOR_CHECKBOX.replace("%value%", checkboxColorName)));
         checkbox.click();
         compareNumberOfProductsListedAgainstProductCounter(numberOfProductsCounterPerPage, listOfProductsPerPage);
@@ -246,6 +194,7 @@ public class CatalogPage extends GeneralMethods {
 
     public void viewProductsAsList(){
         listViewButton.click();
+       // System.out.print("aaaaaaaaaaaaaaa" + entireProductListBodyOnCurrentPage);
     }
 
 
