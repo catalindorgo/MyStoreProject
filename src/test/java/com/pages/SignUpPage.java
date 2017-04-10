@@ -1,6 +1,7 @@
 package com.pages;
 
 import net.serenitybdd.core.annotations.findby.FindBy;
+import org.jruby.RubyProcess;
 import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -117,9 +118,10 @@ public class SignUpPage extends GeneralMethods {
     */
     /* Done  - Method Name updated. I believe that initially I wanted to use the String in order to parametrize different error messages for different faulty credentials or tests.
     but now switched to a WebElement instead of String */
-    public void clickRegisterButtonWithAllFieldsLeftBlankAndVerifyTheErrorMessageIsThrown() {
+    public void clickRegisterButtonWithAllFieldsBlankAndVerifyTheErrorMessageIsThrown() {
         registerButton.click();
-        Assert.assertTrue("Sign Up field in details are not correct. The " + errorMessageForSignUpProblems.getText() + " message should have been displayed", errorMessageForSignUpProblems.isDisplayed());
+        Assert.assertTrue("The error message banner is not displayed at all", errorMessageForSignUpProblems.isDisplayed());
+        Assert.assertTrue("The 'Sign Up failed' error message was not displayed" , errorMessageForSignUpProblems.getText().contains("errors"));
     }
 
     /*
@@ -143,8 +145,6 @@ public class SignUpPage extends GeneralMethods {
     private void selectOptionFromDropDownList(String option, String dateSubCategory){
         WebElement dropDownListExpander = getDriver().findElement(By.xpath(DATE_DROP_DOWN_LISTS_BUTTONS_EXPANDER.replace("%value%",dateSubCategory )));
         WebElement dropDownListSelect = getDriver().findElement(By.xpath(DATE_DROP_DOWN_LISTS_SELECT.replace("%value%", dateSubCategory)));
-//        String optionUpdated = option.trim();
-        //System.out.println(optionUpdated);
         dropDownListExpander.click();
         Select dropDownListOption = new Select (dropDownListSelect);
         dropDownListOption.selectByVisibleText(option);

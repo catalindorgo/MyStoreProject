@@ -51,10 +51,7 @@ public class ShoppingCartPage extends CatalogPage {
 
     public void checkIfProductIsSuccessfullyAddedToShoppingChartSummary(String productTitle){
         WebElement productInShoppingChartSummary = getDriver().findElement(By.xpath(PRODUCT_IN_SHOPPING_CHART_SUMMARY.replace("%value%", productTitle)));
-        //String productNameInTheShoppingChartSummary = productInShoppingChartSummary.getText();
-
         Assert.assertTrue("Incorrect title", shoppingCartPageTitle.getText().contains("SHOPPING-CART SUMMARY"));
-        System.out.println(PRODUCT_NAME);
         Assert.assertTrue("Name of the added/ selected product from list is not the same as in Shopping Cart Summary", productInShoppingChartSummary.getText().contentEquals(productTitle));
     }
 

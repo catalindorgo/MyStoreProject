@@ -54,8 +54,8 @@ public class CatalogSteps extends ScenarioSteps {
     }
 
     @Step
-    public void viewProductsAsList(){
-        catalogPage.viewProductsAsList();
+    public void viewProductsAsListAndVerifyTheListingStyleIsApplied(){
+        catalogPage.viewProductsAsListAndVerifyTheListingStyleIsApplied();
     }
 
     @Step

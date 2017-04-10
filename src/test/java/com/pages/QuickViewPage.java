@@ -16,14 +16,10 @@ public class QuickViewPage extends CatalogPage {
     String SHARE_ON_SOCIAL_NETWORK_BUTTON ="//p/button/i[@class='icon-%value%']/..";
     String PRODUCT_NAME_IN_QUICK_VIEW_POP_UP ="//div/div/h1[text()='%value%']";
 
-    @FindBy(xpath ="" )
-    private WebElement productDescription;
+
 
     @FindBy(xpath = "//div/div/h1[@itemprop]")
     private WebElement productName;
-
-    @FindBy(xpath = "")
-    private WebElement socialNetworkShareButton;
 
     @FindBy(xpath = "//div/span/img")
     private WebElement productImage;
@@ -52,12 +48,12 @@ public class QuickViewPage extends CatalogPage {
 
     public void clickAddToWishlistButtonAndCheckConfirmationPopUp() {
         addToWishListButton.click();
-        addedToWishlistConfirmationMessage.isDisplayed();
+        Assert.assertTrue("The 'Added to wishlist' message was not displayed", addedToWishlistConfirmationMessage.isDisplayed());
     }
 
     public void checkProductNameIsCorrect(String productTitle){
         WebElement productName = getDriver().findElement(By.xpath(PRODUCT_NAME_IN_QUICK_VIEW_POP_UP.replace("%value%", productTitle)));
-        Assert.assertTrue("name not correct", productName.getText().contains(productTitle));
+        Assert.assertTrue("The products name is not correct, it should be: " + productTitle, productName.getText().contains(productTitle));
 
     }
 
@@ -66,6 +62,6 @@ public class QuickViewPage extends CatalogPage {
             plusQuantityButton.click();
         }
         Integer quantityAfterUpdate = Integer.valueOf(quantityInputField.getAttribute("value"));
-        Assert.assertTrue("the quantity is not updated correctly", quantity.equals(quantityAfterUpdate -1 ) );
+        Assert.assertTrue("The quantity is not updated correctly", quantity.equals(quantityAfterUpdate -1 ) );
     }
 }

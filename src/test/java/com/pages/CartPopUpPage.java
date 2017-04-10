@@ -1,7 +1,6 @@
 package com.pages;
 
 import net.serenitybdd.core.annotations.findby.FindBy;
-import net.thucydides.core.pages.PageObject;
 import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -24,7 +23,7 @@ public class CartPopUpPage extends CatalogPage {
     private WebElement proceedToCheckoutButton;
 
     public void checkAddedProductIsPresentInCartPopUp (String productTitle){
-        WebElement addToCartButton = getDriver().findElement(By.xpath(ADD_TO_CART_BUTTON.replace("%value%", productTitle)));
+        WebElement addToCartButton = getDriver().findElement(By.xpath(ADD_TO_CART_BUTTON_FOR_SELECTED_PRODUCT.replace("%value%", productTitle)));
         Assert.assertTrue("The product you clicked AddToCart is not the same as in the basket", productsNameInCartPopUp.getText().equals(productTitle));
         Assert.assertTrue("The Product Successfully added message was not received", productSuccessfullyAddedMessage.getText().contains("successfully added"));
     }

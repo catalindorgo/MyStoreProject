@@ -31,7 +31,7 @@ public class SearchResultTests {
     @Test
     public void checkIfSearchResultRetainsTheSearchTerm(){
         mainSteps.searchForTerm("SUMMER");
-        searchResultSteps.checkIfSearchResultRetainsTheSearchTerm("SUMMER");
+        searchResultSteps.checkIfSearchResultRetainsTheSearchTerm("summer");
     }
 
     @Test
@@ -42,7 +42,7 @@ public class SearchResultTests {
 
     @Test
     public void checkErrorMessageIsDisplayedForNoResultsSearch(){
-        mainSteps.searchForTerm("ErrorTerm");
+        mainSteps.searchForTerm("ErrorMessage");
         searchResultSteps.checkErrorMessageIsDisplayedForNoResultsSearch();
     }
 }

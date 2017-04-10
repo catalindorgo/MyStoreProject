@@ -33,7 +33,7 @@ public class CartPopUpTests {
     @Test
     public void addProductToCartAndCheckIfSuccessfullyAdded(){
         mainSteps.clickOnWomenSectionAndVerifyLandingPageBreadCrumb();
-        catalogSteps.viewProductsAsList();
+        catalogSteps.viewProductsAsListAndVerifyTheListingStyleIsApplied();
         catalogSteps.addProductToCart("Faded Short Sleeve T-shirts");
         cartPopUpSteps.addProductToCartAndCheckIfSuccessfullyAdded("Faded Short Sleeve T-shirts");
     }

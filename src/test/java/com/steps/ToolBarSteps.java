@@ -16,8 +16,8 @@ public class ToolBarSteps extends ScenarioSteps{
     }
 
     @Step
-    public void checkBottomToolbarElementsPrsence(){
-        toolBarPage.checkBottomToolbarElementsPrsence();
+    public void verifyBottomToolbarNewsletterAndFollowUsButtonsArePresent(){
+        toolBarPage.verifyBottomToolbarNewsletterAndFollowUsButtonsArePresent();
     }
 
     @Step
@@ -26,13 +26,13 @@ public class ToolBarSteps extends ScenarioSteps{
     }
 
     @Step
-    public void subscribeToNewsletter(String emailAddress){
-        toolBarPage.subscribeToNewsletter(emailAddress);
+    public void subscribeToNewsletterAndCheckIfSubscriptionWasSuccessfull(String emailAddress){
+        toolBarPage.subscribeToNewsletterAndCheckIfSubscriptionWasSuccessfull(emailAddress);
     }
 
     @Step
-    public void subscribeToNewsletterWithInvalidEmail(String invalidEmail){
-        toolBarPage.subscribeToNewsletterWithInvalidEmail(invalidEmail);
+    public void subscribeToNewsletterWithInvalidEmailAndVerifyIfErrorMessageIsThrown(String invalidEmail){
+        toolBarPage.subscribeToNewsletterWithInvalidEmailAndVerifyIfErrorMessageIsThrown(invalidEmail);
     }
 
 

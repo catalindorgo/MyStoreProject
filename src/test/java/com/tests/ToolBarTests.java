@@ -27,8 +27,8 @@ public class ToolBarTests {
     }
 
     @Test
-    public void checkBottomToolbarElementsPrsence(){
-        toolBarSteps.checkBottomToolbarElementsPrsence();
+    public void verifyBottomToolbarNewsletterAndFollowUsButtonsArePresent(){
+        toolBarSteps.verifyBottomToolbarNewsletterAndFollowUsButtonsArePresent();
     }
 
     @Test
@@ -37,13 +37,13 @@ public class ToolBarTests {
     }
 
     @Test
-    public void subscribeToNewsletter(){
-        toolBarSteps.subscribeToNewsletter("mrreemmailaddress@yahoo.com");
+    public void subscribeToNewsletterAndCheckIfSubscriptionWasSuccessfull(){
+        toolBarSteps.subscribeToNewsletterAndCheckIfSubscriptionWasSuccessfull("mrreemmailaddress@yahoo.com");
     }
 
     @Test
-    public void subscribeToNewsletterWithInvalidEmail(){
-        toolBarSteps.subscribeToNewsletterWithInvalidEmail("zzzssdsds");
+    public void subscribeToNewsletterWithInvalidEmailAndVerifyIfErrorMessageIsThrown(){
+        toolBarSteps.subscribeToNewsletterWithInvalidEmailAndVerifyIfErrorMessageIsThrown("zzzssdsds");
 
     }
 }

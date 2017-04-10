@@ -43,15 +43,17 @@ public class ToolBarPage extends GeneralMethods{
     String FOLLOW_US_BUTTON_STANDARD_STRING = "//li[@class='%value%']";
 
     //TODO: Assert that you are on the desired page- Authentication
+    // in progress.
     public void clickSignInButton(){
         signInButtonFromToolbar.click();
     }
-    public void checkBottomToolbarElementsPrsence(){
-        newsletterInputEmailField.isDisplayed();
-        facebookFollowUsButton.isDisplayed();
-        twitterFollowUsButton.isDisplayed();
-        youtubeFollowUsButton.isDisplayed();
-        googlePlusFollowUsButton.isDisplayed();
+
+    public void verifyBottomToolbarNewsletterAndFollowUsButtonsArePresent(){
+        Assert.assertTrue("Newsletter field is not displayed",newsletterInputEmailField.isDisplayed());
+        Assert.assertTrue("Facebook Follow Us button is not displayed",facebookFollowUsButton.isDisplayed());
+        Assert.assertTrue("Twitter Follow Us button is not displayed",twitterFollowUsButton.isDisplayed());
+        Assert.assertTrue("Youtube Follow Us button is not displayed",youtubeFollowUsButton.isDisplayed());
+        Assert.assertTrue("Google Follow Us button is not displayed",googlePlusFollowUsButton.isDisplayed());
     }
 
     public void clickOnFollowUsIconAndCheckLandingPage(String followUsSiteName){
@@ -64,14 +66,14 @@ public class ToolBarPage extends GeneralMethods{
         Assert.assertTrue("expected url is incorrect compared to your input", currentUrl.contains(followUsSiteName));
     }
 
-    public void subscribeToNewsletter(String emailAddress){
+    public void subscribeToNewsletterAndCheckIfSubscriptionWasSuccessfull(String emailAddress){
         newsletterInputEmailField.sendKeys(emailAddress);
         goButtonFromNewsLetterSubscription.click();
         Assert.assertTrue("The subscription Successful message was not received", newsLetterSubscriptionSuccessfulMessage.getText().contains("successfully subscribed"));
 
     }
 
-    public void subscribeToNewsletterWithInvalidEmail(String invalidEmail){
+    public void subscribeToNewsletterWithInvalidEmailAndVerifyIfErrorMessageIsThrown(String invalidEmail){
         newsletterInputEmailField.sendKeys(invalidEmail);
         goButtonFromNewsLetterSubscription.click();
         Assert.assertTrue("The expected error message for invalid email was not received", newsLetterSubscriptionErrorMessage.getText().contains("Invalid") || newsLetterSubscriptionErrorMessage.getText().contains("already registered"));

@@ -13,8 +13,8 @@ public class SignUpSteps extends ScenarioSteps{
     AuthenticationPage authenticationPage;
 
     @Step
-    public void registerWithInvalidCredentialsAndCheckError(){
-        signUpPage.clickRegisterButtonWithAllFieldsLeftBlankAndVerifyTheErrorMessageIsThrown();
+    public void clickRegisterButtonWithAllFieldsBlankAndVerifyTheErrorMessageIsThrown(){
+        signUpPage.clickRegisterButtonWithAllFieldsBlankAndVerifyTheErrorMessageIsThrown();
     }
     @Step
     public void registerNewAccountSuccessfully(String gender, String firstName, String lastName, String email,String password, String dayOfBirthNumber, String monthName, String year, String addressFirstname, String addressLastname, String homeAddress,String cityName ,String state,String zipCodeNumber, String mobilePhoneNumber, String alias ){

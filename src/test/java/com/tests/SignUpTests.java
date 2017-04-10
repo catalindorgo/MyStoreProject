@@ -33,18 +33,20 @@ public class SignUpTests  {
         webDriver.manage().window().maximize();}
 
     /*
-    TODO: registerWithInvalidCredentialsAndCheckError- poor name for the method: no invalid credentials + error message is not checked (only verifies that the message is displayed but can be any error message);
+    TODO: clickRegisterButtonWithAllFieldsBlankAndVerifyTheErrorMessageIsThrown- poor name for the method: no invalid credentials + error message is not checked (only verifies that the message is displayed but can be any error message);
     TODO: decide what you want to to achieve with this method and change it accordingly; I would propose different approach but it depends on what you want to do with it:
     TODO: change test's name accordingly
     */
+    //Done. new name, the assert from the SignUpPage class, also checks part of the errors text.
     @Test
-    public void registerWithInvalidCredentialsAndCheckError(){
+    public void createAccountWithAllRequiredFieldsLeftBlankAndVerifyIfErrorMessageIsThrown(){
         toolBarSteps.clickSignInButton();
         authenticationSteps.createAccountWithValidEmail("matei@corvin.ro");
-        signUpSteps.registerWithInvalidCredentialsAndCheckError();
+        signUpSteps.clickRegisterButtonWithAllFieldsBlankAndVerifyTheErrorMessageIsThrown();
     }
 
     @Test
+    //Method currently not working, as I talked to Ioana about this issue. More details in SignUpPage line 141.
     public void registerNewAccountSuccessfully(){
         toolBarSteps.clickSignInButton();
         authenticationSteps.createAccountWithValidEmail("admin991@yahoo.ro");
