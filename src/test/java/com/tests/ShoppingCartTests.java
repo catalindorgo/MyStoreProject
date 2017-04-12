@@ -34,7 +34,7 @@ public class ShoppingCartTests {
     public void userLogIn(){
         webDriver.get("http://automationpractice.com/index.php");
         webDriver.manage().window().maximize();
-        toolBarSteps.clickSignInButton();
+        toolBarSteps.clickSignInButtonAndVerifyLandingPage();
         authenticationSteps.logInAndVerifyAccount("admin@yahoo.ro", "password", "Admin lastName");
     }
 

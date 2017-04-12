@@ -22,13 +22,8 @@ public class SignUpSteps extends ScenarioSteps{
     }
 
     @Step
-    public void waitForSignUpPageHeader(){
-        signUpPage.waitForSignUpPageHeader();
-    }
-
-    @Step
-    public void verifyCurrentPageTitle(String currentPageTitle){
-        signUpPage.verifyCurrentPageTitle(currentPageTitle);
+    public void waitAndVerifyCurrentPageTitle(String currentPageTitle){
+        signUpPage.waitAndVerifyCurrentPageTitle(currentPageTitle);
     }
 }
 

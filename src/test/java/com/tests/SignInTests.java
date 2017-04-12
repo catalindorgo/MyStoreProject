@@ -24,13 +24,13 @@ public class SignInTests {
     AuthenticationSteps authenticationSteps;
 
     @Before
-    public void launchFireFox(){
+    public void launchApplicationHomePageInFireFoxBrowser(){
         webDriver.get("http://automationpractice.com/index.php");
         webDriver.manage().window().maximize();}
 
     @Test
     public void logInAndVerifyAccount(){
-        toolBarSteps.clickSignInButton();
+        toolBarSteps.clickSignInButtonAndVerifyLandingPage();
         authenticationSteps.logInAndVerifyAccount("admin@yahoo.ro", "password", "Admin lastName");
     }
 
@@ -39,7 +39,7 @@ public class SignInTests {
     // Done - Updated the Methods name to be more suggestive.  Also will use Verify over Check in this context in the future.
     @Test
     public void signInWithIncorrectCredentialsAndVerifyErrorMessage(){
-        toolBarSteps.clickSignInButton();
+        toolBarSteps.clickSignInButtonAndVerifyLandingPage();
         authenticationSteps.checkErrorMessageAtFailedAuthentication("admin@yahoo.ro", "$%^&*()_");
     }
 }

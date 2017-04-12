@@ -27,10 +27,6 @@ public class CartPopUpPage extends CatalogPage {
         Assert.assertTrue("The product you clicked AddToCart is not the same as in the basket", productsNameInCartPopUp.getText().equals(productTitle));
         Assert.assertTrue("The Product Successfully added message was not received", productSuccessfullyAddedMessage.getText().contains("successfully added"));
     }
-// NOT USED in current tests.
-//    public void clickContinueShopping(){
-//        continueShoppingButton.click();
-//    }
 
     public void clickProceedToCheckout(){
         proceedToCheckoutButton.click();

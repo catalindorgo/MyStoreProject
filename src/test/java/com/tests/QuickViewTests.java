@@ -30,7 +30,7 @@ public class QuickViewTests {
 
 
     @Before
-    public void launchFireFox(){
+    public void launchApplicationHomePageInFireFoxBrowser(){
         webDriver.get("http://automationpractice.com/index.php");
         webDriver.manage().window().maximize();}
 
@@ -44,7 +44,7 @@ public class QuickViewTests {
 
     @Test
     public void addProductToWishListAndCheckConfirmation()   {
-        toolBarSteps.clickSignInButton();
+        toolBarSteps.clickSignInButtonAndVerifyLandingPage();
         authenticationSteps.logInAndVerifyAccount("admin@yahoo.ro", "password", "Admin lastName");
         mainSteps.clickOnWomenSectionAndVerifyLandingPageBreadCrumb();
         catalogSteps.quickViewProduct("Blouse");

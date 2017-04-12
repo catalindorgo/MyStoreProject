@@ -11,8 +11,8 @@ public class ToolBarSteps extends ScenarioSteps{
     ToolBarPage toolBarPage;
 
     @Step
-    public void clickSignInButton(){
-        toolBarPage.clickSignInButton();
+    public void clickSignInButtonAndVerifyLandingPage(){
+        toolBarPage.clickSignInButtonAndVerifyLandingPage();
     }
 
     @Step

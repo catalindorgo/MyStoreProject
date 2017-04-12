@@ -21,7 +21,7 @@ public class ToolBarTests {
     ToolBarSteps toolBarSteps;
 
     @Before
-    public void launchFireFox(){
+    public void launchApplicationHomePageInFireFoxBrowser(){
         webDriver.get("http://automationpractice.com/index.php");
         webDriver.manage().window().maximize();
     }
@@ -38,7 +38,7 @@ public class ToolBarTests {
 
     @Test
     public void subscribeToNewsletterAndCheckIfSubscriptionWasSuccessfull(){
-        toolBarSteps.subscribeToNewsletterAndCheckIfSubscriptionWasSuccessfull("mrreemmailaddress@yahoo.com");
+        toolBarSteps.subscribeToNewsletterAndCheckIfSubscriptionWasSuccessfull("gg@yahoo.com");
     }
 
     @Test

@@ -29,7 +29,7 @@ public class CreateAccountTests {
     SignUpSteps signUpSteps;
 
     @Before
-    public void launchFireFox(){
+    public void launchApplicationHomePageInFireFoxBrowser(){
         webDriver.get("http://automationpractice.com/index.php");
         webDriver.manage().window().maximize();}
 
@@ -37,7 +37,7 @@ public class CreateAccountTests {
     // Done - I agree, it's easier to follow. 2 classes present - CreateAccountTests and - SignInTests.
     @Test
     public void createAccountWithInvalidEmailAndVerifyThrownError(){
-        toolBarSteps.clickSignInButton();
+        toolBarSteps.clickSignInButtonAndVerifyLandingPage();
         authenticationSteps.createAccountWithIncorrectEmailAndVerifyThrownError("invalidEmail");
     }
 
@@ -45,10 +45,9 @@ public class CreateAccountTests {
     // NOT DONE - The WebElement that I'm waiting for, the page header is from a different Class so that's why I didn't include it in the suggested method
     @Test
     public void createAccountWithValidEmailAndVerifyLandingPage(){
-        toolBarSteps.clickSignInButton();
+        toolBarSteps.clickSignInButtonAndVerifyLandingPage();
         authenticationSteps.createAccountWithValidEmail("domnul1@copac.com");
-        signUpSteps.waitForSignUpPageHeader();
-        signUpSteps.verifyCurrentPageTitle("CREATE AN ACCOUNT");
+        signUpSteps.waitAndVerifyCurrentPageTitle("CREATE AN ACCOUNT");
     }
 
 }

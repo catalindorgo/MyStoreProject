@@ -1,1 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?><testsuite errors="0" failures="0" name="com.tests.CatalogTests" skipped="0" tests="1" time="19.47" timestamp="2017-04-97 12:14:24"><testcase classname="com.tests.CatalogTests" name="Check women product list is correctly sorted by price low to high"/></testsuite>

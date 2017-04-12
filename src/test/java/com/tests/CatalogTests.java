@@ -23,7 +23,7 @@ public class CatalogTests {
     CatalogSteps catalogSteps;
 
     @Before
-    public void launchFireFox(){
+    public void launchApplicationHomePageInFireFoxBrowser(){
         webDriver.get("http://automationpractice.com/index.php");
         webDriver.manage().window().maximize();}
 

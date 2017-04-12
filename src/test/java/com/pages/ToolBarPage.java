@@ -11,7 +11,7 @@ import java.util.ArrayList;
 /**
  * Created by catalindorgo on 3/14/2017.
  */
-public class ToolBarPage extends GeneralMethods{
+public class ToolBarPage extends AuthenticationPage{
 
     @FindBy(xpath = "//a[@class='login']")
     private WebElement signInButtonFromToolbar;
@@ -34,8 +34,8 @@ public class ToolBarPage extends GeneralMethods{
     @FindBy(xpath = "//form/div/button")
     private WebElement goButtonFromNewsLetterSubscription;
 
-    @FindBy(xpath = "//div/p[@class='alert alert-success']")
-    private WebElement newsLetterSubscriptionSuccessfulMessage;
+    @FindBy(xpath = "//div/p[contains(@class,'alert')]")
+    private WebElement newsLetterSubscriptionMessage;
 
     @FindBy(xpath = "//div/p[@class='alert alert-danger']")
     private WebElement newsLetterSubscriptionErrorMessage;
@@ -43,9 +43,10 @@ public class ToolBarPage extends GeneralMethods{
     String FOLLOW_US_BUTTON_STANDARD_STRING = "//li[@class='%value%']";
 
     //TODO: Assert that you are on the desired page- Authentication
-    // in progress.
-    public void clickSignInButton(){
+    // Done
+    public void clickSignInButtonAndVerifyLandingPage(){
         signInButtonFromToolbar.click();
+        Assert.assertTrue("You are not on the Authentication page, the bread crumbs are not indicating it.", authenticationPageBreadCrumb.getText().contains("Authentication") );
     }
 
     public void verifyBottomToolbarNewsletterAndFollowUsButtonsArePresent(){
@@ -69,7 +70,7 @@ public class ToolBarPage extends GeneralMethods{
     public void subscribeToNewsletterAndCheckIfSubscriptionWasSuccessfull(String emailAddress){
         newsletterInputEmailField.sendKeys(emailAddress);
         goButtonFromNewsLetterSubscription.click();
-        Assert.assertTrue("The subscription Successful message was not received", newsLetterSubscriptionSuccessfulMessage.getText().contains("successfully subscribed"));
+        Assert.assertTrue("The subscription Successful message was not received", newsLetterSubscriptionMessage.getText().contains("successfully subscribed"));
 
     }
 

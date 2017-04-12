@@ -28,7 +28,7 @@ public class SignUpTests  {
 
     //TODO: maybe change method's name?
     @Before
-    public void launchFireFox(){
+    public void launchApplicationHomePageInFireFoxBrowser(){
         webDriver.get("http://automationpractice.com/index.php");
         webDriver.manage().window().maximize();}
 
@@ -40,16 +40,16 @@ public class SignUpTests  {
     //Done. new name, the assert from the SignUpPage class, also checks part of the errors text.
     @Test
     public void createAccountWithAllRequiredFieldsLeftBlankAndVerifyIfErrorMessageIsThrown(){
-        toolBarSteps.clickSignInButton();
+        toolBarSteps.clickSignInButtonAndVerifyLandingPage();
         authenticationSteps.createAccountWithValidEmail("matei@corvin.ro");
         signUpSteps.clickRegisterButtonWithAllFieldsBlankAndVerifyTheErrorMessageIsThrown();
     }
 
     @Test
-    //Method currently not working, as I talked to Ioana about this issue. More details in SignUpPage line 141.
+    //Method currently not working, I've talked with Ioana about it and it's a known issue. More details in SignUpPage line 141.
     public void registerNewAccountSuccessfully(){
-        toolBarSteps.clickSignInButton();
-        authenticationSteps.createAccountWithValidEmail("admin991@yahoo.ro");
+        toolBarSteps.clickSignInButtonAndVerifyLandingPage();
+        authenticationSteps.createAccountWithValidEmail("admin9911@yahoo.ro");
         signUpSteps.registerNewAccountSuccessfully("mr", "firstname", "lastname", "", "password", "4", "June", "1986", "randomAddress", "theaddress", "homeAdd", "chicago","Iowa", "00000", "2321312", "alias" );
     }
 }

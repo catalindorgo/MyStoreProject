@@ -38,6 +38,9 @@ public class AuthenticationPage extends PageObject {
     @FindBy (xpath = "//div/a[@class='account']/span")
     private WebElement loggedInAccount;
 
+    @FindBy(xpath = "//span[@class='navigation_page']")
+    public WebElement authenticationPageBreadCrumb;
+
     //TODO: The same xpath as for errorMessageForInvalidEmail
     // Done - will use only 1 WebElement for all error messages triggered by the Autentication fields (Email address and Password).
 //    @FindBy (xpath = "//ol/li[text()='Authentication failed.']")
@@ -57,6 +60,7 @@ public class AuthenticationPage extends PageObject {
         emailAddressFieldUnderCreateAnAccount.sendKeys(emailAddress);
         createAccountButton.click();
     }
+
     private void  logInWithValidCredentials(String userName, String password){
         logInEmailInputField.sendKeys(userName);
         logInPassword.sendKeys(password);

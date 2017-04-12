@@ -1,17 +1,10 @@
 package com.pages;
 
 import net.serenitybdd.core.annotations.findby.FindBy;
-import org.jruby.RubyProcess;
 import org.junit.Assert;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
-import org.openqa.selenium.support.ui.WebDriverWait;
-
-import java.util.List;
-import java.util.Set;
 
 /**
  * Created by catalindorgo on 3/10/2017.
@@ -27,7 +20,10 @@ public class SignUpPage extends GeneralMethods {
     private String DATE_DROP_DOWN_LISTS_SELECT = "//select[@id='%value%']";
 
     @FindBy(xpath = ".//div[@class='row']//h1")
-    private WebElement signUpPageTitle;
+    private WebElement currentPageTitle;
+
+    @FindBy(xpath = ".//div[@class='row']//h1[contains(text(),'Create')]")
+    private WebElement uniqueSignUpPageHeader;
 
     @FindBy(xpath = "//button/span[contains(text(), 'Register')]")
     private WebElement registerButton;
@@ -105,13 +101,12 @@ public class SignUpPage extends GeneralMethods {
     // Done - Removed.
     //TODO: Change assert error to be thrown to reflect reality
     // Updated the assert error.
-    public void verifyCurrentPageTitle(String expectedPageTitle) {
-        Assert.assertTrue("The page title is incorrect, it should be: " +expectedPageTitle, signUpPageTitle.getText().contentEquals(expectedPageTitle));
+    public void waitAndVerifyCurrentPageTitle(String expectedPageTitle) {
+        //here I used a specific pageHeader WE "uniqueSignUpPageHeader", because I need to wait for that page to show up. If I'm using the currentPage WE, my test will fail.
+        waitMethod(uniqueSignUpPageHeader);
+        Assert.assertTrue("The page title is incorrect, it should be: " +expectedPageTitle, currentPageTitle.getText().contentEquals(expectedPageTitle));
     }
 
-    public void waitForSignUpPageHeader() {
-        waitMethod(signUpPageTitle);
-    }
 
     /*TODO: Change the method to reflect what you intend to do in the test
       TODO: Question: Why did you declare "ERROR_MESSAGE_FOR_INVALID_CREDENTIALS" as a String and not used @FindBy?
