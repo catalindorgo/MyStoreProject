@@ -64,6 +64,15 @@ public class CatalogSteps extends ScenarioSteps {
     }
 
     @Step
+    public void addTwoProductsToCompareBasketAndVerifyIfTheyAreAddedUp(String productTitle1, String productTitle2){
+        catalogPage.addTwoProductsToCompareBasketAndVerifyIfTheyAreAddedUp(productTitle1, productTitle2);
+    }
+    @Step
+    public void clickTheCompareButtonAndVerifyLandingPage(){
+        catalogPage.clickTheCompareButtonAndVerifyLandingPage();
+    }
+
+    @Step
     public void quickViewProduct(String productTitle){
         catalogPage.quickViewProduct(productTitle);
     }

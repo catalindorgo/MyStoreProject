@@ -13,7 +13,7 @@ import java.util.List;
 /**
  * Created by catalindorgo on 3/15/2017.
  */
-public class CatalogPage extends GeneralMethods {
+public class CatalogPage extends ProductComparisonPage {
 
     @FindBy(xpath = "//div[contains(@class, 'rte')]")
     private WebElement pageBannerText;
@@ -54,6 +54,9 @@ public class CatalogPage extends GeneralMethods {
     @FindBy(xpath = "//div[(@id= 'center_column')]/ul")
     private WebElement productPageListingStyle;
 
+    @FindBy(xpath = "//div[contains(@class, 'top-pagination')]//strong")
+     private WebElement numberOfProductsAddedToCompareTop;
+
 
     String LIST_OF_PRODUCT_PRICES = "//form[@id='productsSortForm']//span[text()='%value%']/../../../../../..//li/div/div/div/span[@itemprop]";
     String LIST_OF_CHECKBOX_TEXT = "//input[@type='checkbox']/../../..//a[text()='%value%']";
@@ -62,7 +65,7 @@ public class CatalogPage extends GeneralMethods {
     String PRODUCT_IMAGES = "//img[@title='%value%']";
     String ADD_TO_CART_BUTTON_FOR_SELECTED_PRODUCT ="//h5/a[@title='%value%']/../../../div//a[contains(@class, 'add_to_cart')]";
     String QUICK_VIEW_BUTTONS ="//img[@title='%value%']/../../a[@class='quick-view']";
-
+    String ADD_TO_COMPARE_BUTTON_FOR_SELECTED_PRODUCT ="//h5/a[@title='%value%']/../../../div//a[contains(@class, 'add_to_compare')]";
 
 
     public void checkIfPageTitleBannerAndListedItemsAreCorrectlyDisplayed() {
@@ -177,6 +180,23 @@ public class CatalogPage extends GeneralMethods {
     public void addProductToCart (String productTitle){
         WebElement addToCartButton = getDriver().findElement(By.xpath(ADD_TO_CART_BUTTON_FOR_SELECTED_PRODUCT.replace("%value%", productTitle)));
         addToCartButton.click();
+    }
+
+    public void addTwoProductsToCompareBasketAndVerifyIfTheyAreAddedUp(String productTile1, String productTile2){
+        WebElement addToCompare1 = getDriver().findElement(By.xpath(ADD_TO_COMPARE_BUTTON_FOR_SELECTED_PRODUCT.replace("%value%", productTile1)));
+        WebElement addToCompare2 = getDriver().findElement(By.xpath(ADD_TO_COMPARE_BUTTON_FOR_SELECTED_PRODUCT.replace("%value%", productTile2)));
+        addToCompare1.click();
+        waitABit(1000);
+        addToCompare2.click();
+        waitABit(1000);
+        Integer numberOfProductsAddedToCompare = Integer.parseInt(numberOfProductsAddedToCompareTop.getText());
+        System.out.print("zzz"+ numberOfProductsAddedToCompare);
+        Assert.assertTrue("The Compare number should equal 2 (added products)", numberOfProductsAddedToCompare == 2);
+    }
+
+    public void clickTheCompareButtonAndVerifyLandingPage(){
+        numberOfProductsAddedToCompareTop.click();
+        Assert.assertTrue("The landing page title is not the 'Porduct Comparison'", productComparisonPageHeader.getText().contentEquals("PRODUCT COMPARISON"));
     }
 
     public void quickViewProduct(String productTitle){

@@ -52,7 +52,7 @@ public class MainPage extends GeneralMethods {
     private WebElement tShirtsSection;
 
     @FindBy(xpath = "//div[@id='homepage-slider']")
-    private WebElement mainTopBanner;
+    public WebElement mainTopBanner;
 
     @FindBy(xpath = "//div[@id='htmlcontent_top']")
     private WebElement secondaryTopBanner;
