@@ -30,7 +30,7 @@ public class QuickViewTests {
 
 
     @Before
-    public void launchApplicationHomePageInFireFoxBrowser(){
+    public void launchApplication(){
         webDriver.get("http://automationpractice.com/index.php");
         webDriver.manage().window().maximize();}
 

@@ -6,6 +6,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 
+import java.util.List;
+
 /**
  * Created by catalindorgo on 3/10/2017.
  */
@@ -96,6 +98,9 @@ public class SignUpPage extends GeneralMethods {
     @FindBy(xpath = "//div[contains(@class, 'alert')]")
     private WebElement errorMessageForSignUpProblems;
 
+    @FindBy(xpath = "//ol/li")
+    private List<WebElement> errorListOfRequiredFields;
+
 
     //TODO: Remove System.out.println
     // Done - Removed.
@@ -104,7 +109,7 @@ public class SignUpPage extends GeneralMethods {
     public void waitAndVerifyCurrentPageTitle(String expectedPageTitle) {
         //here I used a specific pageHeader WE "uniqueSignUpPageHeader", because I need to wait for that page to show up. If I'm using the currentPage WE, my test will fail.
         waitMethod(uniqueSignUpPageHeader);
-        Assert.assertTrue("The page title is incorrect, it should be: " +expectedPageTitle, currentPageTitle.getText().contentEquals(expectedPageTitle));
+        Assert.assertTrue("The page title is incorrect, should be: " +expectedPageTitle, currentPageTitle.getText().contentEquals(expectedPageTitle));
     }
 
 
@@ -113,10 +118,12 @@ public class SignUpPage extends GeneralMethods {
     */
     /* Done  - Method Name updated. I believe that initially I wanted to use the String in order to parametrize different error messages for different faulty credentials or tests.
     but now switched to a WebElement instead of String */
+    // make the method verify that all 8 required field throw the error along with the top banner error message.
     public void clickRegisterButtonWithAllFieldsBlankAndVerifyTheErrorMessageIsThrown() {
         registerButton.click();
-        Assert.assertTrue("The error message banner is not displayed at all", errorMessageForSignUpProblems.isDisplayed());
-        Assert.assertTrue("The 'Sign Up failed' error message was not displayed" , errorMessageForSignUpProblems.getText().contains("errors"));
+       // Assert.assertTrue("The error message banner is not displayed at all", errorMessageForSignUpProblems.isDisplayed());
+        Assert.assertTrue("There should be 8 errors in list", errorListOfRequiredFields.size() == 8);
+        Assert.assertTrue("'Sign Up failed' error message was not displayed" , errorMessageForSignUpProblems.getText().contains("errors"));
     }
 
     /*
@@ -214,6 +221,6 @@ public class SignUpPage extends GeneralMethods {
         mobilePhone.sendKeys(mobilePhoneNumber);
         aliasAddress.sendKeys(alias);
         submitAccountButton.click();
-        Assert.assertTrue("Sign Up failed. You should have been redirected to MY ACCOUNT page and the 'Welcome to your account. Here you can manage all of your personal information and orders' message, should have been displayed", welcomeToAccountText.getText().contentEquals("Welcome to your account. Here you can manage all of your personal information and orders."));
+        Assert.assertTrue("Sign Up failed. MY ACCOUNT page not displayed", welcomeToAccountText.getText().contentEquals("Welcome to your account. Here you can manage all of your personal information and orders."));
     }
 }

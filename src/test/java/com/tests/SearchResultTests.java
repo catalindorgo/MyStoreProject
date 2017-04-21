@@ -20,11 +20,12 @@ public class SearchResultTests {
 
     @Steps
     SearchResultSteps searchResultSteps;
+
     @Steps
     MainSteps mainSteps;
 
     @Before
-    public void launchApplicationHomePageInFireFoxBrowser(){
+    public void launchApplication(){
         webDriver.get("http://automationpractice.com/index.php");
         webDriver.manage().window().maximize();}
 

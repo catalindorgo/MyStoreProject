@@ -1,14 +1,17 @@
 package com.steps;
 
+import com.pages.GeneralMethods;
 import com.pages.MainPage;
 import net.thucydides.core.annotations.Step;
 import net.thucydides.core.steps.ScenarioSteps;
+import org.openqa.selenium.WebElement;
 
 /**
  * Created by catalindorgo on 3/14/2017.
  */
 public class MainSteps extends ScenarioSteps {
     MainPage mainPage;
+    GeneralMethods generalMethods;
 
     @Step
     public void checkLogoPresence(){
@@ -73,5 +76,10 @@ public class MainSteps extends ScenarioSteps {
     @Step
     public void selectCasualDressesSubSectionFromDresses(){
         mainPage.selectCasualDressesSubSectionFromDresses();
+    }
+
+    @Step
+    public void scrollDown( final int times){
+        mainPage.scrollDown(times);
     }
 }

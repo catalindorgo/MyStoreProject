@@ -1,0 +1,1 @@
+<?xml version="1.0" encoding="UTF-8"?><testsuite errors="0" failures="0" name="com.tests.SignUpTests" skipped="0" tests="1" time="17.65" timestamp="2017-04-109 02:54:01"><testcase classname="com.tests.SignUpTests" name="Create account with all required fields left blank and verify if error message is thrown"/></testsuite>

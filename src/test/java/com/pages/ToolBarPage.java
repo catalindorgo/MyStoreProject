@@ -11,7 +11,7 @@ import java.util.ArrayList;
 /**
  * Created by catalindorgo on 3/14/2017.
  */
-public class ToolBarPage extends AuthenticationPage{
+public class ToolBarPage extends GeneralMethods{
 
     @FindBy(xpath = "//a[@class='login']")
     private WebElement signInButtonFromToolbar;
@@ -44,17 +44,18 @@ public class ToolBarPage extends AuthenticationPage{
 
     //TODO: Assert that you are on the desired page- Authentication
     // Done
+    //General bread crumb not authentication. just click method, and the assert from its class : Toolbar. /atuh class.
     public void clickSignInButtonAndVerifyLandingPage(){
         signInButtonFromToolbar.click();
-        Assert.assertTrue("You are not on the Authentication page, the bread crumbs are not indicating it.", authenticationPageBreadCrumb.getText().contains("Authentication") );
+        Assert.assertTrue("Incorrect bread crumbs displayed. 'Authentication expected.'", pageHeaderBreadCrumb.getText().contains("Authentication") );
     }
 
     public void verifyBottomToolbarNewsletterAndFollowUsButtonsArePresent(){
-        Assert.assertTrue("Newsletter field is not displayed",newsletterInputEmailField.isDisplayed());
-        Assert.assertTrue("Facebook Follow Us button is not displayed",facebookFollowUsButton.isDisplayed());
-        Assert.assertTrue("Twitter Follow Us button is not displayed",twitterFollowUsButton.isDisplayed());
-        Assert.assertTrue("Youtube Follow Us button is not displayed",youtubeFollowUsButton.isDisplayed());
-        Assert.assertTrue("Google Follow Us button is not displayed",googlePlusFollowUsButton.isDisplayed());
+        Assert.assertTrue("Newsletter field not displayed",newsletterInputEmailField.isDisplayed());
+        Assert.assertTrue("Facebook Follow Us button not displayed",facebookFollowUsButton.isDisplayed());
+        Assert.assertTrue("Twitter Follow Us button not displayed",twitterFollowUsButton.isDisplayed());
+        Assert.assertTrue("Youtube Follow Us button not displayed",youtubeFollowUsButton.isDisplayed());
+        Assert.assertTrue("Google Follow Us button not displayed",googlePlusFollowUsButton.isDisplayed());
     }
 
     public void clickOnFollowUsIconAndCheckLandingPage(String followUsSiteName){

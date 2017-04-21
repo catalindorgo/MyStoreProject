@@ -38,9 +38,6 @@ public class AuthenticationPage extends PageObject {
     @FindBy (xpath = "//div/a[@class='account']/span")
     private WebElement loggedInAccount;
 
-    @FindBy(xpath = "//span[@class='navigation_page']")
-    public WebElement authenticationPageBreadCrumb;
-
     //TODO: The same xpath as for errorMessageForInvalidEmail
     // Done - will use only 1 WebElement for all error messages triggered by the Autentication fields (Email address and Password).
 //    @FindBy (xpath = "//ol/li[text()='Authentication failed.']")
@@ -55,28 +52,30 @@ public class AuthenticationPage extends PageObject {
     }
 
     //TODO: Assert user is on the expected page- Create an account
-    // NOT DONE - this test is done in the @CreateAccountTest class, beacause it uses the header WebElement from the SignUp page not from the AuthenticationPage.
+    // NOT DONE - this test is done in the @CreateAccountTest class, because it uses the header WebElement from the SignUp page not from the AuthenticationPage.
     public void createAccountWithValidEmail(String emailAddress){
         emailAddressFieldUnderCreateAnAccount.sendKeys(emailAddress);
         createAccountButton.click();
     }
 
-    private void  logInWithValidCredentials(String userName, String password){
+    private void logIn(String userName, String password){
         logInEmailInputField.sendKeys(userName);
         logInPassword.sendKeys(password);
         signInButton.click();
     }
     //TODO: Login should be a separated method (maybe prvate- it depends on how you use it) to be used in these 2 methods
     // Done - log in method is private for this class.
+    //Done - shorter assert error. or try asserEquals.
     public void logInAndVerifyAccount (String userName, String password, String expectedLoggedInAccount){
-        logInWithValidCredentials(userName, password);
-        Assert.assertTrue("Your user name is not displayed as the logged in account", loggedInAccount.getText().contentEquals(expectedLoggedInAccount));
+        logIn(userName, password);
+        Assert.assertEquals("Log in failed",expectedLoggedInAccount,loggedInAccount.getText());
+       // Assert.assertTrue("Your user name is not displayed as the logged in account", loggedInAccount.getText().contentEquals(expectedLoggedInAccount));
     }
 
     //TODO: Assertion error message is not reflecting what you are asserting. Why using contains and not contentEquals?
     // DONE - Updated the Assertion Error message. And the Assertion is using contentEquals now.
     public void checkErrorMessageAtFailedAuthentication(String userEmail, String password){
-       logInWithValidCredentials(userEmail, password);
+       logIn(userEmail, password);
         Assert.assertTrue("The 'Authentication failed' error message was not received",errorMessageTriggeredByAutenticationProblems.getText().contentEquals("Authentication failed.") );
     }
 }

@@ -72,8 +72,10 @@ public class MainPage extends GeneralMethods {
     @FindBy(xpath = ".//form[@id='searchbox']/button")
     private WebElement searchBoxGoButton;
 
-    @FindBy(xpath = "//div[contains(@class, 'breadcrumb')]")
-    private WebElement pageHeaderBreadCrumb;
+    @FindBy(xpath = "//body[@id]")
+    private WebElement wholePage;
+
+
 
     private void clickOnTopMainProductsSection(String mainSectionTitle){
         WebElement mainSection = getDriver().findElement(By.xpath(PRODUCT_MAIN_SECTIONS_FROM_PAGE_TOP.replace("%value%", mainSectionTitle)));
@@ -150,6 +152,10 @@ public class MainPage extends GeneralMethods {
         searchBoxField.click();
         searchBoxField.sendKeys(searchTerm);
         searchBoxGoButton.click();
+    }
+
+    public void scrollDown( final int times){
+        scrollPageDown(wholePage, times);
     }
 }
 

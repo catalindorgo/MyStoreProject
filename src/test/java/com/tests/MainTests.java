@@ -22,7 +22,7 @@ public class MainTests {
     MainSteps mainSteps;
 
     @Before
-    public void launchApplicationHomePageInFireFoxBrowser(){
+    public void launchApplication(){
         webDriver.get("http://automationpractice.com/index.php");
         webDriver.manage().window().maximize();}
 
@@ -59,5 +59,11 @@ public class MainTests {
     @Test
     public void checkPopularAndBestSellersSectionsPresence(){
         mainSteps.checkPopularAndBestSellersSectionsPresence();
+    }
+
+    // just wanted to try this method.
+    @Test
+    public void scrollDown(){
+        mainSteps.scrollDown(1);
     }
 }

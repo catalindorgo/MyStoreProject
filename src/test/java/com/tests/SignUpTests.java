@@ -27,8 +27,9 @@ public class SignUpTests  {
     ToolBarSteps toolBarSteps;
 
     //TODO: maybe change method's name?
+    // Done - name: launchApplication.
     @Before
-    public void launchApplicationHomePageInFireFoxBrowser(){
+    public void launchApplication(){
         webDriver.get("http://automationpractice.com/index.php");
         webDriver.manage().window().maximize();}
 
